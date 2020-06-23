@@ -24,6 +24,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { LoginComponent } from './component/login/login.component';
 import { PerfilUsuarioComponent } from './component/perfil-usuario/perfil-usuario.component';
 import { RegistroComponent } from './component/registro/registro.component';
+import { ConfiteriaComponent } from './component/confiteria/confiteria.component';
+import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { RegistroComponent } from './component/registro/registro.component';
     MoviesSliderComponent,
     LoginComponent,
     PerfilUsuarioComponent,
-    RegistroComponent
+    RegistroComponent,
+    ConfiteriaComponent,
+    TybaEmpresaComponent
   ],
   imports: [
     BrowserModule,
