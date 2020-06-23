@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "Angular-Cinema"
+  "defaultProject": "Angular-Cinema",
+  "cli": {
+    "analytics": "d3cbebed-ba89-4406-99b9-1afcf44a7c2e"
+  }
 }

@@ -8,6 +8,7 @@ var UsuarioSchema = new Schema({
     correo: String,
     contrasena: String,
     rol: String,
+    membresia: String,
     imagen: String
 });
 
