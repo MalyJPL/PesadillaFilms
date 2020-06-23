@@ -15,6 +15,7 @@ function registrarUsuario(req, res) {
     usuario.correo = parametros.correo;
     usuario.contrasena = parametros.contrasena;
     usuario.rol = parametros.rol; // podemos quemar en la BD el registro del usuario con rol admin
+    usuario.rol = parametros.membresia;
     usuario.imagen = null;
 
     // funcion save para interactuar con la BD
@@ -35,6 +36,7 @@ function registrarUsuario(req, res) {
 
 }
 
+
 // Función Login
 function login(req, res) {
     var parametros = req.body;
@@ -52,7 +54,7 @@ function login(req, res) {
                     res.status(200).send({ message: "Contraseña incorrecta" });
                 } else {
                     res.status(200).send({
-                        message: "Usuario Logueado!",
+                        message: "¡Usuario Logueado!",
                         usuario: usuarioLogueado
                     });
                 }
@@ -60,6 +62,7 @@ function login(req, res) {
         }
     });
 }
+
 
 // Función Actualizar Usuario
 function actualizarUsuario(req, res) {
@@ -82,10 +85,11 @@ function actualizarUsuario(req, res) {
     });
 }
 
+
 // Función Subir IMG
-function subirImg(req, res) {
+function subirImgUsuario(req, res) {
     var usuarioId = req.params.id;
-    var nombreArchivo = "No has subido ninguna imagen...";
+    var nombreArchivo = "No has subido ninguna imagen del usuario...";
 
     // Validar si efectivamente se está enviando un archivo
     if (req.files) {
@@ -141,13 +145,14 @@ function subirImg(req, res) {
     }
 }
 
+
 // Función Mostrar Archivo
-function mostrarArchivo(req, res) {
+function mostrarImgUsuario(req, res) {
     // Pedir el archivo que queremos mostrar
     // localhost:3000/api/obtenerImagen/:imageFile
     var archivo = req.params.imageFile;
     // Ubicación del archivo
-    var ruta = './archivos/usuarios/' + archivo;
+    var ruta = './files/usuarios/' + archivo;
 
     // Validar si existe o no
     // fs.exists('la ruta del archivo a buscar', (existencia)=>{})
@@ -165,6 +170,6 @@ module.exports = {
     registrarUsuario,
     login,
     actualizarUsuario,
-    subirImg,
-    mostrarArchivo
+    subirImgUsuario,
+    mostrarImgUsuario
 }
