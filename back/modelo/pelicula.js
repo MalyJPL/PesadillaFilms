@@ -8,10 +8,12 @@ var PeliculaSchema = new Schema({
     sinopsis: String,
     director: String,
     protagonistas: String,
+    duracion: String,
     trailer: String,
     online: String,
     cover: String,
-    poster: String
+    poster: String,
+    estado: Boolean
 });
 
 // Exportar el modelo

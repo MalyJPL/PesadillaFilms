@@ -1,5 +1,5 @@
 const express = require('express');
-const UsuarioControl = require('../control/peliculaControl');
+const PeliculaControl = require('../control/peliculaControl');
 
 
 // Importar el paquete connect-multiparty
@@ -13,14 +13,16 @@ var api = express.Router();
 
 
 //Registrar película
-
-//Actualizar película
+api.post('/registrar-pelicula', PeliculaControl.registrarPelicula);
 
 //Subir trailer peli
 
-//Subir img cover peli
+//Subir img cover o wallpaper peli
+api.put('/subir-imagen/:idPelicula/:tipoImg', PeliculaControl.registrarPelicula);
 
 //Subir img wallpaper peli
+
+//Actualizar película
 
 // Exportar el módulo
 module.exports = api;
