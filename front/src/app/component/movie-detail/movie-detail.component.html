@@ -11,7 +11,7 @@
       <div class="col-md-8">
         <h1 style="color: #8b0101 ; text-shadow:2px 2px 7px rgb(255, 255, 255);" class="movie-title">{{ movie.title }}</h1>
         <div class="movie-info">
-          <p class="movie-overview">{{ movie.overview }}</p>
+          <p class="movie-overview" style="text-align: justify;">{{ movie.overview }}</p>
           <div class="movie-meta">
             <dl class="movie meta-director">
               <dt>Director:</dt>
@@ -38,14 +38,14 @@
             class="movie-more-showtime"
             (click)="showAllShowtimes()"
             *ngIf="!showAllTimes"
-            >Mostrar todos los horarios</a>
+            >Mostrar todos los horarios &nbsp; <i class="fa fa-chevron-down" ></i></a>
 
           <a
             href="javascript:void(0)"
             class="movie-today-showtime"
             (click)="hideAllShowtimes()"
             *ngIf="showAllTimes"
-            >Ocultar todos los horarios</a>
+            >Ocultar todos los horarios &nbsp; <i class="fa fa-chevron-up" ></i></a>
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@
 </div>
 
 <div class="container py-5">
-  <h2 class="my-4">También te puede interesar...</h2>
+  <h2 class="my-4"><i class="fa fa-eye" style="color: #8b0101;"></i> También te puede interesar...</h2>
   <app-movies-grid limit="4" columns="4" exclude="movie.id"></app-movies-grid>
 </div>
 

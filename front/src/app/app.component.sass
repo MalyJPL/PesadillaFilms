@@ -14,10 +14,15 @@
     .nav-link
       // text-transform: uppercase
       padding-left: 1rem
-      padding-right: 1rem      
-    
-
-
+      padding-right: 1rem   
+      &:hover
+          background: #9e0606  
+          border-top-right-radius: 10px
+          border-bottom-left-radius: 10px  
+          border-top-left-radius: 10px
+          border-bottom-right-radius: 10px
+          transition: 1s
+          color: #000000
 
 .footer
   font-size: 16px
@@ -38,6 +43,51 @@
   left: 50%
   transform: translate(-50%,-50%)
   position: absolute
+
+
+.col-md-6 
+   
+    .fb-ic       
+      &:hover         
+          color: #180000 
+          cursor: pointer          
+
+    .tw-ic      
+      &:hover         
+          color: #180000 
+          cursor: pointer
+
+    .gplus-ic     
+          &:hover         
+              color: #180000 
+              cursor: pointer
+
+    .li-ic     
+          &:hover         
+              color: #180000 
+              cursor: pointer
+
+    .ins-ic    
+          &:hover         
+              color: #180000 
+              cursor: pointer
+
+.col-md-3
+    img      
+      &:hover         
+          filter: grayscale(100%) 
+          cursor: pointer
+
+.dropdown-menu
+  .dropdown-item
+    &:hover 
+       background: #8b010154  
+         
+.navbar-nav 
+  .dropdown-menu
+      margin-top: 20px
+      
+
 
 
 // Paleta de colores:
