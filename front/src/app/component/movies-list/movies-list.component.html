@@ -10,7 +10,7 @@
     </div>
     <div class="movielist-info col-md-9">
       <a  routerLink="/movie/{{ movie.id }}" class="subtitle h3">{{ movie.title}}</a>
-      <p class="movielist-overview">{{ movie.overview }}</p>
+      <p class="movielist-overview" style="text-align: justify;">{{ movie.overview }}</p>
       <div class="movielist-meta">
         <dl class="movielist-meta-cast">
           <dt>Protagonista:</dt>
@@ -33,16 +33,15 @@
         class="movelist-more-showtime"
         (click)="showAllShowtimes(movie.id)"
         *ngIf="!showAllTimes[movie.id]"
-        >Mostrar todos los horarios</a
-      >
+        >Mostrar todos los horarios &nbsp;<i class="fa fa-chevron-down" ></i>
+        </a >&nbsp;
 
       <a
         href="javascript:void(0)"
         class="movelist-today-showtime"
         (click)="hideAllShowtimes(movie.id)"
         *ngIf="showAllTimes[movie.id]"
-        >Ocultar todos los horarios</a
-      >
+        >Ocultar todos los horarios &nbsp; <i class="fa fa-chevron-up" ></i> </a>
     </div>
   </div>
 </div>
