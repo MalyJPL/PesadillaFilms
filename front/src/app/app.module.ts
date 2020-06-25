@@ -38,8 +38,9 @@ import { ConfiteriaComponent } from './component/confiteria/confiteria.component
 import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
 import { AdminComponent } from './component/admin/admin.component';
 
-// Importar Servicio Usuario
+// Importar Servicio Usuario y película
 import { UsuarioService } from './service/usuario.service';
+import { PeliculaService } from './service/pelicula.service';
 
 
 @NgModule({
@@ -75,7 +76,7 @@ import { UsuarioService } from './service/usuario.service';
     ),
     CarouselModule.forRoot()
   ],
-  providers: [DatabaseService, UsuarioService],
+  providers: [DatabaseService, UsuarioService, PeliculaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
