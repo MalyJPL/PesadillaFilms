@@ -64,6 +64,8 @@ import { PeliculaService } from './service/pelicula.service';
     ConfiteriaComponent,
     TybaEmpresaComponent,
     AdminComponent
+
+    
   ],
   imports: [
     BrowserModule,

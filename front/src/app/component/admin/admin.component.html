@@ -1,27 +1,38 @@
-<p  style="font-size: 40px; color: rgb(172, 221, 11);" >admin works!</p>
 
-<h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, et! Quos quae est iste officia dolorum ex aperiam at vitae? Dicta nostrum quia fugit minima doloremque. Illo, ipsum! Cum, commodi!</h5>
+        
+        
+        
+        
+        <form #formularioPeliculas="ngForm" >
 
- 
+                <input class="datos" type="text" placeholder="Nombre Pelicula" name="titulo"
+                #titulo="ngModel" [(ngModel)]= "pelicula.titulo">
 
-<h3>hola</h3>
+                <input class="datos" type="text" placeholder="Director" name="Director"
+                #director="ngModel" [(ngModel)]= "pelicula.director">
 
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+                <input class="datos" type="text" placeholder="Sinopsis" name="sinopsis"
+                #sinopsis="ngModel" [(ngModel)] = "pelicula.sinopsis">
+
+                <input class="datos" type="text" placeholder="Categoria" name="categoria"
+                #categoria="ngModel" [(ngModel)] ="pelicula.categoria">
+
+                <input class="datos" type="text" placeholder="Protagonista" name="protagonista"
+                #protagonista="ngModel" [(ngModel)] = "pelicula.protagonista">
+              
+                <input class="datos" type="text"placeholder="Duracion" name="tiempo"
+                #tiempo="ngModel" [(ngModel)]="pelicula.tiempo">
+              
+                <input type="file" class="datos">
+
+                <!-- <input class="datos" type="text" placeholder="tipo de documento" name="tipo"
+                #tipo="ngModel" [(ngModel)] = "pelicula.tipo"> -->
+
+                <button id="botonAgregar" type="submit" (click)="nuevaPelicula()">Pelicula Nueva</button>
+                <button id="botonDocumento" type="submit" (click)="subirDocumento()">Pelicula Documento</button>
+                <button id="botonActualizar" type="submit" (click)="actualizarPelicula()">Actualizar Pelicula</button>
+
+        </form> 
 
 
 
