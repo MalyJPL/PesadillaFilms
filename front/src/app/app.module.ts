@@ -1,9 +1,20 @@
-import { InMemoryDataService } from './service/in-memory-data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
+
+
+// Importar módulo de rutas
 import { AppRoutingModule } from './app-routing.module';
+// Importar Módulo Formularios
+import { FormsModule } from '@angular/forms';
+// Importar el módulo HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 import { AppComponent } from './app.component';
+import { InMemoryDataService } from './service/in-memory-data.service';
 import { MoviesComponent } from './component/movies/movies.component';
 import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
 import { FrontpageComponent } from './component/frontpage/frontpage.component';
@@ -12,7 +23,6 @@ import { MinutePipe } from './pipe/minute.pipe';
 import { ShowtimesComponent } from './component/showtimes/showtimes.component';
 import { DayPipe } from './pipe/day.pipe';
 import { DatabaseService } from './service/database.service';
-import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { MoviesListComponent } from './component/movies-list/movies-list.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -26,6 +36,11 @@ import { PerfilUsuarioComponent } from './component/perfil-usuario/perfil-usuari
 import { RegistroComponent } from './component/registro/registro.component';
 import { ConfiteriaComponent } from './component/confiteria/confiteria.component';
 import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
+import { AdminComponent } from './component/admin/admin.component';
+
+// Importar Servicio Usuario
+import { UsuarioService } from './service/usuario.service';
+
 
 @NgModule({
   declarations: [
@@ -46,11 +61,13 @@ import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.comp
     PerfilUsuarioComponent,
     RegistroComponent,
     ConfiteriaComponent,
-    TybaEmpresaComponent
+    TybaEmpresaComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,    
     ModalModule.forRoot(),
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
@@ -58,7 +75,7 @@ import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.comp
     ),
     CarouselModule.forRoot()
   ],
-  providers: [DatabaseService],
+  providers: [DatabaseService, UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

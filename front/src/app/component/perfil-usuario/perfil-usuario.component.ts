@@ -1,10 +1,6 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../modelo/usuario';
 import { UsuarioService } from '../../service/usuario.service';
-import Swal from 'sweetalert2';
-// Importar el manejador de rutas
-import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -12,8 +8,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./perfil-usuario.component.sass']
 })
 export class PerfilUsuarioComponent implements OnInit {
-
-  imagen5 = [ 'assets/img/logo.png'] ;
 
   // Declarar la variable usuarioActualizar
   public usuarioActualizar : Usuario;
@@ -25,8 +19,7 @@ export class PerfilUsuarioComponent implements OnInit {
   public url : String;
 
   constructor(
-    private usuarioService : UsuarioService,
-    private _router : Router  //ruta para el menu
+    private usuarioService : UsuarioService
   ) { 
     this.url = usuarioService.url;
   }
@@ -36,43 +29,26 @@ export class PerfilUsuarioComponent implements OnInit {
     this.usuarioActualizar = JSON.parse(localStorage.getItem('sesion'));
     this.identidad = this.usuarioService.obtenerNombreUsuario();
   }
+
   // Método subirArchivo
   subirArchivo(fileInput : any){
     this.archivoSubir = <File>fileInput.target.files[0];
   }
+
   // --------------------------------------------------------
   // Método actualizarUsuario
   actualizarUsuario(){
     this.usuarioService.editarUsuario(this.usuarioActualizar._id, this.usuarioActualizar).subscribe(
       (response : any)=>{
         if(response.usuario){
-
-            Swal.fire({           
-            icon: 'success',
-            title: `<h5> ¡Tus datos han sido Actualizados correctamente !!</h5>`,         
-            timer: 11500
-          });
-
+          alert('Tus datos han sido Actualizados correctamente!!');
           localStorage.setItem('sesion', JSON.stringify(this.usuarioActualizar));
 
           // Validación y consumo del servicio de la carga de imagen 
           if(!this.archivoSubir){
-            
-
-            Swal.fire({           
-              icon: 'warning',
-              title: `<h5> No hay ninguna imagen</h5>`,         
-              timer: 11500
-            });
-            
-          }else{            
-
-            Swal.fire({           
-              icon: 'success',
-              title: `<h5> Tu imagen es ${this.archivoSubir.name}</h5>`,         
-              timer: 11500
-            });
-
+            alert('No hay ninguna imagen');
+          }else{
+            alert(`Tu imagen es ${this.archivoSubir.name}`);
             this.usuarioService.cargarImagenUsuario(this.archivoSubir, this.usuarioActualizar._id).subscribe(
               (result : any )=>{
                 this.usuarioActualizar.imagen = result.imagen;
@@ -89,24 +65,15 @@ export class PerfilUsuarioComponent implements OnInit {
           }
           // Cierre Validación
 
-           // Redireccion al perfil
-           this._router.navigate(['/menu']);
-
         }else {
-         
-          Swal.fire({           
-            icon: 'error',
-            title: `<h5> No fue posible actualizar tus datos. </h5>`,         
-            timer: 11500
-          });
-
-        } 
+          alert('No fue posible actualizar tus datos :(');
+        }
 
         // Cierre response
       }, error =>{
         if(error != null){
           console.log(error);
-        } 
+        }
       }
     );
   }

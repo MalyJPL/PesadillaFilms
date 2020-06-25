@@ -1,8 +1,11 @@
+import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+
 import { FrontpageComponent } from './component/frontpage/frontpage.component';
 import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
 import { MoviesComponent } from './component/movies/movies.component';
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+
+
 
 // Importar los componentes de navegación
 
@@ -10,8 +13,8 @@ import { RegistroComponent } from './component/registro/registro.component';
 import { LoginComponent } from './component/login/login.component';
 import { PerfilUsuarioComponent } from './component/perfil-usuario/perfil-usuario.component';
 import { ConfiteriaComponent } from './component/confiteria/confiteria.component';
-import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component'
-
+import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
+import { AdminComponent } from './component/admin/admin.component';
 
 
 // Relacionar rutas con componentes
@@ -26,7 +29,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'perfil', component: PerfilUsuarioComponent},
   { path: 'confiteria', component: ConfiteriaComponent},
-  { path: 'tyba-empresa', component: TybaEmpresaComponent}
+  { path: 'tyba-empresa', component: TybaEmpresaComponent},
+  { path: 'admin', component: AdminComponent }
 
 
   
