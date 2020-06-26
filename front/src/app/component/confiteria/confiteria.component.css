@@ -1,0 +1,65 @@
+@font-face{
+     font-family: houseHorror;
+     src: url("/front/src/");
+ }   
+
+
+.cardConfiteria{
+          margin-left: 8%;
+          margin-top: 20px;
+          color: black;
+          text-align: center;
+          box-shadow: 1px 1px 8px lightgray;
+     }
+        
+     .list-group-item{
+          margin-bottom: -16px;
+          text-align: left;
+     }
+       
+     #vacio{
+          color: white;
+     }
+
+   .categoriasComida{
+        margin-top: 40px;
+        background-color: #8b0101;
+        font-weight: bolder;
+        width: 83%;
+        padding-top: 10px;
+        text-align: center;
+        margin-left: 7%;
+        font-family: houseHorror;
+        border-radius: 4px;
+        box-shadow: 8px 8px 8px black;
+
+   }
+
+   h1{
+        color: black;
+        font-weight: bolder;
+   }
+
+    
+
+
+
+
+     
+
+
+
+
+     
+  /*    hr{
+          color: gray !important;
+          border: 1px solid;
+      } */
+
+
+/*  #eaeaea    blanco
+   #8b0101   tono rojo claro
+    #580000  rojo oscuro
+      #180000  rojo negro
+        #000000  negro */
+
