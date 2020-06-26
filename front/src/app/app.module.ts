@@ -41,6 +41,7 @@ import { AdminComponent } from './component/admin/admin.component';
 // Importar Servicio Usuario y película
 import { UsuarioService } from './service/usuario.service';
 import { PeliculaService } from './service/pelicula.service';
+import { IntroComponent } from './component/intro/intro.component';
 
 
 @NgModule({
@@ -63,9 +64,8 @@ import { PeliculaService } from './service/pelicula.service';
     RegistroComponent,
     ConfiteriaComponent,
     TybaEmpresaComponent,
-    AdminComponent
-
-    
+    AdminComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
