@@ -40,6 +40,7 @@ import { AdminComponent } from './component/admin/admin.component';
 
 // Importar Servicio Usuario
 import { UsuarioService } from './service/usuario.service';
+import { IntroComponent } from './component/intro/intro.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { UsuarioService } from './service/usuario.service';
     RegistroComponent,
     ConfiteriaComponent,
     TybaEmpresaComponent,
-    AdminComponent
+    AdminComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
