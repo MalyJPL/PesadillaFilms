@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-
-
 // Importar módulo de rutas
 import { AppRoutingModule } from './app-routing.module';
 // Importar Módulo Formularios
@@ -38,9 +36,11 @@ import { ConfiteriaComponent } from './component/confiteria/confiteria.component
 import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
 import { AdminComponent } from './component/admin/admin.component';
 
-// Importar Servicio Usuario
+// Importar Servicio Usuario y película
 import { UsuarioService } from './service/usuario.service';
+import { PeliculaService } from './service/pelicula.service';
 import { IntroComponent } from './component/intro/intro.component';
+import { SillasComponent } from './component/sillas/sillas.component';
 
 
 @NgModule({
@@ -64,7 +64,8 @@ import { IntroComponent } from './component/intro/intro.component';
     ConfiteriaComponent,
     TybaEmpresaComponent,
     AdminComponent,
-    IntroComponent
+    IntroComponent,
+    SillasComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +78,7 @@ import { IntroComponent } from './component/intro/intro.component';
     ),
     CarouselModule.forRoot()
   ],
-  providers: [DatabaseService, UsuarioService],
+  providers: [DatabaseService, UsuarioService, PeliculaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
