@@ -5,6 +5,8 @@ const fs = require('fs');
 const path = require('path');
 
 
+
+
 //Funcion registrar película
 function registrarPelicula(req, res) {
 
@@ -240,14 +242,113 @@ if(tipo === 'trailer'){
 })
 }
 //Función actualizar datos pelicula
+function actualizarPelicula(req, res) {
+  var usuarioId = req.params.id;
+  var nuevosDatosPelicula = req.body;
 
+  Pelicula.findByIdAndUpdate(usuarioId, nuevosDatosPelicula, (err, peliculaActualizada) => {
+      if (err) {
+          res.status(500).send({ message: "Error en el servidor" });
+      } else {
+          if (!peliculaActualizada) {
+              res.status(200).send({ message: "No fue posible actualizar la película" });
+          } else {
+              res.status(200).send({
+                  message: "¡Pelicula Actualizada!",
+                  pelicula: peliculaActualizada
+              });
+          }
+      }
+  });
+}
 
+//mostrar peliculas por categorias 
 
+function mostrarCategoria(req, res) {
+  // Pedir el archivo que queremos mostrar
+  // localhost:3000/api/obtenerImagen/:imageFile
+  var categoriaSeleccionada = req.params.categoria;
+
+Pelicula.find({'categoria' : categoriaSeleccionada}, function (err, peliculasEncontradas){
+  if (err) {
+    res.status(500).send({ message: "Error en el servidor" });
+} else {
+    if (!peliculasEncontradas) {
+        res.status(200).send({ message: "No fue posible encontrar películas en la categoría" });
+    } else {
+        res.status(200).send({
+            message: "¡Categoría recuperada!",
+            peliculas: peliculasEncontradas
+        });
+    }
+}
+  });
+}
+
+//mostrar películas por palabra
+
+function busquedaPorPalabra(req, res) {
+  // Pedir el archivo que queremos mostrar
+  // localhost:3000/api/obtenerImagen/:imageFile
+  var palabra= req.params.palabra;
+
+Pelicula.find({
+   $or:{ categoria: {$regex: palabra}} ,
+   $or: {titulo: {$regex : palabra}} , 
+  $or: {sinopsis: {$regex : palabra}} ,
+ $or: {director: {$regex : palabra}} ,
+  $or: {protagonistas: {$regex : palabra}}
+}
+, 
+  function (err, peliculasEncontradas){
+  if (err) {
+    res.status(500).send({ message: "Error en el servidor" });
+} else {
+    if (!peliculasEncontradas) {
+        res.status(200).send({ message: "No fue posible encontrar películas en la categoría" });
+    } else {
+        res.status(200).send({
+            message: "¡Categoría recuperada!",
+            peliculas: peliculasEncontradas
+        });
+    }
+}
+  });
+}
+
+//mostrar todas las películas
+
+function buscarTodas(req, res) {
+  // Pedir el archivo que queremos mostrar
+  // localhost:3000/api/obtenerImagen/:imageFile
+  var palabra= req.params.palabra;
+
+Pelicula.find(function (err, peliculasEncontradas){
+  if (err) {
+    res.status(500).send({ message: "Error en el servidor" });
+} else {
+    if (!peliculasEncontradas) {
+        res.status(200).send({ message: "No fue posible encontrar películas en la categoría" });
+    } else {
+        res.status(200).send({
+            message: "¡Todas las películas recuperadas!",
+            peliculas: peliculasEncontradas
+        });
+    }
+}
+  });
+}
+
+ 
 
 // Exportar paquete de funciones
 module.exports = {
   registrarPelicula,
   subirImgPelicula,
   mostrarArchivos,
-  subirVideo
+  subirVideo,
+  actualizarPelicula,
+  mostrarCategoria,
+  busquedaPorPalabra,
+  buscarTodas
 }
