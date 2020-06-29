@@ -28,8 +28,18 @@ api.put('/subir-wallpaper/:idPelicula/:tipoImg',  subirWallpaperDirectorio, Peli
 api.get('/obtener-archivo/:idPelicula/:tipo', PeliculaControl.mostrarArchivos);
 
 
-
 //Actualizar película
+api.put('/actualizar-pelicula/:id', PeliculaControl.actualizarPelicula);
+
+//Mostrar películas en una categoría
+api.get('/buscar-categoria/:categoria', PeliculaControl.mostrarCategoria);
+
+//Mostrar películas que coincidan en algún campo en una palabra
+api.get('/buscar-palabra/:palabra', PeliculaControl.busquedaPorPalabra);
+
+//mostrar todas las películas
+api.get('/buscar-todas', PeliculaControl.buscarTodas);
+
 
 // Exportar el módulo
 module.exports = api;
