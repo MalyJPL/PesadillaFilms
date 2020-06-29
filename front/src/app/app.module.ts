@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-
-
 // Importar módulo de rutas
 import { AppRoutingModule } from './app-routing.module';
 // Importar Módulo Formularios

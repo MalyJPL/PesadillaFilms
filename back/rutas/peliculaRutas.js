@@ -16,11 +16,18 @@ var api = express.Router();
 api.post('/registrar-pelicula', PeliculaControl.registrarPelicula);
 
 //Subir trailer peli
+api.put('/subir-video/:idPelicula', subirTrailerDirectorio, PeliculaControl.subirVideo);
 
-//Subir img cover o wallpaper peli
-api.put('/subir-imagen/:idPelicula/:tipoImg', PeliculaControl.registrarPelicula);
+//Subir img cover peli
+api.put('/subir-cover/:idPelicula/:tipoImg',  subirCoverDirectorio, PeliculaControl.subirImgPelicula);
 
 //Subir img wallpaper peli
+api.put('/subir-wallpaper/:idPelicula/:tipoImg',  subirWallpaperDirectorio, PeliculaControl.subirImgPelicula);
+
+// Ruta mostrar Imagen Usuario
+api.get('/obtener-archivo/:idPelicula/:tipo', PeliculaControl.mostrarArchivos);
+
+
 
 //Actualizar película
 
