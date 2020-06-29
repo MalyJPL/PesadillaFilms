@@ -17,6 +17,8 @@ import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.comp
 import { CategoriasComponent } from './component/categorias/categorias.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { IntroComponent } from './component/intro/intro.component';
+import { MovieInfoComponent } from './component/movie-info/movie-info.component';
+
 
 
 
@@ -35,7 +37,8 @@ const routes: Routes = [
   { path: 'tyba-empresa', component: TybaEmpresaComponent},
   { path: 'categorias', component: CategoriasComponent},
   { path: 'admin', component: AdminComponent },
-  { path: 'intro', component: IntroComponent }
+  { path: 'intro', component: IntroComponent },
+   { path: 'movie-info', component: MovieInfoComponent }
   
 ];
 
