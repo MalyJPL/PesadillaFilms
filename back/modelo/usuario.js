@@ -9,7 +9,8 @@ var UsuarioSchema = new Schema({
     contrasena: String,
     rol: String,
     membresia: String,
-    imagen: String
+    imagen: String,
+    estado: Boolean
 });
 
 // Exportar el modelo

@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import Swal from 'sweetalert2'
-
-
 // Importar el modelo
 import { Usuario } from '../../modelo/usuario';
 // Importar el servicio
@@ -18,14 +15,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-//-------------- Insertar imagenes
-  imagen1 = [ 'assets/img/social/facebook.png'] ;
-  imagen2 = [ 'assets/img/social/instagram.png'] ;
-  imagen3 = [ 'assets/img/social/linkedin.png'] ;
-  imagen4 = [ 'assets/img/social/twitter.png'] ;
-  imagen5 = [ 'assets/img/logo.png'] ;
-  imagen6 = [ 'assets/img/social/bg.jpg'] ;
-
   // Declarar la variable login de tipo Usuario
   public login : Usuario;
   // Declarar la variable identidad
@@ -39,7 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }  
+  }
 
   // -- Método loginUsuario que consumirá el servicio iniciarSesion --
   loginUsuario(){
@@ -48,8 +37,6 @@ export class LoginComponent implements OnInit {
         // this.login = response.usuario
         let usuario = response.usuario;
         this.login = usuario;
-
-        
         if(this.login){
           let usuarioLogueado = new Usuario(
             this.login._id,
@@ -65,26 +52,11 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('sesion', JSON.stringify(usuarioLogueado));
           // Consumir el servicio obtenerNombreUsuario
           this.identidad = this.usuarioService.obtenerNombreUsuario();
-
-          // alert(`Hola ${this.identidad.nombre}!! Bienvenid@`);
-
-          Swal.fire({           
-            icon: 'success',
-            title: `<h5> Hola  <b> ${this.identidad.nombre}!!</b>  Bienvenid@</h5>`,         
-            timer: 11500
-          })
-
+          alert(`Hola ${this.identidad.nombre}!! Bienvenid@`);
           // Redireccion al perfil
-          this._router.navigate(['/']);
-
+          this._router.navigate(['/perfil']);
         }else{
-          // alert('Usuario no identificado');
-
-          Swal.fire({           
-            icon: 'error',
-            title: `Usuario no identificado`,         
-            timer: 11500
-          })
+          alert('Usuario no identificado');
         }
         // Cierre validación usuario logueado
       }, error =>{
@@ -97,3 +69,4 @@ export class LoginComponent implements OnInit {
   // -- Fin Método --
 
 }
+

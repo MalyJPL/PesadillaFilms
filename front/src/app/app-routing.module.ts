@@ -1,8 +1,11 @@
+import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+
 import { FrontpageComponent } from './component/frontpage/frontpage.component';
 import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
 import { MoviesComponent } from './component/movies/movies.component';
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+
+
 
 // Importar los componentes de navegación
 
@@ -12,6 +15,8 @@ import { PerfilUsuarioComponent } from './component/perfil-usuario/perfil-usuari
 import { ConfiteriaComponent } from './component/confiteria/confiteria.component';
 import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
 import { CategoriasComponent } from './component/categorias/categorias.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { IntroComponent } from './component/intro/intro.component';
 
 
 
@@ -28,12 +33,12 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilUsuarioComponent},
   { path: 'confiteria', component: ConfiteriaComponent},
   { path: 'tyba-empresa', component: TybaEmpresaComponent},
-  { path: 'categorias', component: CategoriasComponent}
-
-
-
+  { path: 'categorias', component: CategoriasComponent},
+  { path: 'admin', component: AdminComponent },
+  { path: 'intro', component: IntroComponent }
   
 ];
+
 // Importamos en la raíz de RouterModule el array de rutas y luego exportamos el nuevo Módulo
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
