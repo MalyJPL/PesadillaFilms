@@ -40,7 +40,7 @@ import { AdminComponent } from './component/admin/admin.component';
 import { UsuarioService } from './service/usuario.service';
 import { PeliculaService } from './service/pelicula.service';
 import { IntroComponent } from './component/intro/intro.component';
-import { SillasComponent } from './component/sillas/sillas.component';
+/* import { SillasComponent } from './component/sillas/sillas.component'; */
 
 
 @NgModule({
@@ -65,7 +65,7 @@ import { SillasComponent } from './component/sillas/sillas.component';
     TybaEmpresaComponent,
     AdminComponent,
     IntroComponent,
-    SillasComponent
+/*     SillasComponent */
   ],
   imports: [
     BrowserModule,
