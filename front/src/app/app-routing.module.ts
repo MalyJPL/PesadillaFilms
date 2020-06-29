@@ -10,7 +10,8 @@ import { RegistroComponent } from './component/registro/registro.component';
 import { LoginComponent } from './component/login/login.component';
 import { PerfilUsuarioComponent } from './component/perfil-usuario/perfil-usuario.component';
 import { ConfiteriaComponent } from './component/confiteria/confiteria.component';
-import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component'
+import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
+import { CategoriasComponent } from './component/categorias/categorias.component';
 
 
 
@@ -26,7 +27,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'perfil', component: PerfilUsuarioComponent},
   { path: 'confiteria', component: ConfiteriaComponent},
-  { path: 'tyba-empresa', component: TybaEmpresaComponent}
+  { path: 'tyba-empresa', component: TybaEmpresaComponent},
+  { path: 'categorias', component: CategoriasComponent}
+
 
 
   

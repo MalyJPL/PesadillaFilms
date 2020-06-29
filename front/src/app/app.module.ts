@@ -26,6 +26,8 @@ import { PerfilUsuarioComponent } from './component/perfil-usuario/perfil-usuari
 import { RegistroComponent } from './component/registro/registro.component';
 import { ConfiteriaComponent } from './component/confiteria/confiteria.component';
 import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
+import { CategoriasComponent } from './component/categorias/categorias.component';
+import { MovieInfoComponent } from './component/movie-info/movie-info.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.comp
     PerfilUsuarioComponent,
     RegistroComponent,
     ConfiteriaComponent,
-    TybaEmpresaComponent
+    TybaEmpresaComponent,
+    CategoriasComponent,
+    MovieInfoComponent
   ],
   imports: [
     BrowserModule,
