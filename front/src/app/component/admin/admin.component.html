@@ -9,13 +9,20 @@
                         <li class="nav-item">
                         <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Usuarios</a>
                         </li>
+
                         <li class="nav-item">
-                        <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Película </a>				   	
+                        <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Registro película </a>				   	
                         </li>
+
+                       <li class="nav-item">
+                            <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Listado películas</a>
+                        </li> 
+
+
                     </ul>
                     <div class="tab-content" id="myTabContent">
 
-<!----------------------------------------------------------Formulario ------------------------------------------------>
+<!----------------------------------------------------------Formulario -------------------------------------------------------------------------->
                         <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
                             <div class="card">
                                 <div class="card-header">
@@ -54,7 +61,7 @@
                             </div>
                         </div>
 
-<!----------------------- Formulario subir peliculas ( cover, wallpaper y trailer ) ------------->
+<!----------------------- Formulario subir peliculas ( cover, wallpaper y trailer ) ---------------------------------------------------------------->
 
                         <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
                             <div class="card">
@@ -62,7 +69,7 @@
                                     <h4 style="color: black;"><i class="fa fa-film" style="color: red;" ></i> Registrar Pelicula </h4>
                                 </div>
                                 <div class="card-body">
-                                    <form class="form" role="form" autocomplete="off" style="color: black;">
+                                    <form class="form"  #formularioRegistroPeli="ngForm" (ngSubmit)="registrarPelicula()"  role="form" autocomplete="off" style="color: black;">
 
 
                                         <div class="form-group row">
@@ -71,14 +78,14 @@
 
                                                 <!-- categoria de la pelicula:Asesinos, Monstruos, Paranormal y Psicológico  -->
 
-                                                <input class="form-control" type="text" id="nombre" placeholder="" name="nombreCancion" list="categorias"
-                                                #nombreCancion="ngModel" [(ngModel)]="cancionRegistrada.nombreCancion" />
+                                                <input class="form-control" type="text" id="categoria" placeholder="" name="categoria" list="categorias"
+                                                #categoria="ngModel" [(ngModel)]="peliculaRegistrada.categoria" />
                                         
                                                                                 <datalist id="categorias">
-                                                                                <option value="Asesinos">
-                                                                                <option value="Monstruos">
-                                                                                <option value="Paranormal">
-                                                                                <option value="Psicológico">
+                                                                                <option value="asesinos">
+                                                                                <option value="monstruos">
+                                                                                <option value="paranormal">
+                                                                                <option value="psicologico">
                                                                                 </datalist>
                                             </div>
                                         </div>
@@ -87,59 +94,66 @@
                                             <label class="col-lg-3 col-form-label form-control-label">Titulo
                                                 </label>
                                             <div class="col-lg-9">
-                                                <input class="form-control"  type="text" id="album" placeholder="Titulo" name="albumCancion"
-                                                #albumCancion="ngModel" [(ngModel)]="cancionRegistrada.albumCancion" />
+                                                <input class="form-control"  type="text" id="titulo" placeholder="Titulo" name="titulo"
+                                                #titulo="ngModel" [(ngModel)]="peliculaRegistrada.titulo" />
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label class="col-lg-3 col-form-label form-control-label">Sinopsis</label>
                                             <div class="col-lg-9">
-                                                <input class="form-control"  type="text" id="emocion" placeholder="Sinopsis" name="emocionCancion"
-                                                #emocionCancion="ngModel" [(ngModel)]="cancionRegistrada.emocionCancion" />
+                                                <input class="form-control"  type="text" id="sinopsis" placeholder="Sinopsis" name="sinopsis"
+                                                #sinopsis="ngModel" [(ngModel)]="peliculaRegistrada.sinopsis" />
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-3 col-form-label form-control-label">Director</label>
                                             <div class="col-lg-9">
-                                                <input class="form-control"  type="text" id="genero" placeholder="Director" name="generoCancion" 
-                                                #generoCancion="ngModel" [(ngModel)]="cancionRegistrada.generoCancion" />
+                                                <input class="form-control"  type="text" id="director" placeholder="Director" name="director" 
+                                                #director="ngModel" [(ngModel)]="peliculaRegistrada.director" />
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-3 col-form-label form-control-label">Protagonista</label>
                                             <div class="col-lg-9">
                                                
-                                                <input class="form-control"  type="text" id="artista" placeholder="Protagonista" name="artistaCancion" 
-                                                #artistaCancion="ngModel" [(ngModel)]="cancionRegistrada.artistaCancion" />
+                                                <input class="form-control"  type="text" id="protagonista" placeholder="Protagonista" name="protagonista" 
+                                                #protagonista="ngModel" [(ngModel)]="peliculaRegistrada.protagonista" />
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-3 col-form-label form-control-label">Duración</label>
                                             <div class="col-lg-9">
                                                
-                                                <input class="form-control"  type="text" id="anio" placeholder="HH:MM:SS" name="anioCancion"
-                                                #anioCancion="ngModel" [(ngModel)]="cancionRegistrada.anioCancion"  />
+                                                <input class="form-control"  type="text" id="duracion" placeholder="HH:MM:SS" name="duracion"
+                                                #duracion="ngModel" [(ngModel)]="peliculaRegistrada.duracion"  />
                                             </div>
                                         </div>
-
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label">Archivo online</label>
+                                            <div class="col-lg-9">
+                                               
+                                                <input class="form-control"  type="text" id="online" placeholder="Link online  URL" name="online"
+                                                #online="ngModel" [(ngModel)]="peliculaRegistrada.online"  />
+                                            </div>
+                                        </div>
 
                                         <div class="centrar">
                                             <h6 style="color: black;">Seleccionar archivos:</h6>
                                             
-                                                          <label class="sub1">  <input   class="sub"   type="file" placeholder="Subir Cancion" (change)="subirArchivo($event)" /> <i class="fa fa-cloud-upload"></i> Trailer 
+                                                          <label class="sub1">  <input   class="sub"   type="file" placeholder="Subir Trailer" (change)="subirArchivoTrailer($event)" /> <i class="fa fa-cloud-upload"></i> Trailer 
                                                           </label>&nbsp;
                                                           
                                                        
-                                                          <label class="sub1">   <input   class="sub"   type="file" placeholder="Subir Imagen Pósters" (change)="subirArchivoImg($event)" /> <i class="fa fa-cloud-upload"></i> Pósters 
+                                                          <label class="sub1">   <input   class="sub"   type="file" placeholder="Subir Imagen Cover" (change)="subirArchivoCover($event)" /> <i class="fa fa-cloud-upload"></i> Cover
                                                         </label>&nbsp;
                                             
                                             
-                                                        <label class="sub1">  <input   class="sub"   type="file" placeholder="Subir Película completa" (change)="subirArchivo($event)" /> <i class="fa fa-cloud-upload"></i> Película
-                                                        </label>&nbsp;
+                                                        <!-- <label class="sub1">  <input   class="sub"   type="text" placeholder="Link Película completa" [(ngModel)]="subirArchivoPelicula($event)" /> <i class="fa fa-cloud-upload"></i> Película
+                                                        </label>&nbsp; -->
                                                         
                                                      
-                                                        <label class="sub1">   <input   class="sub"   type="file" placeholder="Subir Imagen Wallpaper " (change)="subirArchivoImg($event)" /> <i class="fa fa-cloud-upload"></i> Wallpaper 
+                                                        <label class="sub1">   <input   class="sub"   type="file" placeholder="Subir Imagen Wallpaper " (change)="subirArchivoWallpaper($event)" /> <i class="fa fa-cloud-upload"></i> Wallpaper 
                                                       </label>&nbsp;
                                             
                                                     </div>
