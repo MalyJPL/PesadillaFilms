@@ -1,0 +1,92 @@
+//baseDatos película
+p1 = {
+    categoria: 'asesinatos',
+    titulo: 'Saw',
+    sinopsis:'Adam se despierta encadenado a un tubo oxidado dentro de una decrépita cámara subterránea. A su lado, hay otra persona encadenada, el Dr. Lawrence Gordon. Entre ellos hay un hombre muerto. Ninguno de los dos sabe por qué está allí, pero tienen un casette con instrucciones para que el Dr. Gordon mate a Adam en un plazo de ocho horas. Recordando una investigación de asesinato llevada a cabo por un detective llamado Tapp, Gordon descubre que él y Adam son victimas de un psicópata conocido como Jigsaw. Sólo disponen de unas horas para desenredar el complicado rompecabezas en el que están inmersos.',
+    director:'James Wan',
+    protagonistas:'Cary Elwes, Leigh Whannell, Danny Glover, Monica Potter, Dina Meyer, Tobin Bell, Shawnee Smith, Ken Leung, Alexandra Bokyun Chun, Michael Emerson, Makenzie Vega, Mike Butters, Paul Gutrecht, Benito Martinez',
+    duracion: '100 min.',
+    trailer: 'sawTrailer.mp4',
+    online: 'https://waaw.tv/watch_video.php?v=b0VQZ1p6NkFsY2dqUHMrQXNHUUtPV3NscDFLWGppMklPbjl6RlVvd0t2aHRXTVN2WmxVRXFmREFpaU5wU1F5SQ%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
+    cover: 'sawCover.jpg',
+    poster: 'sawWallpaper.jpg',
+    estado: 1
+}
+
+p2 = {
+    categoria: 'asesinatos',
+    titulo: 'La Masacre de Texas',
+    sinopsis:'Durante un viaje de Texas a México, un grupo de jóvenes recoge a una autoestopista ensangrentada que asegura que es la única superviviente de una masacre ocurrida la noche anterior en una casa cercana. Remake del clásico homónimo de Tobe Hooper (1974).',
+    director:'Marcus Nispel',
+    protagonistas:'Jessica Biel, Jonathan Tucker, Eric Balfour, Erica Leerhsen, Mike Vogel, Lauren German, R. Lee Ermey, Brad Leland, Andrew Bryniarski, David Dorfman, Terrence Evans, Marietta Marich',
+    duracion: '98 min.',
+    trailer: 'texasTrailer.mp4',
+    online: 'https://waaw.tv/watch_video.php?v=UnlMWDQ0YXhQQ1NLcGN0SktkMnozS2Uwc0gxMGp2L05XNWs1VkdLSHRXL0M5Nmc3WDVQUDVUdWt2SFJlQjJKWA%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
+    cover: 'texasCover.jpg',
+    poster: 'texasWallpaper.jpg',
+    estado: 1
+}
+
+p3 = {
+    categoria: 'psicologico',
+    titulo: 'Doctor sueño',
+    sinopsis:'Años después de los eventos de El Resplandor, el ahora adulto Dan Torrance debe proteger a una niña con poderes similares de un culto conocido como The True Knot, quienes cazan niños con poderes para permanecer inmortales.',
+    director:'Mike Flanagan',
+    protagonistas:'Ewan McGregor, Rebecca Ferguson, Kyliegh Curran, Cliff Curtis, Zahn McClarnon, Emily Alyn Lind, Selena Anduze, Robert Longstreet, Carel Struycken, Catherine Parker',
+    duracion: '',
+    trailer: '',
+    online: '',
+    cover: 'doctorCover.jpg',
+    poster: 'doctorWallpapeer.jpg',
+    estado: 1
+}
+
+p4 = {
+    categoria: 'monstruos',
+    titulo: 'Alien, el octavo pasajero',
+    sinopsis:'De regreso a la Tierra, la nave de carga Nostromo interrumpe su viaje y despierta a sus siete tripulantes. El ordenador central, MADRE, ha detectado la misteriosa transmisión de una forma de vida desconocida, procedente de un planeta cercano aparentemente deshabitado. La nave se dirige entonces al extraño planeta para investigar el origen de la comunicación.',
+    director:'Ridley Scott',
+    protagonistas:'Sigourney Weaver, John Hurt, Yaphet Kotto, Tom Skerritt, Veronica Cartwright, Harry Dean Stanton, Ian Holm',
+    duracion: '116 min.',
+    trailer: 'alienTrailer.mp4',
+    online: 'https://waaw.tv/watch_video.php?v=WU81aVRYczZ0dWJvdC8xenRNNFpLTmwydHpaN24vOG5mYkRCMkxOQ3Y4dDRibHo1cmhvQ1AzWEd1T2sydldCbw%3D%3D',
+    cover: 'alienCover.jpg',
+    poster: 'alienWallpaper.jpg',
+    estado: 1
+}
+
+
+p5 = {
+    categoria: 'paranormal',
+    titulo: 'Posesión Infernal',
+    sinopsis:'Cinco amigos se alojan en una cabaña de Tenessee para así poder ayudar a una de los jóvenes, que se encuentra en rehabilitación por drogas. Estar sin sus drogas convierte a la chica en una persona agresiva, lo que llevará a sus amigos a no darse cuenta de que en realidad esta poseída por demonios que fueron desatados al leer el Necromicon... Remake del clásico de Raimi.',
+    director:'Fede Álvarez',
+    protagonistas:'Jane Levy, Shiloh Fernandez, Lou Taylor Pucci, Elizabeth Blackmore, Jessica Lucas, Phoenix Connolly, Jim McLarty, Sian Davis',
+    duracion: '91 min.',
+    trailer: 'posesionTrailer.mp4',
+    online: 'https://waaw.tv/watch_video.php?v=cGUzWEVCYlhQdzM3RTBuMzFmOXhUTm9ONERtc3B1bCtvcnJBSm9zMVFVYnk1TWIwU0RxV0c5MGQrdkE4WkVoag%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
+    cover: 'posesionCoveer.jpg',
+    poster: 'posesionWallpaper.jpg',
+    estado: 1
+}
+
+/* {
+    categoria: '',
+    titulo: '',
+    sinopsis:'',
+    director:'',
+    protagonistas:'',
+    duracion: '',
+    trailer: '',
+    online: '',
+    cover: '',
+    poster: '',
+    estado: 1
+}
+ */
+
+
+
+
+
+db.peliculas.insert( [p1,p2,p3,p4,p5] )

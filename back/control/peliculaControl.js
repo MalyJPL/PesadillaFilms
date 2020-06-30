@@ -293,11 +293,12 @@ function busquedaPorPalabra(req, res) {
   var palabra= req.params.palabra;
 
 Pelicula.find({
-   $or:{ categoria: {$regex: palabra}} ,
-   $or: {titulo: {$regex : palabra}} , 
-  $or: {sinopsis: {$regex : palabra}} ,
- $or: {director: {$regex : palabra}} ,
-  $or: {protagonistas: {$regex : palabra}}
+   $or:[{ categoria: {$regex: palabra}}, 
+    {titulo: {$regex : palabra}} , 
+    {sinopsis: {$regex : palabra}} ,
+    {director: {$regex : palabra}} ,
+     {protagonistas: {$regex : palabra}}
+   ]
 }
 , 
   function (err, peliculasEncontradas){
@@ -305,10 +306,10 @@ Pelicula.find({
     res.status(500).send({ message: "Error en el servidor" });
 } else {
     if (!peliculasEncontradas) {
-        res.status(200).send({ message: "No fue posible encontrar películas en la categoría" });
+        res.status(200).send({ message: "No fue posible encontrar películas para este criterio de búsqueda" });
     } else {
         res.status(200).send({
-            message: "¡Categoría recuperada!",
+            message: "¡Búsqueda exitosa!",
             peliculas: peliculasEncontradas
         });
     }
@@ -339,6 +340,22 @@ Pelicula.find(function (err, peliculasEncontradas){
   });
 }
 
+//borrarPelicula
+function borrarPelicula(req, res) {
+  var peliculaId= req.params.id;
+
+
+  Pelicula.findByIdAndDelete(peliculaId, (err, peliculaBorrada) => {
+      if (err) {
+          res.status(500).send({ message: "Error en el servidor" });
+      } else {
+              res.status(200).send({
+                  message: "¡Pelicula Borrada!",
+                  pelicula: peliculaBorrada
+              });
+          }
+        });
+}
  
 
 // Exportar paquete de funciones
@@ -350,5 +367,6 @@ module.exports = {
   actualizarPelicula,
   mostrarCategoria,
   busquedaPorPalabra,
-  buscarTodas
+  buscarTodas,
+  borrarPelicula
 }

@@ -18,6 +18,8 @@ export class PeliculaService {
 // Declarar la variable url de la api
 url = 'http://localhost:3000/api/';
 
+  // Declarar la variable pelicula registrad
+ 
 
 // Declarar variable privada de tipo HttpClient
   constructor(
@@ -26,33 +28,47 @@ url = 'http://localhost:3000/api/';
 
 
   // Declarar el método del servicio registro
-  PeliculaNueva(nuevaPelicula){
-    let params = JSON.stringify(nuevaPelicula);
+  registrarPelicula(peliculaRegistrada){
+    let params = JSON.stringify(peliculaRegistrada);
     let options ={
       headers : new HttpHeaders({'Content-Type': 'application/json'})
     };
     return this._http.post(
-      this.url + 'nuevaPelicula',
+      this.url + 'registrar-pelicula/',
       params,
       options
     ).pipe(map(res => res))
   }
 
-
- //-------------------------------------------------------------
-// Declarar el método del servicio Actualizar pelicula
-
-  ActualizarPelicula(id,DatosNuevos){
-    console.log(id);
-    console.log(DatosNuevos);
-    let params = JSON.stringify(DatosNuevos);
-    let options = {
-      headers : new HttpHeaders({'Content-Type' : 'application/json'})
-    }
+///----subir archivos
+cargarTrailer(file: File, id){
+  let formData = new FormData();
+   formData.append('video', file);
     return this._http.put(
-      this.url + 'actualizarPelicula/' + id,
-      params,
-      options
+      this.url + 'subir-video/' + id,
+      formData
     ).pipe(map(res => res));
   }
+
+cargarCover(file: File, id){
+  let formData = new FormData();
+   formData.append('imagen', file);
+    return this._http.put(
+      this.url + 'subir-cover/' + id + '/cover',
+      formData
+    ).pipe(map(res => res));
+  }
+
+cargarWallpaper(file: File, id){
+  let formData = new FormData();
+   formData.append('imagen', file);
+    return this._http.put(
+      this.url + 'subir-wallpaper/' + id + '/wallpaper',
+      formData
+    ).pipe(map(res => res));
+  }
+
 }
+
+
+
