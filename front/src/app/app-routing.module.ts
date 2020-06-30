@@ -39,7 +39,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'intro', component: IntroComponent },
    { path: 'movie-info', component: MovieInfoComponent }
-  
+
 ];
 
 // Importamos en la raíz de RouterModule el array de rutas y luego exportamos el nuevo Módulo
