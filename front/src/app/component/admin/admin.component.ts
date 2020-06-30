@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+// Importar el modelo de Usuario
+import { Usuario } from '../../modelo/usuario';
+import { Pelicula } from '../../modelo/pelicula';
+// Importar el servicio Usuario
+import { UsuarioService } from '../../service/usuario.service';
+import { PeliculaService } from '../../service/pelicula.service';
 
 @Component({
   selector: 'app-admin',
