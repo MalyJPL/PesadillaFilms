@@ -34,27 +34,41 @@ url = 'http://localhost:3000/api/';
       headers : new HttpHeaders({'Content-Type': 'application/json'})
     };
     return this._http.post(
-      this.url + 'registrar-pelicula',
+      this.url + 'registrar-pelicula/',
       params,
       options
     ).pipe(map(res => res))
   }
 
-
- //-------------------------------------------------------------
-// Declarar el método del servicio Actualizar pelicula
-
-  ActualizarPelicula(id,DatosNuevos){
-    console.log(id);
-    console.log(DatosNuevos);
-    let params = JSON.stringify(DatosNuevos);
-    let options = {
-      headers : new HttpHeaders({'Content-Type' : 'application/json'})
-    }
+///----subir archivos
+cargarTrailer(file: File, id){
+  let formData = new FormData();
+   formData.append('video', file);
     return this._http.put(
-      this.url + 'actualizarPelicula/' + id,
-      params,
-      options
+      this.url + 'subir-video/' + id,
+      formData
     ).pipe(map(res => res));
   }
+
+cargarCover(file: File, id){
+  let formData = new FormData();
+   formData.append('imagen', file);
+    return this._http.put(
+      this.url + 'subir-cover/' + id + '/cover',
+      formData
+    ).pipe(map(res => res));
+  }
+
+cargarWallpaper(file: File, id){
+  let formData = new FormData();
+   formData.append('imagen', file);
+    return this._http.put(
+      this.url + 'subir-wallpaper/' + id + '/wallpaper',
+      formData
+    ).pipe(map(res => res));
+  }
+
 }
+
+
+
