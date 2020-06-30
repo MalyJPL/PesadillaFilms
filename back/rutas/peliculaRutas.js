@@ -27,7 +27,6 @@ api.put('/subir-wallpaper/:idPelicula/:tipoImg',  subirWallpaperDirectorio, Peli
 // Ruta mostrar Imagen Usuario
 api.get('/obtener-archivo/:idPelicula/:tipo', PeliculaControl.mostrarArchivos);
 
-
 //Actualizar película
 api.put('/actualizar-pelicula/:id', PeliculaControl.actualizarPelicula);
 
@@ -39,6 +38,9 @@ api.get('/buscar-palabra/:palabra', PeliculaControl.busquedaPorPalabra);
 
 //mostrar todas las películas
 api.get('/buscar-todas', PeliculaControl.buscarTodas);
+
+//borrarPelicula
+api.put('/borrar-pelicula/:id', PeliculaControl.borrarPelicula);
 
 
 // Exportar el módulo
