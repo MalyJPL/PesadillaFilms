@@ -1,6 +1,6 @@
 //baseDatos película
 p1 = {
-    categoria: 'asesinatos',
+    categoria: 'asesinos',
     titulo: 'Saw',
     sinopsis:'Adam se despierta encadenado a un tubo oxidado dentro de una decrépita cámara subterránea. A su lado, hay otra persona encadenada, el Dr. Lawrence Gordon. Entre ellos hay un hombre muerto. Ninguno de los dos sabe por qué está allí, pero tienen un casette con instrucciones para que el Dr. Gordon mate a Adam en un plazo de ocho horas. Recordando una investigación de asesinato llevada a cabo por un detective llamado Tapp, Gordon descubre que él y Adam son victimas de un psicópata conocido como Jigsaw. Sólo disponen de unas horas para desenredar el complicado rompecabezas en el que están inmersos.',
     director:'James Wan',
@@ -9,12 +9,12 @@ p1 = {
     trailer: 'sawTrailer.mp4',
     online: 'https://waaw.tv/watch_video.php?v=b0VQZ1p6NkFsY2dqUHMrQXNHUUtPV3NscDFLWGppMklPbjl6RlVvd0t2aHRXTVN2WmxVRXFmREFpaU5wU1F5SQ%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
     cover: 'sawCover.jpg',
-    poster: 'sawWallpaper.jpg',
+    wallpaper: 'sawWallpaper.jpg',
     estado: 1
 }
 
 p2 = {
-    categoria: 'asesinatos',
+    categoria: 'asesinos',
     titulo: 'La Masacre de Texas',
     sinopsis:'Durante un viaje de Texas a México, un grupo de jóvenes recoge a una autoestopista ensangrentada que asegura que es la única superviviente de una masacre ocurrida la noche anterior en una casa cercana. Remake del clásico homónimo de Tobe Hooper (1974).',
     director:'Marcus Nispel',
@@ -23,7 +23,7 @@ p2 = {
     trailer: 'texasTrailer.mp4',
     online: 'https://waaw.tv/watch_video.php?v=UnlMWDQ0YXhQQ1NLcGN0SktkMnozS2Uwc0gxMGp2L05XNWs1VkdLSHRXL0M5Nmc3WDVQUDVUdWt2SFJlQjJKWA%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
     cover: 'texasCover.jpg',
-    poster: 'texasWallpaper.jpg',
+    wallpaper: 'texasWallpaper.jpg',
     estado: 1
 }
 
@@ -37,7 +37,7 @@ p3 = {
     trailer: '',
     online: '',
     cover: 'doctorCover.jpg',
-    poster: 'doctorWallpapeer.jpg',
+    wallpaper: 'doctorWallpapeer.jpg',
     estado: 1
 }
 
@@ -51,7 +51,7 @@ p4 = {
     trailer: 'alienTrailer.mp4',
     online: 'https://waaw.tv/watch_video.php?v=WU81aVRYczZ0dWJvdC8xenRNNFpLTmwydHpaN24vOG5mYkRCMkxOQ3Y4dDRibHo1cmhvQ1AzWEd1T2sydldCbw%3D%3D',
     cover: 'alienCover.jpg',
-    poster: 'alienWallpaper.jpg',
+    wallpaper: 'alienWallpaper.jpg',
     estado: 1
 }
 
@@ -66,7 +66,7 @@ p5 = {
     trailer: 'posesionTrailer.mp4',
     online: 'https://waaw.tv/watch_video.php?v=cGUzWEVCYlhQdzM3RTBuMzFmOXhUTm9ONERtc3B1bCtvcnJBSm9zMVFVYnk1TWIwU0RxV0c5MGQrdkE4WkVoag%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
     cover: 'posesionCoveer.jpg',
-    poster: 'posesionWallpaper.jpg',
+    wallpaper: 'posesionWallpaper.jpg',
     estado: 1
 }
 
@@ -80,7 +80,7 @@ p5 = {
     trailer: '',
     online: '',
     cover: '',
-    poster: '',
+    wallpaper: '',
     estado: 1
 }
  */

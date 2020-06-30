@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 
 import { stringify } from 'querystring';
 
+
 @Injectable()
 export class PeliculaService {
 
@@ -34,7 +35,7 @@ url = 'http://localhost:3000/api/';
       headers : new HttpHeaders({'Content-Type': 'application/json'})
     };
     return this._http.post(
-      this.url + 'registrar-pelicula/',
+      this.url + 'registrar-pelicula',
       params,
       options
     ).pipe(map(res => res))
