@@ -11,6 +11,7 @@ import { UsuarioService } from '../../service/usuario.service';
 // Importar el manejador de rutas
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -68,6 +69,8 @@ export class LoginComponent implements OnInit {
           // Consumir el servicio obtenerNombreUsuario
           this.identidad = this.usuarioService.obtenerNombreUsuario();
 
+          console.log(localStorage.getItem('sesion'));
+
           // alert(`Hola ${this.identidad.nombre}!! Bienvenid@`);
 
           Swal.fire({           
@@ -105,3 +108,4 @@ export class LoginComponent implements OnInit {
 
 }
 
+ 

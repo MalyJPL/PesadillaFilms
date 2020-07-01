@@ -101,14 +101,14 @@
                 <div class="form-container">
                     
                     <div class="welcome">
-                        <h2>Buenos dias!</h2>
-                        <h2>Registrate ahora intenta no perder la cabeza</h2>
+                        <h2>¡Siniestros días!</h2>
+                        <h2>Regístrate ahora e intenta no perder la cabeza</h2>
                         <div class="img-container">
                             <div *ngFor="let img of imagen5"   ><img class="logo" src = "assets/img/logo.png" /></div>
                           </div>
                     </div>
                     <div class="info-form">
-                        <p>Ingresa correctamente los datos y accede a nuestro sistema de entretenimiento o muere en el intento </p>
+                        <p>Ingresa correctamente los datos y accede a nuestro sistema de entretenimiento, o muere en el intento </p>
                     </div>
                     <form #formularioRegistro="ngForm" (ngSubmit)="registrarUsuario()">
                         <div class="input-div one">
@@ -161,56 +161,50 @@
 
 
                         <div class="info-form"  >
-                            <p  style="margin-left: 60px;" >Elije el tipo de membresia </p>
+                            <p  style="margin-left: 60px;" >Elije el tipo de membresía </p>
                         </div>
                         <br>
 
-                        <div class="info-form">
-                            <p style="margin-left: 60px;">Membresia Anabelle</p>
+                        
+                        <input class="form-control" type="text" id="categoria" placeholder="" name="categoria" list="membresias"
+                                                #membresia="ngModel" [(ngModel)]="usuarioRegistro.membresia" />
+                                        
+                                                                                <datalist id="membresias">
+                                                                                <option value="Anabelle">
+                                                                                <option value="Chucky">
+                                                                                </datalist>
+                        <div>
+                        <table> 
+                            <th>
+                        <img class="logo" src = "assets/ana.png" width="60" height="150"/>
+                    </th>
+                    <th>
+                        <img class="logo" src = "assets/chu.png" width="60" height="150"/>
+                        </th>
+                        </table>   
                         </div>
-                        
-                        
-                        <img class="logo" src = "assets/ana.png" width="100" height="120"/>
-                        <br><br><br>
-
-
-                        <div class="info-form">
-                            <p style="margin-left: 60px;">Membresia Chucky</p>
-                        </div>
-                        
-                    
-                        <img class="logo" src = "assets/chu.png" width="100" height="120"/>
-                        <br><br><br>
 
                         <div class="info-form"  >
-                            <p  style="margin-left: 80px;" >Metodos de pago </p>
+                            <p  style="margin-left: 80px;" >Métodos de pago </p>
                         </div>
                         <br>
 
                         <div class="info-form">
                             <p style="margin-left: 110px;">Visa</p>
                         </div>
-                        
-
-
-                       
+    
                         <input type="checkbox" name="vehicle1" value="Bike" style="margin-left: 120px;">
-                        <img class="logo" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Former_Visa_%28company%29_logo.svg/3072px-Former_Visa_%28company%29_logo.svg.png" width="5" height="75" style="margin-right: 50px;"/>
-                        <br><br><br>
-
-
+                        <img class="logo" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Former_Visa_%28company%29_logo.svg/3072px-Former_Visa_%28company%29_logo.svg.png" style="margin-right: 50px;"/>
+                        <br>
 
                         <div class="info-form">
                             <p style="margin-left: 100px;">MasterCard</p>
                         </div>
-                        
-
 
                        
                         <input type="checkbox" name="vehicle1" value="Bike" style="margin-left: 120px;">
-                        <img class="logo" src = "https://www.penfinancial.com/SharedContent/images/1aMastercard.jpg" width="10" height="75" style="margin-right: 50px;"/>
-                        <br><br><br>
-
+                        <img class="logo" src = "https://www.penfinancial.com/SharedContent/images/1aMastercard.jpg"  style="margin-right: 50px;"/>
+                        <br>
 
                         <div class="info-form">
                             <p style="margin-left: 110px;">PayPal</p>

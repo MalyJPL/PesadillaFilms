@@ -2,20 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-//Importamos el botton de angular material
-import {MatButtonModule} from '@angular/material/button';
-
-//Importamos el modulo de stteper de angular material 
-import {MatStepperModule} from '@angular/material/stepper';
-
-//Importamos el modulo de input de angular material
-import { MatInputModule } from '@angular/material/input';
-
-//Importamos el modulo de progress spinner de angular material
-import  { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
-import { MatSnackBarModule } from '@angular/material/snack-bar';
- 
 
 
 // Importar módulo de rutas
@@ -100,16 +86,11 @@ import { IntroComponent } from './component/intro/intro.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatStepperModule,
-    MatInputModule,
-    MatSnackBarModule,
-    MatProgressSpinnerModule,    
+    BrowserAnimationsModule,   
     ModalModule.forRoot(),
     HttpClientModule,
    CarouselModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
 /*     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),  */
