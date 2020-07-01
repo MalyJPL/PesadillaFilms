@@ -10,7 +10,7 @@ export class Pelicula {
         public trailer: String,
         public online: String,
         public cover: String,
-        public poster: String,
+        public wallpaper: String,
         public estado: Boolean
     ){}
 }

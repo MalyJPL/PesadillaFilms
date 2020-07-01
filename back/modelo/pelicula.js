@@ -12,7 +12,7 @@ var PeliculaSchema = new Schema({
     trailer: String,
     online: String,
     cover: String,
-    poster: String,
+    wallpaper: String,
     estado: Boolean
 });
 

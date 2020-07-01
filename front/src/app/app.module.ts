@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { InMemoryDataService } from './service/in-memory-data.service';
+/* import { InMemoryDataService } from './service/in-memory-data.service';  */
 import { MoviesComponent } from './component/movies/movies.component';
 import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
 import { FrontpageComponent } from './component/frontpage/frontpage.component';
@@ -21,7 +21,7 @@ import { MinutePipe } from './pipe/minute.pipe';
 import { ShowtimesComponent } from './component/showtimes/showtimes.component';
 import { DayPipe } from './pipe/day.pipe';
 import { DatabaseService } from './service/database.service';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+/* import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';  */
 import { MoviesListComponent } from './component/movies-list/movies-list.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SafePipe } from './pipe/safe.pipe';
@@ -78,9 +78,9 @@ import { IntroComponent } from './component/intro/intro.component';
     FormsModule,    
     ModalModule.forRoot(),
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
+/*     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    ),
+    ),  */
     CarouselModule.forRoot()
   ],
   providers: [DatabaseService, UsuarioService, PeliculaService],

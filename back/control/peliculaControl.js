@@ -22,7 +22,7 @@ function registrarPelicula(req, res) {
   pelicula.trailer = null;
   pelicula.online = parametros.online;
   pelicula.cover = null;
-  pelicula.poster = null;
+  pelicula.wallpaper = null;
   pelicula.estado = 1;
 
   pelicula.save((err, peliculaNueva) => {
@@ -110,7 +110,7 @@ function subirVideo(req, res) {
   }
 }
 
-// Función Subir IMG cover y poster
+// Función Subir IMG cover y wallpaper
 function subirImgPelicula(req, res) {
   var peliculaId = req.params.idPelicula;
   var tipoImg = req.params.tipoImg;
@@ -219,7 +219,6 @@ Pelicula.findById(idPelicula, 'cover wallpaper trailer', function (err, pelicula
   if(tipo === 'cover'){
   archivo = pelicula.cover;
    ruta = "./files/peliculas/cover/" + archivo;
-   console.log(`la ruta es ${ruta}`)
   } 
   // Ubicación del archivo    
 if(tipo === 'wallpaper'){
