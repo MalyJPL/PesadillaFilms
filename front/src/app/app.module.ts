@@ -2,6 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
+//Importamos el botton de angular material
+import {MatButtonModule} from '@angular/material/button';
+
+//Importamos el modulo de stteper de angular material 
+import {MatStepperModule} from '@angular/material/stepper';
+
+//Importamos el modulo de input de angular material
+import { MatInputModule } from '@angular/material/input';
+
+//Importamos el modulo de progress spinner de angular material
+import  { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+ 
+
+
 // Importar módulo de rutas
 import { AppRoutingModule } from './app-routing.module';
 // Importar Módulo Formularios
@@ -12,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-/* import { InMemoryDataService } from './service/in-memory-data.service';  */
+
+/* import { InMemoryDataService } from './service/in-memory-data.service'; */
 import { MoviesComponent } from './component/movies/movies.component';
 import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
 import { FrontpageComponent } from './component/frontpage/frontpage.component';
@@ -21,7 +38,7 @@ import { MinutePipe } from './pipe/minute.pipe';
 import { ShowtimesComponent } from './component/showtimes/showtimes.component';
 import { DayPipe } from './pipe/day.pipe';
 import { DatabaseService } from './service/database.service';
-/* import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';  */
+/* import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'; */
 import { MoviesListComponent } from './component/movies-list/movies-list.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SafePipe } from './pipe/safe.pipe';
@@ -40,9 +57,14 @@ import { AdminComponent } from './component/admin/admin.component';
 
 // Importar Servicio Usuario y película
 import { UsuarioService } from './service/usuario.service';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 import { PeliculaService } from './service/pelicula.service';
 import { IntroComponent } from './component/intro/intro.component';
 /* import { SillasComponent } from './component/sillas/sillas.component'; */
+
 
 
 @NgModule({
@@ -65,23 +87,34 @@ import { IntroComponent } from './component/intro/intro.component';
     RegistroComponent,
     ConfiteriaComponent,
     TybaEmpresaComponent,
+    AdminComponent,
     CategoriasComponent,
     MovieInfoComponent,
     AdminComponent,
     IntroComponent,
 /*     SillasComponent */
     
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,    
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatStepperModule,
+    MatInputModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,    
     ModalModule.forRoot(),
     HttpClientModule,
+   CarouselModule.forRoot(),
+    BrowserAnimationsModule
 /*     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),  */
     CarouselModule.forRoot()
+
   ],
   providers: [DatabaseService, UsuarioService, PeliculaService],
   bootstrap: [AppComponent]
