@@ -1,9 +1,84 @@
-<form #formularioLogin="ngForm" (ngSubmit)="loginUsuario()">
-    <input type="text" placeholder="Correo Electrónico" name="correo"
-        #correo="ngModel" [(ngModel)]="login.correo" />
-    <br>
-    <input type="password" placeholder="Contraseña" name="contrasena"
-        #contrasena="ngModel" [(ngModel)]="login.contrasena" />
-    <br><br>
-    <button type="submit" >Iniciar Sesión</button>
-</form>
+
+
+  
+
+  
+<body>
+ 
+
+<div class="container">
+        <div class="modal-container">
+            <div class="banner-container">
+                <div class="img-container">
+                  <div *ngFor="let img of imagen5"   ><img class="logo" [src] = "img" /></div>
+                </div>
+                <div class="info-banner">
+                    <p>Aprende a enseñar porque enseñando aprenderás</p>
+
+                    <div class="img-btn"  > 
+
+
+        
+        
+
+                      <span class="btn btn-danger" routerLink="/registro">Registrate</span>
+                      
+                    </div><br><br>
+
+                    <div class="img-btn"  > 
+        
+                      <span class="btn btn-success" routerLink="/">Home</span>
+                    </div>
+
+                    <br><br>
+
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="welcome">
+                    <h2>Buenos dias!</h2>
+                    <h2>Inicia sesión ahora intenta no perder la cabeza</h2>
+                </div>
+                <div class="info-form">
+                    <p>Ingresa correctamente los datos y accede a nuestro sistema de entretenimiento o muere en el intento </p>
+                </div>
+                <form #formularioLogin="ngForm" (ngSubmit)="loginUsuario()" >
+                    <div class="input-div one">
+                        <div class="icono">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h5>Correo</h5>
+                            <input type="text"   name="correo"
+                        #correo="ngModel" [(ngModel)]="login.correo" />
+                        </div>
+                    </div>
+                    <div class="input-div two">
+                        <div class="icono">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h5>Contraseña</h5>
+                            <input type="password"  name="contrasena" placeholder=""
+                            #contrasena="ngModel" [(ngModel)]="login.contrasena" />
+                        </div>
+                    </div>
+                    <a href="#">¿Olvidaste la contraseña?</a>
+                    <input type="submit" class="btn" value="Iniciar Sesión">
+                    <br><br>
+                    <div class="info-form">
+                      <p>Ingresa correctamente los datos y accede a nuestro sistema</p>
+                  </div>
+                  
+                </form>
+               
+            </div>
+        </div>
+    </div>
+
+   
+
+
+  </body>
+
+

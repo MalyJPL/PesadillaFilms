@@ -1,18 +1,252 @@
-<div>
+
+<!-- <body> 
+
+<div class="cont">
+ <div class="form sign-in">    
+
+<div *ngFor="let img of imagen5"><img class="logo" [src] = "img" /></div>
+
+ <h2>Registro</h2> -->
+<!----------------------- Formulario -->
+
+            <!-- <form #formularioRegistro="ngForm" (ngSubmit)="registrarUsuario()">
+                <label> <input type="text" placeholder="Nombre" name="nombre"
+                        #nombre="ngModel" [(ngModel)]="usuarioRegistro.nombre" /></label>
+                    
+                <label> <input type="text" placeholder="Apellido" name="apellido"
+                        #apellido="ngModel" [(ngModel)]="usuarioRegistro.apellido" /></label>
+                    
+                <label> <input type="text" placeholder="Correo" name="correo"
+                        #correo="ngModel" [(ngModel)]="usuarioRegistro.correo" /></label>
+                    
+                <label> <input type="password" placeholder="Contraseña" name="contrasena"
+                        #contrasena="ngModel" [(ngModel)]="usuarioRegistro.contrasena" /></label>
+                    <br>
+                    <button  class="submit" type="submit">Registrarse</button>
+            </form>
+
+</div> -->
+
+<!----------------------- Formulario fin -->
+
+
+
+<!-- <div class="sub-cont">
+    <div class="img"> -->
+        <!-- <div class="fondo" *ngFor="let img of imagen6"><img [src] = "img" /></div> -->
+
+    
+     <!--    <div class="img-text m-up">
+            <h2> Uno de nosotros </h2>
+            <p> Si ya tienes una cuenta, solo inicia sesión. ¡Te hemos extrañado! </p>
+        </div> 
+
+        <div class="img-btn"> 
+         -->
+                <!-- <span><a class="m-up" routerLink="/registro">Registrate</a></span> -->
+
+        <!-- <span class="btn btn-danger" routerLink="/login">Login</span>
+        
      
-    <form #formularioRegistro="ngForm" (ngSubmit)="registrarUsuario()">
-        <input type="text" placeholder="Nombre" name="nombre"
-            #nombre="ngModel" [(ngModel)]="usuarioRegistro.nombre" />
-        <br>
-        <input type="text" placeholder="Apellido" name="apellido"
-            #apellido="ngModel" [(ngModel)]="usuarioRegistro.apellido" />
-        <br>
-        <input type="text" placeholder="Correo" name="correo"
-            #correo="ngModel" [(ngModel)]="usuarioRegistro.correo" />
-        <br>
-        <input type="password" placeholder="Contraseña" name="contrasena"
-            #contrasena="ngModel" [(ngModel)]="usuarioRegistro.contrasena" />
-        <br><br>
-        <button type="submit">Registrarse</button>
-    </form>
+
+
+</div><br><br><br><br>
+
+<div class="img-btn"> 
+  
+  <span class="btn btn-success" routerLink="/">Home</span>
+
+  
+  
 </div>
+    </div>    
+  </div>
+
+
+</div>
+
+</body>  -->
+
+
+
+  
+
+  
+<body>
+ 
+
+    <div class="container">
+            <div class="modal-container">
+                <div class="banner-container">
+                    
+                    <div class="info-banner">
+                        <p>Si ya tienes cuenta inicia sesión </p>
+    
+                        <div class="img-btn"  > 
+    
+                          <span class="btn btn-danger" routerLink="/login">Iniciar Sesión</span>
+                          
+                        </div><br><br>
+    
+                        <div class="img-btn"  > 
+            
+                          <span class="btn btn-success" routerLink="/">Home</span>
+                        </div>
+    
+                        <br><br>
+
+    
+                    </div>
+                </div>
+                <div class="form-container">
+                    
+                    <div class="welcome">
+                        <h2>Buenos dias!</h2>
+                        <h2>Registrate ahora intenta no perder la cabeza</h2>
+                        <div class="img-container">
+                            <div *ngFor="let img of imagen5"   ><img class="logo" src = "assets/img/logo.png" /></div>
+                          </div>
+                    </div>
+                    <div class="info-form">
+                        <p>Ingresa correctamente los datos y accede a nuestro sistema de entretenimiento o muere en el intento </p>
+                    </div>
+                    <form #formularioRegistro="ngForm" (ngSubmit)="registrarUsuario()">
+                        <div class="input-div one">
+                            <div class="icono">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                
+                                <input type="text" placeholder="Nombre" name="nombre"
+                                #nombre="ngModel" [(ngModel)]="usuarioRegistro.nombre" />
+
+                            </div>
+                        </div>
+                        <div class="input-div two">
+                            <div class="icono">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+
+                                <input type="text" placeholder="Apellido" name="apellido"
+                        #apellido="ngModel" [(ngModel)]="usuarioRegistro.apellido" />
+                            
+                            </div>
+                        </div>
+
+                        <div class="input-div two">
+                            <div class="icono">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div>
+
+                                <input type="text" placeholder="Correo" name="correo"
+                        #correo="ngModel" [(ngModel)]="usuarioRegistro.correo" />
+                            
+                            </div>
+                        </div>
+
+
+                        <div class="input-div two">
+                            <div class="icono">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div>
+
+                                <input type="password" placeholder="Contraseña" name="contrasena"
+                        #contrasena="ngModel" [(ngModel)]="usuarioRegistro.contrasena" />
+                            
+                            </div>
+                        </div>
+
+
+                        <div class="info-form"  >
+                            <p  style="margin-left: 60px;" >Elije el tipo de membresia </p>
+                        </div>
+                        <br>
+
+                        <div class="info-form">
+                            <p style="margin-left: 60px;">Membresia Anabelle</p>
+                        </div>
+                        
+                        
+                        <img class="logo" src = "assets/ana.png" width="100" height="120"/>
+                        <br><br><br>
+
+
+                        <div class="info-form">
+                            <p style="margin-left: 60px;">Membresia Chucky</p>
+                        </div>
+                        
+                    
+                        <img class="logo" src = "assets/chu.png" width="100" height="120"/>
+                        <br><br><br>
+
+                        <div class="info-form"  >
+                            <p  style="margin-left: 80px;" >Metodos de pago </p>
+                        </div>
+                        <br>
+
+                        <div class="info-form">
+                            <p style="margin-left: 110px;">Visa</p>
+                        </div>
+                        
+
+
+                       
+                        <input type="checkbox" name="vehicle1" value="Bike" style="margin-left: 120px;">
+                        <img class="logo" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Former_Visa_%28company%29_logo.svg/3072px-Former_Visa_%28company%29_logo.svg.png" width="5" height="75" style="margin-right: 50px;"/>
+                        <br><br><br>
+
+
+
+                        <div class="info-form">
+                            <p style="margin-left: 100px;">MasterCard</p>
+                        </div>
+                        
+
+
+                       
+                        <input type="checkbox" name="vehicle1" value="Bike" style="margin-left: 120px;">
+                        <img class="logo" src = "https://www.penfinancial.com/SharedContent/images/1aMastercard.jpg" width="10" height="75" style="margin-right: 50px;"/>
+                        <br><br><br>
+
+
+                        <div class="info-form">
+                            <p style="margin-left: 110px;">PayPal</p>
+                        </div>
+                        
+                        
+
+                       
+                        <input type="checkbox" name="vehicle1" value="Bike" style="margin-left: 120px;">
+                        <img class="logo" src = "https://www.paypalobjects.com/webstatic/en_US/mktg/pages/stories/pp_h_rgb.jpg" width="10" height="75" style="margin-right: 50px;"/>
+                        <br><br><br>
+
+
+
+
+                        <a href="#">¿Olvidaste la contraseña?</a>
+                        <input type="submit" class="btn" value="Registrarse">
+                        <br><br>
+                        <div class="info-form">
+                          <p>Ingresa correctamente los datos y accede a nuestro sistema</p>
+                      </div>
+                      
+                    </form>
+                   
+                </div>
+            </div>
+        </div>
+    
+       
+    
+    
+      </body>
+    
+    
+    
+
+    
+    
+    
