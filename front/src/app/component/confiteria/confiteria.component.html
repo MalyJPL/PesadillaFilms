@@ -1,29 +1,362 @@
 
+<!-- --------------------- INICIA CARRUSEL CONFITERIA ----------------------->
+<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div *ngFor="let img of imagen2" class="carruselConfiteria">
+            <img style="width: 61%;" id="img" width="100" [src] = "img" class="d-block "/>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div *ngFor="let img of imagen21" class="carruselConfiteria">
+            <img style="width: 53%;" id="img" width="100" [src] = "img" class="d-block"/>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div *ngFor="let img of imagen1" class="carruselConfiteria">
+            <img style="width: 46%;" id="img" width="100" [src] = "img" class="d-block "/>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> -->
+<!-- --------------------- FINALIZA CARRUSEL CONFITERIA ----------------------->
 
-<p style="font-size: 50px;">confiteria works!</p><br><br>
-
- 
-<!-- <section>
-<h1>confiteria works!</h1><br>
-    <ol>
-        <li>
-            <p> Página de confitería con vista de productos y compra de productos en línea
-                para reclamar en cine, o para entrega domicilio (solo para tarjeta Anabelle)
-                bajo las siguientees condiciones: </p><br>
-                <ul>
-                    <li>Combo Zombie – 21.000. Hamburguesa + Sorbete + Paquete de ojo</li>
-                    <li>Combo Vampiro – 25.000. Crispetas + Dedos de frankestein +
-                        Murcielagos + Sorbete</li>
-                    <li>Combo Adams – 40.000 (para dos). Crispetas + Sorbete (2) + Faraones+ Hamburguesa + Sandwich</li>
-
-                  <li> El tamaño de la bebida es único, 32 oz, al igual que las crispetas, 140g o mediana</li>
-                </ul>
-            </p>
-        </li>
-    </ol>
-</section> -->
 
 
+<!-- SEPTIMA LINEA DE CARDS COMBOS................................................................................-->
+<div class="categoriasComida"><h1>C   O   M   B   O   S</h1></div>
+<div class="row" >
+ <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+   <div *ngFor="let img of imagen5">
+     <img id="img" width="300" height="257" [src] = "img" class="card-img-top"  />
+ </div>
+     <div class="card-body">
+       <h4 class="card-title"> {{ producto.producto5 }} </h4>
+       <h6 class="card-title"> {{ frase.frase5 }} </h6>
+     </div> <br>
+     <ul class="list-group list-group-flush">
+         <li class="list-group-item"> {{ descripcion.descripcion5 }}</li>
+         <li class="list-group-item"> {{ descripcion.descripcion51 }}</li>
+         <li class="list-group-item"> {{ descripcion.descripcion52 }}</li>
+         <li id="vacio"  class="list-group-item"> . </li>  <!-- Espacio vacio para ajustar tamaño de cards -->
+         <li class="list-group-item"><b> {{ precio.precio5 }}</b> </li>
+     </ul>
+   </div>
+
+       <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+           <div *ngFor="let img of imagen6">
+             <img id="img" width="300" height="253" [src] = "img" class="card-img-top"  />
+         </div>
+             <div class="card-body">
+               <h4 class="card-title"> {{ producto.producto6 }} </h4>
+               <h6 class="card-title"> {{ frase.frase6 }} </h6>
+             </div> <br>
+             <ul class="list-group list-group-flush">
+                 <li class="list-group-item"> {{ descripcion.descripcion6 }}</li>
+                 <li class="list-group-item"> {{ descripcion.descripcion61 }}</li>
+                 <li class="list-group-item"> {{ descripcion.descripcion62 }}</li>
+                 <li class="list-group-item"> {{ descripcion.descripcion63 }}</li>
+                 <li id="vacio"  class="list-group-item"> . </li>  <!-- Espacio vacio para ajustar tamaño de cards -->
+                 <li class="list-group-item"><b>{{ precio.precio6 }}</b>  </li>
+             </ul>
+           </div>
+
+           <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+             <div *ngFor="let img of imagen7">
+               <img id="img" width="300" [src] = "img" class="card-img-top"  />
+           </div>
+               <div class="card-body">
+                 <h4 class="card-title"> {{ producto.producto7 }} </h4>
+                 <h6 class="card-title"> {{ frase.frase7 }} </h6>
+               </div> 
+               <ul class="list-group list-group-flush">
+                   <li class="list-group-item"> {{ descripcion.descripcion7 }}</li>
+                   <li class="list-group-item"> {{ descripcion.descripcion71 }}</li>
+                   <li class="list-group-item"> {{ descripcion.descripcion72 }}</li>
+                   <li class="list-group-item"> {{ descripcion.descripcion73 }}</li>
+                   <li class="list-group-item"> {{ descripcion.descripcion74 }}</li>
+                   <li class="list-group-item"><b>{{ precio.precio7 }}</b>  </li>
+               </ul>
+             </div>
+</div> <br><br>
+
+    <!-- PRIMERA LINEA DE CARDS BEBIDAS................................................................................-->
+    <div class="categoriasComida"><h1>B   E   B   I   D   A   S</h1></div>
+    <div class="row" >
+      <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+        <div *ngFor="let img of imagen11">
+          <img id="img" width="300" height="274" [src] = "img" class="card-img-top"  />
+      </div>
+          <div class="card-body">
+            <h4 class="card-title"> {{ producto.producto11 }} </h4>
+            <h6 class="card-title"> {{ frase.frase11 }} </h6>
+          </div> <br>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item"> {{ descripcion.descripcion11 }}</li>
+              <li id="vacio"  class="list-group-item"> . </li>  <!-- Espacio vacio para ajustar tamaño de cards -->
+              <li class="list-group-item"><b> {{ precio.precio11 }}</b> </li>
+          </ul>
+        </div>
+
+        <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+            <div *ngFor="let img of imagen4">
+              <img id="img" width="300"  [src] = "img" class="card-img-top"  />
+          </div>
+              <div class="card-body">
+                <h4 class="card-title"> {{ producto.producto4 }} </h4>
+                <h6 class="card-title"> {{ frase.frase4 }} </h6>
+              </div> 
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> {{ descripcion.descripcion4 }}</li>
+                  <li class="list-group-item"> {{ descripcion.descripcion41 }}</li>
+                  <li class="list-group-item"> {{ descripcion.descripcion42 }}</li>
+                  <li class="list-group-item"><b>{{ precio.precio4 }}</b>  </li> 
+              </ul> 
+            </div> 
+
+            <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+                <div *ngFor="let img of imagen13">
+                  <img id="img" width="300" height="246" [src] = "img" class="card-img-top"  />
+              </div>
+                  <div class="card-body">
+                    <h4 class="card-title"> {{ producto.producto13 }} </h4>
+                    <h6 class="card-title"> {{ frase.frase13 }} </h6>
+                  </div> <br>
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item"> {{ descripcion.descripcion13 }}</li>
+                      <li id="vacio"  class="list-group-item"> . </li>  <!-- Espacio vacio para ajustar tamaño de cards -->
+                      <li class="list-group-item"><b>{{ precio.precio13 }}</b>  </li>
+                  </ul>
+                </div>
+    </div> <br><br>
+
+      <!-- SEGUNDA LINEA DE CARDS COMIDA................................................................................-->
+      <div class="categoriasComida"><h1>C   O   M   I   D   A</h1></div>
+      <div class="row" >
+     
+        <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+            <div *ngFor="let img of imagen17">
+              <img id="img" width="300" height="261" [src] = "img" class="card-img-top"  />
+          </div>
+              <div class="card-body">
+                <h4 class="card-title"> {{ producto.producto17 }} </h4>
+                <h6 class="card-title"> {{ frase.frase17 }} </h6>
+              </div> 
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> {{ descripcion.descripcion17 }}</li>
+                  <li class="list-group-item"><b>{{ precio.precio17 }}</b>  </li>
+              </ul>
+            </div>
+          
+              <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+                  <div *ngFor="let img of imagen15">
+                    <img id="img15" width="300" height="256" [src] = "img" class="card-img-top"  />
+                </div>
+                    <div class="card-body">
+                      <h4 class="card-title"> {{ producto.producto15 }} </h4>
+                      <h6 class="card-title"> {{ frase.frase15 }} </h6>
+                    </div> 
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> {{ descripcion.descripcion15 }}</li>
+                        <li id="vacio"  class="list-group-item"> . </li>  <!-- Espacio vacio para ajustar tamaño de cards -->
+
+                        <li class="list-group-item"><b>{{ precio.precio15 }}</b>  </li>
+                    </ul>
+                  </div>
+                  <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+                    <div *ngFor="let img of imagen12">
+                      <img id="img" width="300" height="261" [src] = "img" class="card-img-top"  />
+                  </div>
+                      <div class="card-body">
+                        <h4 class="card-title"> {{ producto.producto12 }} </h4>
+                        <h6 class="card-title"> {{ frase.frase12 }} </h6>
+                      </div> 
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item"> {{ descripcion.descripcion12 }}</li>
+                          <li class="list-group-item"><b>{{ precio.precio12 }}</b>  </li> 
+                      </ul> 
+                    </div> 
+      </div> <br><br>
+      <!-- TERCERA LINEA DE CARDS COMIDA................................................................................-->
+
+      <div class="row" >
+        <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+          <div *ngFor="let img of imagen16">
+            <img id="img" width="300" height="269" [src] = "img" class="card-img-top"  />
+        </div>
+            <div class="card-body">
+              <h4 class="card-title"> {{ producto.producto16 }} </h4>
+              <h6 class="card-title"> {{ frase.frase16 }} </h6>
+            </div> <br>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> {{ descripcion.descripcion16 }}</li>
+                <li class="list-group-item"><b> {{ precio.precio16 }}</b> </li>
+            </ul>
+          </div>
+          <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+            <div *ngFor="let img of imagen8">
+              <img id="img" width="300" [src] = "img" class="card-img-top"  />
+          </div>
+              <div class="card-body">
+                <h4 class="card-title"> {{ producto.producto8 }} </h4>
+                <h6 class="card-title"> {{ frase.frase8 }} </h6>
+              </div> 
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> {{ descripcion.descripcion8 }}</li>
+                  <li class="list-group-item"><b> {{ precio.precio8 }}</b> </li>
+              </ul>
+            </div>
+
+                  <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+                    <div *ngFor="let img of imagen18">
+                      <img id="img" width="300" height="255" [src] = "img" class="card-img-top"  />
+                  </div>
+                      <div class="card-body">
+                        <h4 class="card-title"> {{ producto.producto18 }} </h4>
+                        <h6 class="card-title"> {{ frase.frase18 }} </h6>
+                      </div> 
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item"> {{ descripcion.descripcion18 }}</li>
+                          <li class="list-group-item"> {{ descripcion.descripcion181 }}</li>
+                          <li class="list-group-item"><b>{{ precio.precio18 }}</b>  </li> 
+                      </ul> 
+                    </div> 
+      </div> <br><br>
+
+      <!-- CUARTA LINEA DE CARDS COMIDA................................................................................-->
+
+      <div class="row" >
+        <div class="col-6" class="card" class="cardConfiteria" style="width: 20rem;">
+          <div *ngFor="let img of imagen19">
+            <img id="img" width="300" height="334" [src] = "img" class="card-img-top"  />
+        </div>
+            <div class="card-body">
+              <h4 class="card-title"> {{ producto.producto19 }} </h4>
+              <h6 class="card-title"> {{ frase.frase19 }} </h6>
+            </div> <br>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> {{ descripcion.descripcion19 }}</li>
+                <li class="list-group-item"><b> {{ precio.precio19 }}</b> </li>
+            </ul>
+          </div>
+  
+              <div class="col-6" class="card" class="cardConfiteria" style="width: 20rem;">
+                  <div *ngFor="let img of imagen1">
+                    <img id="img" width="300" [src] = "img" class="card-img-top"  />
+                </div>
+                    <div class="card-body">
+                      <h4 class="card-title"> {{ producto.producto1 }} </h4>
+                      <h6 class="card-title"> {{ frase.frase1 }} </h6>
+                    </div> <br>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> {{ descripcion.descripcion1 }}</li>
+                        <li class="list-group-item"><b>{{ precio.precio1 }}</b>  </li>
+                    </ul>
+                  </div>
+
+      </div> <br><br>
+
+      <!-- QUINTA LINEA DE CARDS POSTRES................................................................................-->
+      <div class="categoriasComida"><h1>P   O   S   T   R   E   S</h1></div>
+      <div class="row" >
+        <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+          <div *ngFor="let img of imagen3">
+            <img id="img" width="300"  [src] = "img" class="card-img-top"  />
+        </div>
+            <div class="card-body">
+              <h4 class="card-title"> {{ producto.producto3 }} </h4>
+              <h6 class="card-title"> {{ frase.frase3 }} </h6>
+            </div> 
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> {{ descripcion.descripcion31 }}</li>
+                <li class="list-group-item"> {{ descripcion.descripcion32 }}</li>
+                <li class="list-group-item"><b> {{ precio.precio3 }}</b> </li>
+            </ul>
+          </div>
+          <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+            <div *ngFor="let img of imagen14">
+              <img id="img" width="300" height="304" [src] = "img" class="card-img-top"  />
+          </div>
+              <div class="card-body">
+                <h4 class="card-title"> {{ producto.producto14 }} </h4>
+                <h6 class="card-title"> {{ frase.frase14 }} </h6>
+              </div> 
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> {{ descripcion.descripcion14 }}</li>
+                  <li id="vacio"  class="list-group-item"> . </li>  <!-- Espacio vacio para ajustar tamaño de cards -->
+                  <li class="list-group-item"><b> {{ precio.precio14 }}</b> </li>
+              </ul>
+            </div>
+
+                  <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+                    <div *ngFor="let img of imagen10">
+                      <img id="img" width="380" height="308" [src] = "img" class="card-img-top"  />
+                  </div>
+                      <div class="card-body">
+                        <h4 class="card-title"> {{ producto.producto10 }} </h4>
+                        <h6 class="card-title"> {{ frase.frase10 }} </h6>
+                      </div> <br>
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item"> {{ descripcion.descripcion10 }}</li>
+                          <li id="vacio"  class="list-group-item"> . </li>  <!-- Espacio vacio para ajustar tamaño de cards -->
+                          <li class="list-group-item"><b>{{ precio.precio10 }}</b>  </li> 
+                      </ul> 
+                    </div> 
+      </div> <br><br>
+
+
+      <!-- SEXTA LINEA DE CARDS POSTRES................................................................................-->
+
+      <div class="row" >
+        <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+            <div *ngFor="let img of imagen9">
+              <img id="img" width="300" height="269" [src] = "img" class="card-img-top"  />
+          </div>
+              <div class="card-body">
+                <h4 class="card-title"> {{ producto.producto9 }} </h4>
+                <h6 class="card-title"> {{ frase.frase9 }} </h6>
+              </div> 
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> {{ descripcion.descripcion9 }}</li>
+                  <li id="vacio"  class="list-group-item"> . </li>  <!-- Espacio vacio para ajustar tamaño de cards -->
+                  <li class="list-group-item"><b>{{ precio.precio9 }}</b>  </li>
+              </ul>
+            </div>
+  
+              <div class="col-4" class="card" class="cardConfiteria" style="width: 20rem;">
+                  <div *ngFor="let img of imagen20">
+                    <img id="img" width="300" height="220" [src] = "img" class="card-img-top"  />
+                </div>
+                    <div class="card-body">
+                      <h4 class="card-title"> {{ producto.producto20 }} </h4>
+                      <h6 class="card-title"> {{ frase.frase20 }} </h6>
+                    </div> <br>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> {{ descripcion.descripcion20 }}</li>
+                        <li class="list-group-item"> {{ descripcion.descripcion201 }}</li>
+                        <li class="list-group-item"><b>{{ precio.precio20 }}</b>  </li>
+                    </ul>
+                  </div>
+      </div> <br><br>
+
+       
 
 
 
+
+
+
+
+
+
+
+
+   

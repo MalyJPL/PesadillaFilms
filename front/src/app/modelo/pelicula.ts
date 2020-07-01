@@ -5,11 +5,12 @@ export class Pelicula {
         public titulo: String,
         public sinopsis: String,
         public director: String,
-        public protagonistas: Number,
+        public protagonistas: String,
         public duracion: String,
         public trailer: String,
-        public archivo: String,
+        public online: String,
         public cover: String,
-        public poster: String
+        public wallpaper: String,
+        public estado: Boolean
     ){}
 }
