@@ -38,7 +38,6 @@ export class CategoriasComponent implements OnInit {
     let arregloUrlCategoria = urlCategoria.split("/");
     var final = arregloUrlCategoria.length - 1;
     const categoria= arregloUrlCategoria[final];
-
     this.peliculaService.obtenerCategoria(categoria).subscribe(
       (response : any)=>{
         this.categorias = response.peliculas;
