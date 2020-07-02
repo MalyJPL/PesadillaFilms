@@ -1,33 +1,33 @@
-import { ShowtimeDate } from './../interface/showtime-date';
+import { ShowtimeDate } from '../modelo/showtime-date';
 import { Observable, of } from 'rxjs';
 import { map, catchError, switchMap, concatMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { Movie } from './../interface/movie';
-import { Showtime } from './../interface/showtime';
+import { Pelicula } from '../modelo/pelicula';
+import { Showtime } from '../modelo/showtime';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseService {
-  private moviesUrl = 'api/movies';
-  private showtimesUrl = 'api/showtimes';
+  private moviesUrl = 'http://localhost:3000/api/buscar-todas';
+  private showtimesUrl = 'http://localhost:3000/api/buscar-showtimes';
 
   constructor(private http: HttpClient) { }
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T>  => {
-      console.error(error);
+      console.log(error);
 
       return of(result as T);
     };
   }
 
   // Get all movies
-  getMovies(limit?: number, exclude?: number | number[]): Observable<Movie[]> {
-    return this.http.get<Movie[]>(this.moviesUrl).pipe(
+  getMovies(limit?: number, exclude?: String | string[]): Observable<Pelicula[]> {
+    return this.http.get<Pelicula[]>(this.moviesUrl).pipe(
       map(movies => {
-        let excludes: number[] = [];
+        let excludes: String | String[] = [];
 
         if (exclude) {
           if (typeof exclude === 'number') {
@@ -36,17 +36,16 @@ export class DatabaseService {
             excludes = exclude;
           }
 
-          movies = movies.filter(movie => excludes.indexOf(movie.id) === -1);
-        }
+                  }
 
         return limit ? movies.slice(0, limit) : movies;
       }),
-      catchError(this.handleError<Movie[]>(`getMovies`, []))
+      catchError(this.handleError<Pelicula[]>(`getMovies`, []))
     );
   }
 
   // Get now playing moving
-  getNowPlayingMovies(filterDate: string = 'all'): Observable<Movie[]> {
+  getNowPlayingMovies(filterDate: string = 'all'): Observable<Pelicula[]> {
     let today = null;
     let next6days = null;
 
@@ -69,22 +68,22 @@ export class DatabaseService {
             return filterDate === 'all' ? showtimeDate >= today && showtimeDate <= next6days : showtimeDate.getDate() === today.getDate();
           }).length > 0
         )),
-        concatMap(showtimes => this.http.get<Movie[]>(this.moviesUrl)
+        concatMap(showtimes => this.http.get<Pelicula[]>(this.moviesUrl)
           .pipe(
-            map(movies => movies.filter(movie => showtimes.filter(showtime => movie.id === showtime.movieId).length > 0))
+            map(movies => movies.filter(movie => showtimes.filter(showtime => movie.titulo === showtime.titulo).length > 0))
           )),
         catchError(this.handleError('getNowPlayingMovies', []))
       );
   }
 
   // Get movie showtimes
-  getMovieShowtimes(movie: Movie | number, filterDate: string, showAllTimes: boolean = false): Observable<ShowtimeDate[]> {
-    let movieId = null;
+  getMovieShowtimes(movie: Pelicula | number, filterDate: string, showAllTimes: boolean = false): Observable<ShowtimeDate[]> {
+    let movieTitulo = null;
 
     if (typeof movie === 'object') {
-      movieId = movie.id;
-    } if (typeof movie === 'number') {
-      movieId = movie;
+      movieTitulo = movie.titulo;
+    } if (typeof movie === 'string') {
+      movieTitulo = movie;
     }
 
     //
@@ -104,7 +103,7 @@ export class DatabaseService {
             return showAllTimes || filterDate === 'all' && !flag++ ? showtimeDate >= date && showtimeDate <= next6days : showtimeDate.getTime() === date.getTime();
           });
 
-          return showtime.movieId === movieId;
+          return showtime.titulo === movieTitulo;
         })),
         map(showtimes => showtimes.length ? showtimes[0].showtimes : []),
         catchError(this.handleError('getNowPlayingMovies', []))
@@ -112,21 +111,21 @@ export class DatabaseService {
   }
 
   // get single movie
-  getMovie(id: number): Observable<Movie> {
+  getMovie(id: number): Observable<Pelicula> {
     const url = `${this.moviesUrl}/${id}`;
-    return this.http.get<Movie>(url).pipe(
-      catchError(this.handleError<Movie>(`getMovie id = {id}`))
+    return this.http.get<Pelicula>(url).pipe(
+      catchError(this.handleError<Pelicula>(`getMovie id = {id}`))
     );
   }
 
   // search movies
-  searchMovies(term: string): Observable<Movie[]> {
+  searchMovies(term: string): Observable<Pelicula[]> {
     if (!term.trim()) {
       return of([]);
     }
 
-    return this.http.get<Movie[]>(`${this.moviesUrl}/?title=${term}`).pipe(
-      catchError(this.handleError<Movie[]>(`searchMovies`, []))
+    return this.http.get<Pelicula[]>(`${this.moviesUrl}/?title=${term}`).pipe(
+      catchError(this.handleError<Pelicula[]>(`searchMovies`, []))
     );
   }
 }

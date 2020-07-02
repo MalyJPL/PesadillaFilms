@@ -1,29 +1,33 @@
 <div *ngIf="movie">
-  <div class="movie-backdrop" [ngStyle]="{ 'background-image': 'url(' + movie.backdrop + ')' }"></div>
+  <div class="movie-backdrop" [ngStyle]="{ 'background-image': 'url(' + movie.wallpaper + ')' }"></div>
   <div class="container">
     <div class="movie-data row">
       <div class="col-md-4">
         <div class="movie-poster">
-          <img class="img-fluid" src="{{ movie.poster }}" alt="{{ movie.title }}" />
+          <img class="img-fluid" src="{{ movie.cover }}" alt="{{ movie.titulo }}" />
           <a href="javascript:void(0)" class="movie-play-trailer" (click)="openModal(preview)"></a>
         </div>
       </div>
       <div class="col-md-8">
-        <h1 style="color: #8b0101 ; text-shadow:2px 2px 7px rgb(255, 255, 255);" class="movie-title">{{ movie.title }}</h1>
+        <h1 style="color: #8b0101 ; text-shadow:2px 2px 7px rgb(255, 255, 255);" class="movie-title">{{ movie.titulo }}</h1>
         <div class="movie-info">
-          <p class="movie-overview" style="text-align: justify;">{{ movie.overview }}</p>
+          <p class="movie-overview" style="text-align: justify;">{{ movie.sinopsis}}</p>
           <div class="movie-meta">
             <dl class="movie meta-director">
               <dt>Director:</dt>
               <dd>{{ movie.director }}</dd>
             </dl>
-            <dl class="movie-meta-cast">
+            <dl class="movie-meta">
               <dt>Protagonista:</dt>
-              <dd>{{ movie.cast | join: ", " }}</dd>
+              <dd>{{ movie.protagonistas }}</dd>
             </dl>
-            <dl class="movie-meta-runtime">
+            <dl class="movie-meta">
               <dt>Tiempo:</dt>
-              <dd>{{ movie.runtime | minute }}</dd>
+              <dd>{{ movie.duracion }}</dd>
+            </dl>
+            <dl class="movie-meta" id="veronline">
+              <dt>ACCESO EN LÍNEA:</dt>
+              <dd><a href="{{movie.online}}">ACCEDE EN LÍNEA  DANDO CLICK ACÁ</a></dd>
             </dl>
           </div>
 
@@ -63,8 +67,11 @@
       <span aria-hidden="true">&times;</span>
     </button>
     <!-- 16:9 aspect ratio -->
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item"  [src]="getPreviewUrl()" allowscriptaccess="always"></iframe>
+    <div class="embed-responsive-item"  class="embed-responsive embed-responsive-16by9">
+      <video [src]="getPreviewUrl()" autoplay>
+        Tu navegador no admite el elemento <code>video</code>.
+      </video>
     </div>
   </div>
+
 </ng-template>

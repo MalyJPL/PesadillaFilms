@@ -1,7 +1,10 @@
 import { Component, OnInit, Input, SimpleChange, SimpleChanges, OnChanges } from '@angular/core';
 import { Movie } from '../../interface/movie';
 import { DatabaseService } from '../../service/database.service';
-import { ShowtimeDate } from 'src/app/interface/showtime-date';
+import { ShowtimeDate } from '../../modelo/showtime-date';
+import { Pelicula} from '../../modelo/pelicula';
+import { PeliculaService } from '../../service/pelicula.service';
+
 
 @Component({
   selector: 'app-showtimes',
@@ -9,7 +12,7 @@ import { ShowtimeDate } from 'src/app/interface/showtime-date';
   styleUrls: ['./showtimes.component.sass']
 })
 export class ShowtimesComponent implements OnInit, OnChanges {
-  @Input() movie: Movie;
+  @Input() movie: Pelicula;
   @Input() showAllTimes: boolean;
   @Input() filterDate: string;
   showtimes: ShowtimeDate[];

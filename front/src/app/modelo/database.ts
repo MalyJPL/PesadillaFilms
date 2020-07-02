@@ -1,7 +1,7 @@
 import { Showtime } from './showtime';
-import { Movie } from './movie';
+import { Pelicula } from '../pelicula';
 
 export interface Database {
-  movies: Movie[];
+  movies: Pelicula[];
   showtimes: Showtime[];
 }
