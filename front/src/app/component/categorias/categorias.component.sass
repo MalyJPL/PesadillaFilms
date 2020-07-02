@@ -2,3 +2,119 @@ $rojo: #8b0101
 
 li,p,h5
     color: $rojo 
+
+.btn 
+  color: #ffff
+  cursor: pointer
+  // display: block
+  font-size: 0.8rem
+  font-weight: 400
+  line-height: 30px
+  margin: 0 0 2em
+  max-width: 160px 
+  position: relative
+  text-decoration: none
+  text-transform: uppercase
+  width: auto
+
+.btn-1 
+  background: darken($rojo, 1.5%)
+  font-weight: 100
+  
+  svg 
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0 
+    width: 100% 
+  
+  
+  rect 
+    fill: none
+    stroke: #343a40
+    stroke-width: 3
+    stroke-dasharray: 422, 0
+    transition: all 0.55s linear
+  
+
+
+.btn-1:hover 
+  background: rgba($rojo, 0)
+  font-weight: 900
+  letter-spacing: 1px
+  
+  rect 
+    stroke-width: 5
+    stroke-dasharray: 15, 310
+    stroke-dashoffset: 48
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1)
+  
+
+  
+                   
+@media (max-width: 576px)   
+  .xs 
+    color: $rojo 
+    font-weight:bold
+
+  .btn
+    width: 100%
+
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (max-width:992px)   
+ .md 
+    color: $rojo 
+     font-weight: bold 
+
+ 
+/* Large devices (desktops, 992px and up) */
+.lg
+@media (min-width: 992px) and (max-width:1200px)  
+
+    color: $rojo 
+     font-weight: bold 
+
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px)   
+    .xl 
+        color: $rojo 
+        font-weight: bold 
+
+/** @mixin shutter-in-vertical 
+	@include hacks()
+	position: relative
+	background: $activeColor
+	@include prefixed(transition-property, color)
+	@include prefixed(transition-duration, $mediumDuration)
+
+	&:before 
+		content: ""
+		position: absolute
+		z-index: -1
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: $primaryColor
+		@include prefixed(transform, scaleY(1))
+		@include prefixed(transform-origin, 50%)
+		@include prefixed(transition-property, transform)
+		@include prefixed(transition-duration, $mediumDuration)
+		@include prefixed(transition-timing-function, ease-out)
+	
+
+	&:hover,
+	&:focus,
+	&:active 
+		color: white
+
+		&:before 
+			@include prefixed(transform, scaleY(0))
+		
+	 **/
+
+
+ 
+

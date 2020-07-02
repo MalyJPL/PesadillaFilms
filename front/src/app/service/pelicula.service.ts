@@ -67,8 +67,17 @@ cargarWallpaper(file: File, id){
       formData
     ).pipe(map(res => res));
   }
-
+  
+  obtenerCategoria(categoria){
+    return this._http
+    .get(this.url + 'buscar-categoria/' + categoria)
+    .pipe(map((res) => res));
+  }
 }
+
+ 
+
+
 
 
 
