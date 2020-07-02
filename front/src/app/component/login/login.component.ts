@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     private usuarioService : UsuarioService,
     private _router : Router
   ) { 
-    this.login = new Usuario('', '', '', '', '', 'usuario', '');
+    this.login = new Usuario('', '', '', '', '', 'usuario', '', '', true);
   }
 
   ngOnInit(): void {
@@ -61,7 +61,10 @@ export class LoginComponent implements OnInit {
             this.login.correo,
             this.login.contrasena,
             this.login.rol,
-            this.login.imagen
+            this.login.membresia, 
+            this.login.imagen,
+            this.login.estado
+
           );
 
           // Crear el objeto localStorage

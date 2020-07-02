@@ -69,6 +69,19 @@ p5 = {
     wallpaper: 'posesionWallpaper.jpg',
     estado: 1
 }
+p6 = {
+     categoria: 'paranormal',
+    titulo: 'El conjuro',
+    sinopsis:'A principios de los años 70, Ed y Lorrain Warren, reputados investigadores de fenómenos paranormales, se enfrentan a una entidad demoníaca al intentar ayudar a una familia que está siendo aterrorizada por una presencia oscura en su aislada granja.',
+    director:'James Wan',
+    protagonistas: 'Ron Livingston, Shannon Kook',
+    duracion: '91 min.',
+    trailer: 'elconjuroTrailer.mp4',
+    online: 'https://waaw.tv/watch_video.php?v=cGUzWEVCYlhQdzM3RTBuMzFmOXhUTm9ONERtc3B1bCtvcnJBSm9zMVFVYnk1TWIwU0RxV0c5MGQrdkE4WkVoag%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
+    cover: 'elconjuroCover.jpg',
+    wallpaper: 'elconjuroWallpaper.jpg',
+    estado: 1
+}
 
 /* {
     categoria: '',
@@ -89,4 +102,4 @@ p5 = {
 
 
 
-db.peliculas.insert( [p1,p2,p3,p4,p5] )
+db.peliculas.insert( [p1,p2,p3,p4,p5, p6] )

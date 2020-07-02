@@ -31,7 +31,7 @@ export class RegistroComponent implements OnInit {
     private usuarioService : UsuarioService,
     private _router : Router 
     ) {
-    this.usuarioRegistro = new Usuario('', '', '', '', '', 'usuario', '');
+    this.usuarioRegistro = new Usuario('', '', '', '', '', 'usuario', '', '', true);
    }
 
   ngOnInit(): void {
@@ -59,7 +59,7 @@ export class RegistroComponent implements OnInit {
           })
 
 
-          this.usuarioRegistro = new Usuario('', '', '', '', '', 'usuario', '');
+          this.usuarioRegistro = new Usuario('', '', '', '', '', 'usuario', '', '', true);
           this._router.navigate(['/login']);
         }
       }, 

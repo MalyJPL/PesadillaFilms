@@ -1,8 +1,8 @@
 <carousel class="movies-slider-container">
-  <slide *ngFor="let movie of movies">
-    <img src="{{ movie.backdrop }}" alt="{{ movie.title }}">
+  <slide *ngFor="let pelicula of carrusel">
+    <img src="{{ pelicula.imgcarrusel }}" alt="{{ pelicula.titulo }}">
     <div class="carousel-caption d-none d-md-block">
-      <h1><a routerLink="/movie/{{ movie.id }}">{{ movie.title }}</a></h1>
+      <h1><a routerLink="/movie/{{ pelicula._id }}">{{ pelicula.titulo }}</a></h1>
     </div>
   </slide>
 </carousel>
