@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilUsuarioComponent},
   { path: 'confiteria', component: ConfiteriaComponent},
   { path: 'tyba-empresa', component: TybaEmpresaComponent},
-  { path: 'categorias', component: CategoriasComponent},
+  { path: 'categorias/:categoria', component: CategoriasComponent},
   { path: 'admin', component: AdminComponent },
   { path: 'intro', component: IntroComponent },
    { path: 'movie-info', component: MovieInfoComponent }
