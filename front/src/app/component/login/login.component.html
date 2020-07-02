@@ -8,21 +8,21 @@
                   <div *ngFor="let img of imagen5"   ><img class="logo" [src] = "img" /></div>
                 </div>
                 <div class="info-banner">
-                    <p>Aprende a enseñar porque enseñando aprenderás</p>
+                    <p style="color: silver;text-shadow: 2px 2px 2px rgb(0, 0, 0),2px 2px 2px rgb(0, 0, 0) ;">"Veo gente muerta"</p>
 
-                    <div class="img-btn"  > 
+                    <div class="img-btn"  >
 
 
-        
-        
 
-                      <span class="btn btn-danger" routerLink="/registro">Registrate</span>
-                      
+
+
+                      <span class="btn btn-danger" routerLink="/registro"><i class="fa fa-pencil" ></i>&nbsp; Registro</span>
+
                     </div><br><br>
 
-                    <div class="img-btn"  > 
-        
-                      <span class="btn btn-success" routerLink="/">Home</span>
+                    <div class="img-btn"  >
+
+                      <span class="btn btn-success"  routerLink="/"><i class="fa fa-home" ></i>&nbsp; Home</span>
                     </div>
 
                     <br><br>
@@ -31,20 +31,20 @@
             </div>
             <div class="form-container">
                 <div class="welcome">
-                    <h2>Buenos dias!</h2>
-                    <h2>Inicia sesión ahora intenta no perder la cabeza</h2>
+                    <h2 style="text-align: center;color: #8b0101 ;text-shadow: 2px 2px 3px rgb(0, 0, 0);">¡Buenos días!</h2>
+                    <h3 style="text-align: justify;">Inicia sesión ahora intenta no perder la cabeza.</h3>
                 </div>
                 <div class="info-form">
-                    <p>Ingresa correctamente los datos y accede a nuestro sistema de entretenimiento o muere en el intento </p>
+                    <p style="text-align: justify;" >Ingresa correctamente los datos y accede a nuestro sistema de entretenimiento o muere en el intento. </p>
                 </div>
                 <form #formularioLogin="ngForm" (ngSubmit)="loginUsuario()" >
                     <div class="input-div one">
                         <div class="icono">
-                            <i class="fas fa-user"></i>
+                            <i class="fa fa-envelope-o"></i>
                         </div>
                         <div>
-                            <h5>Correo</h5>
-                            <input type="text"   name="correo"
+                            <!-- <h5>Correo</h5> -->
+                            <input type="text"   name="correo" placeholder="Correo"
                         #correo="ngModel" [(ngModel)]="login.correo" />
                         </div>
                     </div>
@@ -53,25 +53,28 @@
                             <i class="fas fa-lock"></i>
                         </div>
                         <div>
-                            <h5>Contraseña</h5>
-                            <input type="password"  name="contrasena" placeholder=""
+                            <!-- <h5 >Contraseña</h5> -->
+                            <input type="password"  name="contrasena" placeholder="Contraseña"
                             #contrasena="ngModel" [(ngModel)]="login.contrasena" />
                         </div>
                     </div>
-                    <a href="#">¿Olvidaste la contraseña?</a>
-                    <input type="submit" class="btn" value="Iniciar Sesión">
-                    <br><br>
+                    <a href="#" style="text-align: center;">¿Olvidaste la contraseña?</a> 
+
+                    <!-- <div><input  type="submit" class="btn" value=" Iniciar Sesión"></div> -->
+
+                    <button type="submit" class="btn btn-success"> <i class="fa fa-sign-in" ></i>&nbsp; Iniciar Sesión </button>
+
                     <div class="info-form">
-                      <p>Ingresa correctamente los datos y accede a nuestro sistema</p>
+                      <p style="text-align: justify;">Ingresa correctamente los datos y accede a nuestro sistema.</p>
                   </div>
-                  
+
                 </form>
-               
+
             </div>
         </div>
-    </div>
+    </div><br>
 
-   
+
 
 
   </body>

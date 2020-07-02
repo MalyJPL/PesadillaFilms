@@ -21,8 +21,24 @@
     50% {box-shadow: 20px 20px 30px gray;}
   }
   
-  
-  
+  input[type="file"] {
+    display: none;
+} 
+  .sub1 {
+    border: 1px solid rgb(223, 22, 22);
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: white;
+    
+}
+ 
+.sub1:hover {
+background-color: #ff0000;
+color: white;
+
+}
   
   
   
