@@ -14,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { InMemoryDataService } from './service/in-memory-data.service';
+
+/* import { InMemoryDataService } from './service/in-memory-data.service'; */
 import { MoviesComponent } from './component/movies/movies.component';
 import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
 import { FrontpageComponent } from './component/frontpage/frontpage.component';
@@ -23,7 +24,7 @@ import { MinutePipe } from './pipe/minute.pipe';
 import { ShowtimesComponent } from './component/showtimes/showtimes.component';
 import { DayPipe } from './pipe/day.pipe';
 import { DatabaseService } from './service/database.service';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+/* import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'; */
 import { MoviesListComponent } from './component/movies-list/movies-list.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SafePipe } from './pipe/safe.pipe';
@@ -36,11 +37,20 @@ import { PerfilUsuarioComponent } from './component/perfil-usuario/perfil-usuari
 import { RegistroComponent } from './component/registro/registro.component';
 import { ConfiteriaComponent } from './component/confiteria/confiteria.component';
 import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
+import { CategoriasComponent } from './component/categorias/categorias.component';
+import { MovieInfoComponent } from './component/movie-info/movie-info.component';
 import { AdminComponent } from './component/admin/admin.component';
 
-// Importar Servicio Usuario
+// Importar Servicio Usuario y película
 import { UsuarioService } from './service/usuario.service';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { PeliculaService } from './service/pelicula.service';
 import { IntroComponent } from './component/intro/intro.component';
+/* import { SillasComponent } from './component/sillas/sillas.component'; */
+
 
 
 @NgModule({
@@ -64,20 +74,30 @@ import { IntroComponent } from './component/intro/intro.component';
     ConfiteriaComponent,
     TybaEmpresaComponent,
     AdminComponent,
-    IntroComponent
+    CategoriasComponent,
+    MovieInfoComponent,
+    AdminComponent,
+    IntroComponent,
+/*     SillasComponent */
+    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,    
+    FormsModule,
+    BrowserAnimationsModule,   
     ModalModule.forRoot(),
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
+   CarouselModule.forRoot(),
+    BrowserAnimationsModule,
+/*     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    ),
+    ),  */
     CarouselModule.forRoot()
+
   ],
-  providers: [DatabaseService, UsuarioService],
+  providers: [DatabaseService, UsuarioService, PeliculaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
