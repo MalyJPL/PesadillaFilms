@@ -166,11 +166,32 @@ function mostrarImgUsuario(req, res) {
     });
 }
 
+// Función Mostrar Archivo
+function mostrarUsuarios(req, res) {
+    // Pedir el archivo que queremos mostrar
+    // localhost:3000/api/obtenerImagen/:imageFile
+   Usuario.find((err, listaUsuarios)=>{
+    if (err) {
+        res.status(500).send({ message: "Error en el servidor" });
+    } else {
+        if (!listaUsuarios) {
+            res.status(200).send({ message: "No fue posible recuperar lista de usuarios" });
+        } else {
+            res.status(200).send({
+                message: "Lista de usuarios enviada",
+                usuarios: listaUsuarios
+            });
+        }
+    }
+});
+}
+
 // Exportar paquete de funciones
 module.exports = {
     registrarUsuario,
     login,
     actualizarUsuario,
     subirImgUsuario,
-    mostrarImgUsuario
+    mostrarImgUsuario,
+    mostrarUsuarios
 }

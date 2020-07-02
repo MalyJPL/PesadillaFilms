@@ -17,6 +17,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class AdminComponent implements OnInit {
 
   public usuario: Usuario;
+  public listaUsuarios: Usuario[];
   public peliculaRegistrada: Pelicula;
   // Declarar la variable archivoSubir de tipo File
   public archivoSubirTrailer: File;
@@ -36,6 +37,8 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.mostrarUsuarios();
   }
   // Método subirArchivo
   subirArchivoTrailer(fileInput: any) {
@@ -113,4 +116,17 @@ export class AdminComponent implements OnInit {
     }
   });
   }
+
+  //funcion para mostrar lista de usuarios
+mostrarUsuarios(){
+  this.usuarioService.listarUsuarios().subscribe(
+    (response: any)=>{
+      this.listaUsuarios = response.usuarios;
+    },error => {
+      var errorMensaje = <any>error;
+      if (errorMensaje != null) {
+        console.log(`Error al listar usuarios: ${JSON.stringify(error)}`)
+      }
+    }
+  )}
 }

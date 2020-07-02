@@ -37,18 +37,20 @@
                                                 <th scope="col">#</th>
                                                 <th scope="col">Nombre</th>
                                                 <th scope="col">Apellido</th>
-                                                <th scope="col">Username</th>
-                                                <th scope="col">E-mail</th>
+                                                <th scope="col">Correo</th>
+                                                <th scope="col">Membresía</th>
+                                                <th scope="col">Estado</th>
                                                 <th></th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
+                                            <tr *ngFor="let usuario of listaUsuarios">
                                                 <th scope="row">1</th>
-                                                <td>Cristian</td>
-                                                <td>Ruiz</td>
-                                                <td>c.r.username</td>
-                                                <td>c.r.username@blog.com</td>
+                                                <td>{{usuario.nombre}}</td>
+                                                <td>{{usuario.apellido}}</td>
+                                                <td>{{usuario.correo}}</td>
+                                                <td>{{usuario.membresia}}</td>
+                                                <td><input type="checkbox" name="estado" value="activo"></td>
                                                 <td>
                                                     <a href="#"><i style="color: rgb(233, 134, 20);" class="fas fa-edit"></i></a> | <a href="#"><i style="color: red;" class="fas fa-user-times"></i></a>
                                                 </td>
