@@ -72,6 +72,14 @@ cargarWallpaper(file: File, id){
     ).pipe(map(res => res));
   }
 
+  
+  obtenerCategoria(categoria){
+    return this._http
+    .get(this.url + 'buscar-categoria/' + categoria)
+    .pipe(map((res) => res));
+  }
+
+
 
  todasLasPeliculas(){
     return this._http.get(
@@ -85,7 +93,12 @@ cargarWallpaper(file: File, id){
       ).pipe(map(res => res));
   }
 
+
 }
+
+ 
+
+
 
 
 

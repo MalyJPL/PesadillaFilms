@@ -1,91 +1,175 @@
 <div class="container mt-3">
-    <div class="row justify-content-between">
-        <div class="card mt-4 col-3-sm p-0">
-            <img class="card-img-top" src="/../../assets/img/Portadas/alien.jpg" alt="Card image cap">
+    <div class="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+  
+        <div class="card mt-2 col-lg-3 col-md-5 col-sm-10 mx-1 p-0 bg-primary " *ngFor="let pelicula of categorias">
+            <img class="card-img-top" src="lista.imagen" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Alien</h5>
-                <p class="card-text">Duracion: 116 min.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">{{pelicula.titulo}}</h5>
+                <p class="card-text"><small class="text-muted"></small></p>
+            
+                <div class="row justify-content-around"> 
+                 <a href="/movie/pelicula._id" class="btn btn-1">
+                    <svg>
+                        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                    </svg>
+                    Ver Detalle
+                </a>
+                 <a href="pelicula.online" id="ver" class="btn btn-1 nav-link" routerLink="/movie-info">
+                    <svg>
+                        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                    </svg>
+                    Ver Online
+                </a>
+                </div>
             </div>
         </div>
-        <div class="card mt-4 col-3-sm p-0">
-            <img class="card-img-top" src="/../../assets/img/Portadas/alien.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Alien</h5>
-                <p class="card-text">Duracion: 116 min.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        <div class="card mt-4 col-3-sm p-0">
-            <img class="card-img-top" src="/../../assets/img/Portadas/alien.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Alien</h5>
-                <p class="card-text">Duracion: 116 min.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-     </div>
-
 </div>
+
+
+<!-- 
+
+  <h1>
+    Responsive Column Rows
+  </h1>
+  <p>Resize window to see the column grid change. <a href="https://getbootstrap.com/docs/4.4/components/card/#grid-cards" target="_blank">Read Docs</a></p>
+  
+  <ul>
+    <li class="xs">1 column xs</li>
+    <li class="sm">2 column sm</li>
+    <li class="md">3 column md</li>
+    <li class="lg">4 column lg</li>
+    <li class="xl">5 column xl</li>
+  </ul>
 
   
-    <div class="row justify-content-between">
-        <div class="card mb-4 col-3-sm p-0">
-            <img class="card-img-top" src="/../../assets/img/Portadas/alien.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card <br> with <br> supporting <br> text below <br> as a natural
-                    lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        <div class="card mb-4 col-3-sm p-0">
-            <img class="card-img-top" src="/../../assets/img/Portadas/alien.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        <div class="card mb-4 col-3-sm p-0">
-            <img class="card-img-top" src="/../../assets/img/Portadas/alien.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This <br> card <br> has <br> even longer <br> content <br> than <br> the first <br> to show
-                    <br> that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
+  <h2>Responsive card deck example</h2>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
     </div>
-
-    <div class="row justify-content-between">
-        <div class="card mb-4 col-3-sm p-0">
-            <img class="card-img-top" src="/../../assets/img/Portadas/alien.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card <br> with <br> supporting <br> text below <br> as a natural
-                    lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        <div class="card mb-4 col-3-sm p-0">
-            <img class="card-img-top" src="/../../assets/img/Portadas/alien.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        <div class="card mb-4 col-3-sm p-0">
-            <img class="card-img-top" src="/../../assets/img/Portadas/alien.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This <br> card <br> has <br> even longer <br> content <br> than <br> the first <br> to show
-                    <br> that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
     </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
 </div>
+  
+  
+    
+  <h2>Normal column grid example</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+  
+  
+ -->
+
+
+
+  
+   
