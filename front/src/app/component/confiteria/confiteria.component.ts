@@ -134,14 +134,15 @@ export class ConfiteriaComponent implements OnInit {
     precio20: '$3.000 porción'
   }
 
-
-
-
-
-
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
+
+  
+
+
 
 }

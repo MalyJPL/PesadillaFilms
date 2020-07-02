@@ -1,5 +1,5 @@
 
-
+<div *ngIf="!'/tyba-empresa'">   
 
 <!--            imagen de fondo y logo          -->
 
@@ -88,13 +88,13 @@
     </div>
   </div>
 </header>
-
+</div>
 <main id="main" class="site-main main">
   <router-outlet></router-outlet>
 </main>
 
 <!-- --------------------- Footer --------------------- -->
-
+<div *ngIf="!'/tyba-empresa'"> 
 <footer class="page-footer font-small unique-color-dark">
 
   <div style="background-color: #8b0101;">
@@ -228,4 +228,4 @@
 
 </footer>
 <!-- Footer -->
-
+</div>

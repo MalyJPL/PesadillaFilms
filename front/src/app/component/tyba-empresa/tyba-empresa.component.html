@@ -1,26 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--styles css-->
+    <link rel="stylesheet" href="styles.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Menu -->
+<nav class="navbar navbar-expand-lg navbar-light text-center bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <div *ngFor="let img of logo" class="logo">
+            <img id="img" width="150"  [src] = "img"  />
+        </div>
 
 
-<p style="font-size: 50px;">tyba-empresa works!</p><br><br>
+        
+          </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tyba-empresa/#servicios">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
 
 
-<!-- 
-<section>
-    <h1>tyba-empresa works!</h1><br>
-        <ol>
-            <li>
-                <p> 
-                    Tyba SAS es una compañía de emprendedores comprometdos con el avance de proyectos
-                    innovadores y poderosos en Tecnologías de la Información. Como parte de su portafolio,
-                    han preparado el proyecto PESADILLA FILMS; una página temátca de streaming de
-                    películas de género del terror para compra de boletas oﬀ-line y compra online .....etc   completar</p><br>
-                    <ul>
-                        <li>Página (one-page) de la empresa de desarrollo   ......</li>
-                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, amet ipsam. Quaerat inventore ipsam similique dolores totam ullam, officiis nobis odio, laudantium nostrum delectus adipisci architecto earum aspernatur blanditiis a.</li>
-                      
-                    </ul>
-                </p>
-            </li>
-        </ol>
-    </section> -->
+<section class="hero-banner magic-ball">
+    <div class="container">
+
+      <div class="row align-items-center text-center ">
+        <div class="col-md-6 col-lg-5 mb-5 mb-md-0">
+          <h1>TYBA SAS</h1>
+          <p>Somos una compañía de emprendedores comprometidos  con el avance de proyectos
+            innovadores y poderosos en Tecnologías de la Información. Como parte de nuestro portafolio,
+            hemos preparado el proyecto PESADILLA FILMS; una página temática de streaming de
+            películas de género de terror para compra de boletas oﬀ-line y compra online .....etc </p>
+         
+        </div>
+        <div class="imgGrupo" class="col-md-6 col-lg-7 col-xl-6 offset-xl-1">
+            <div *ngFor="let img of grupo">
+                <img id="img" width="450"  [src] = "img"  />
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+  <div class="section-intro text-center pb-90px">
+    <div *ngFor="let img of compro">
+        <img id="img" width="250"  [src] = "img"  />
+    </div> <br> 
+    <h2>COMPROMISO TYBA</h2>
+    <h4>Segun la evaluación de nuestros clientes:</h4>
+  </div>
+  <div id="contenedor_aptitudes">
+    <div class="row">
+        <div class="col"><h6>Responsabilidad 100%</h6> <progress value="100" max="100"></progress></div>
+    </div>     
+    <div class="row">
+        <div class="col"><h6>Compromiso 100%</h6> <progress value="100" max="100"></progress></div>
+    </div> 
+    <div class="row">
+        <div class="col"><h6>Desarrollo agil 100%</h6> <progress value="100" max="100"></progress></div>
+    </div> 
+    <div class="row">
+        <div class="col"><h6>Entregas a tiempo 95%</h6> <progress value="95" max="100"></progress></div>
+    </div> 
+    <div class="row">
+        <div class="col"><h6>Adaptabilidad 100%</h6> <progress value="100" max="100"></progress></div>
+    </div> 
+    <div class="row">
+        <div class="col"><h6>Dentro del presupuesto 100%</h6> <progress value="100" max="100"></progress></div>
+    </div> 
+</div> 
+
+
+
+
+  <section class="section-margin generic-margin">
+    <div class="container">
+      <div class="section-intro text-center pb-90px">
+
+        <div *ngFor="let img of servicios">
+            <img id="img" width="100"  [src] = "img"  />
+        </div>
+
+        <h2 id="servicios">SERVICIOS</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="service-card text-center">
+            <div class="service-card-img">
+                <div *ngFor="let img of grafico">
+                    <img id="img" width="200"  [src] = "img"  />
+                </div>
+            </div>
+            <div class="service-card-body">
+                <h3>Diseño Gráfico</h3>
+                <p>Estudio de diseño gráfico. Diseño de logotipos para empresas. Expertos en desarrollo de páginas web a medida.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="service-card text-center">
+              <div class="service-card-img">
+                  <div *ngFor="let img of eco">
+                      <img id="img" width="200"  [src] = "img"  />
+                  </div>
+                <img class="img-fluid" src="img/service3.png" alt="">
+              </div>
+            <div class="service-card-body">
+              <h3>E-commerce</h3>
+              <p>Diseñamos páginas web con tiendas online. Creamos aplicaciones E-commerce y sistemas de ventas online.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="service-card text-center">
+            <div class="service-card-img">
+                <div *ngFor="let img of di">
+                    <img id="img" width="200"  [src] = "img"  />
+                </div>
+              <img class="img-fluid" src="img/service3.png" alt="">
+            </div>
+            <div class="service-card-body">
+              <h3>Desarrollo web</h3>
+              <p>Empresa de desarrollo de páginas web. Diseño de app web. Hacemos páginas web profesionales de calidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <div class="section-intro text-center pb-90px">
+    <div *ngFor="let img of equipo">
+        <img id="img" width="150"  [src] = "img"  />
+    </div>
+    <h2>NUESTRO EQUIPO</h2>
+  </div>
+ 
+        <div  id="contenedorFoto" class="foto1">
+            <div *ngFor="let img of camilo" >
+                <img id="img1"  [src] = "img"  />
+            </div>
+            <div id="acerca_de_mi"> <p id="texto_aceraDeMi" >De manera breve, puedo decir del desarrollo web que un es una rama muy importante del desarrollo de software y que hay demasiada información gratuita y disponible en internet del tema. Que uno puede llegar a hacer proyectos de gran complejidad técnica sin darse cuenta. También que hay miles de cosas complementarias y que nos dan un plus muy grande, las cuales a veces pasamos desapercibidas, como a interfaz de usuario (UI), la experiencia de usuario (UX), los marcos CSS, etc.
+              Este mundo el desarrollo es de constante cambio y hay que estar siempre actualizado, aprendiendo nuevas cosas y estando atento a los diferentes cambios del mercado.
+              Una última cosa, aprender no es suficiente, hay que poner en práctica los conceptos, por ejemplo, clonar una página web que te gusta y ver cuánto aplicas lo que has aprendido. Si no prácticas, olvidarás lo que aprendiste.</p> </div>
+         </div>
+        <br> <br>
+         <div  id="contenedorFoto" class="foto2">
+            <div *ngFor="let img of angie" >
+                <img id="img1"  [src] = "img"  />
+            </div>
+            <div id="acerca_de_mi"> <p id="texto_aceraDeMi" >Tecnóloga profesional en Administración; con gran interés en entrar en el campo de la
+              programación y desarrollo web, cursando actualmente un Bootcamp full stack, ya he
+              cursado un Bootcamp fundamentos de programación, empleando HTML5, CCS3, bases
+              de JavaScript y Bootstrap; en búsqueda de un semillero donde pueda ampliar
+              conocimientos y empezar a desarrollarlos, adicionalmente tengo amplia experiencia en
+              servicio al cliente, promoción y venta de productos tangibles, manejo de personal, trabajo
+              en equipo, control de inventarios; proactiva, creativa, responsable, organizada, con
+              buenas relaciones interpersonales, enfocada en lograr crecimiento y aprendizaje
+              constante que me permita escalar y avanzar progresivamente dentro de la compañía.</p> </div>
+         </div>
+        <br> <br>
+         <div  id="contenedorFoto" class="foto3">
+            <div *ngFor="let img of mali" >
+                <img id="img1"  [src] = "img"  />
+            </div>
+            <div id="acerca_de_mi"> <p id="texto_aceraDeMi" >Apasionada por el uso de las TIC  <br> en soluciones innovadoras
+               y con <br> impacto social. Programadora <br> fullstack,  mis fortalezas son <br> javascript y node.js,  pero me <br> desempeño también en HTML/CSS, <br> PHP, MySQL y Angular.</p> </div>
+         </div>
+         <br> <br>
+         <div  id="contenedorFoto" class="foto2">
+            <div *ngFor="let img of richard" >
+                <img id="img1"  [src] = "img"  />
+            </div>
+            <div id="acerca_de_mi"> <p id="texto_aceraDeMi" >Tecnóloga profesional en Administración; con gran interés en entrar en el campo de la
+             programación y desarrollo web, cursando actualmente un Bootcamp full stack, ya he
+             cursado un Bootcamp fundamentos de programación, empleando HTML5, CCS3, bases
+             de JavaScript y Bootstrap; en búsqueda de un semillero donde pueda ampliar
+             conocimientos y empezar a desarrollarlos, adicionalmente tengo amplia experiencia en
+             servicio al cliente, promoción y venta de productos tangibles, manejo de personal, trabajo
+             en equipo, control de inventarios; proactiva, creativa, responsable, organizada, con
+             buenas relaciones interpersonales, enfocada en lograr crecimiento y aprendizaje
+             constante que me permita escalar y avanzar progresivamente dentro de la compañía.</p> </div>
+         </div>
+        <br> <br>
+         <div  id="contenedorFoto" class="foto1">
+            <div *ngFor="let img of mali" >
+                <img id="img1"  [src] = "img"  />
+            </div>
+            <div id="acerca_de_mi"> <p id="texto_aceraDeMi" >Tecnóloga profesional en Administración; con gran interés en entrar en el campo de la
+             programación y desarrollo web, cursando actualmente un Bootcamp full stack, ya he
+             cursado un Bootcamp fundamentos de programación, empleando HTML5, CCS3, bases
+             de JavaScript y Bootstrap; en búsqueda de un semillero donde pueda ampliar
+             conocimientos y empezar a desarrollarlos, adicionalmente tengo amplia experiencia en
+             servicio al cliente, promoción y venta de productos tangibles, manejo de personal, trabajo
+             en equipo, control de inventarios; proactiva, creativa, responsable, organizada, con
+             buenas relaciones interpersonales, enfocada en lograr crecimiento y aprendizaje
+             constante que me permita escalar y avanzar progresivamente dentro de la compañía.</p> </div>
+         </div>
+        <br> <br>
+
+
+        <div class="section-intro text-center pb-90px">
+            <div *ngFor="let img of tec">
+                <img id="img" width="150"  [src] = "img"  />
+            </div>
+            <h2>TECNOLOGIAS CON LAS QUE TRABAJAMOS</h2>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <br><br>
+
+  <div class="btn-mail">
+    <a href="mailto:angie.a.tellez87@gmail.com" target="_blank" >
+        <div *ngFor="let img of flotante" class="mail">
+            <img id="img" width="120"  [src] = "img"  />
+        </div>
+    </a>
+    </div>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small">
+
+    <!-- Footer Links -->
+    <div class="container">
+  
+   
+      <!-- Grid row-->
+      <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+  
+      <!-- Grid row-->
+      <div class="row pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 text-center">
+  
+          <div class="mb-5 flex-center">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter fa-lg white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g fa-lg white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic">
+              <i class="fab fa-pinterest fa-lg white-text"> </i>
+            </a>
+  
+          </div>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://www.roman-gomez.com"> Roma Design</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->   
+
+  
+      <!--js, popper.js y jquery-->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+      <!--scrip awesome: Acá tienes que cambiar el SRC con el que te dan en la página web de AWESONE -->
+      <script src="https://kit.fontawesome.com/1b72e4ed05.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
 
     
