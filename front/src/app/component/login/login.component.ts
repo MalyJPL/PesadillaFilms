@@ -85,7 +85,7 @@ export class LoginComponent implements OnInit {
 
 
           // Redireccion al perfil
-          this._router.navigate(['/cancion-todas']);
+          this._router.navigate(['/frontpage']);
 
         }else{
           // alert('Usuario no identificado');
