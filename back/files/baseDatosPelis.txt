@@ -65,7 +65,7 @@ p5 = {
     duracion: '91 min.',
     trailer: 'posesionTrailer.mp4',
     online: 'https://waaw.tv/watch_video.php?v=cGUzWEVCYlhQdzM3RTBuMzFmOXhUTm9ONERtc3B1bCtvcnJBSm9zMVFVYnk1TWIwU0RxV0c5MGQrdkE4WkVoag%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
-    cover: 'posesionCoveer.jpg',
+    cover: 'posesionCover.jpg',
     wallpaper: 'posesionWallpaper.jpg',
     estado: 1
 }

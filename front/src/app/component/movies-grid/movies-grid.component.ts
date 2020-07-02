@@ -20,26 +20,32 @@ export class MoviesGridComponent implements OnInit {
   public archivoMostrar: String;
   modalRef: BsModalRef;
   previewUrl = '';
+    // Declarar la variable url
+  public url : String;
 
   constructor(
     private peliculaService : PeliculaService, 
     private modalService: BsModalService, 
-    private sanitizer: DomSanitizer) { }
+    private sanitizer: DomSanitizer) { 
+      this.url = peliculaService.url;
+    }
 
   ngOnInit() {
     this.getMovies();
+    
   }
 
   getMovies() {
     this.peliculaService.todasLasPeliculas().subscribe(
       (response: any)=>{
         this.peliculas = response.peliculas;
-
-for(let i = 0; i< this.peliculas.length; i++){
+         for(let i = 0; i< this.peliculas.length; i++){
+          this.peliculas[i].cover = this.url+'obtener-archivo/'+ this.peliculas[i]._id+'/'+'cover';
+          this.peliculas[i].wallpaper = this.url+'obtener-archivo/'+ this.peliculas[i]._id+'/'+'wallpaper';
+          this.peliculas[i].trailer = this.url+'obtener-archivo/'+ this.peliculas[i]._id+'/'+'trailer';
   //obtener la rut completa y no solo el nombre
-  console.log(`entro: ${i}`);
+  console.log(`La pelicula ${i} tiene datos: ${JSON.stringify(this.peliculas[i])}`)
   }
-
         if (!this.peliculas) {
          console.log("No se pudo recuperar películas");
         } else {
@@ -55,18 +61,6 @@ for(let i = 0; i< this.peliculas.length; i++){
     );
   }
 
-  obtenerImagen(tipo, idPelicula){
-this.peliculaService.obtenerArchivoImagen(tipo, idPelicula).subscribe(
-  (response: any)=>{
-    this.archivoMostrar = response.imagen;
-    if (!this.peliculas) {
-     console.log("No se pudo recuperar imagen");
-    } else {
-      console.log("imagen recuperada");
-    }
-  }
-)
-  }
 
   openModal(template: TemplateRef<any>, previewUrl: string) {
     this.previewUrl = previewUrl;

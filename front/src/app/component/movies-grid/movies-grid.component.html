@@ -1,8 +1,9 @@
 <div class="moviegrid">
   <div class="row">
-    <div *ngFor="let movie of movies" class="moviegrid-item col-md-{{ 12 / columns }}">
-      <a href="javascript:void(0)" class="moviegrid-play-trailer" (click)="openModal(preview, movie.trailer)"></a>
-      <a routerLink="/movie/{{ movie.id }}">
+    <div *ngFor="let movie of peliculas" class="moviegrid-item col-md-{{ 12 / columns }}">
+      <a href="javascript:void(0)" class="moviegrid-play-trailer" 
+      (click)="openModal(preview, movie.trailer)"></a>
+      <a routerLink="/movie/{{ movie._id }}">
         <img src="{{ movie.cover }}" alt="{{ movie.titulo }}" class="moviegrid-poster img-fluid" style="height:380px ; max-width: 100%;"  />
         <span style="text-align: center;" class="moviegrid-title">{{ movie.titulo }}</span>
       </a>
