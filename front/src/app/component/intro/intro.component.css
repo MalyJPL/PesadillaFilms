@@ -1,0 +1,16 @@
+button{
+   border-radius: 4px;
+   background-color:  #8b0101;
+   padding: 10px;
+   font-weight: bolder;
+   z-index: 999;
+   margin-top: 1000px;
+   margin-left: -55%;
+   display:inline-block;
+   position: absolute;
+
+}
+
+video{
+    z-index: 100;
+}
