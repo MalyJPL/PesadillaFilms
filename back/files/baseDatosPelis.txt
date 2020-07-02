@@ -1,6 +1,6 @@
 //baseDatos película
 p1 = {
-    categoria: 'asesinatos',
+    categoria: 'asesinos',
     titulo: 'Saw',
     sinopsis:'Adam se despierta encadenado a un tubo oxidado dentro de una decrépita cámara subterránea. A su lado, hay otra persona encadenada, el Dr. Lawrence Gordon. Entre ellos hay un hombre muerto. Ninguno de los dos sabe por qué está allí, pero tienen un casette con instrucciones para que el Dr. Gordon mate a Adam en un plazo de ocho horas. Recordando una investigación de asesinato llevada a cabo por un detective llamado Tapp, Gordon descubre que él y Adam son victimas de un psicópata conocido como Jigsaw. Sólo disponen de unas horas para desenredar el complicado rompecabezas en el que están inmersos.',
     director:'James Wan',
@@ -9,12 +9,12 @@ p1 = {
     trailer: 'sawTrailer.mp4',
     online: 'https://waaw.tv/watch_video.php?v=b0VQZ1p6NkFsY2dqUHMrQXNHUUtPV3NscDFLWGppMklPbjl6RlVvd0t2aHRXTVN2WmxVRXFmREFpaU5wU1F5SQ%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
     cover: 'sawCover.jpg',
-    poster: 'sawWallpaper.jpg',
+    wallpaper: 'sawWallpaper.jpg',
     estado: 1
 }
 
 p2 = {
-    categoria: 'asesinatos',
+    categoria: 'asesinos',
     titulo: 'La Masacre de Texas',
     sinopsis:'Durante un viaje de Texas a México, un grupo de jóvenes recoge a una autoestopista ensangrentada que asegura que es la única superviviente de una masacre ocurrida la noche anterior en una casa cercana. Remake del clásico homónimo de Tobe Hooper (1974).',
     director:'Marcus Nispel',
@@ -23,7 +23,7 @@ p2 = {
     trailer: 'texasTrailer.mp4',
     online: 'https://waaw.tv/watch_video.php?v=UnlMWDQ0YXhQQ1NLcGN0SktkMnozS2Uwc0gxMGp2L05XNWs1VkdLSHRXL0M5Nmc3WDVQUDVUdWt2SFJlQjJKWA%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
     cover: 'texasCover.jpg',
-    poster: 'texasWallpaper.jpg',
+    wallpaper: 'texasWallpaper.jpg',
     estado: 1
 }
 
@@ -37,7 +37,7 @@ p3 = {
     trailer: '',
     online: '',
     cover: 'doctorCover.jpg',
-    poster: 'doctorWallpapeer.jpg',
+    wallpaper: 'doctorWallpaper.jpg',
     estado: 1
 }
 
@@ -51,7 +51,7 @@ p4 = {
     trailer: 'alienTrailer.mp4',
     online: 'https://waaw.tv/watch_video.php?v=WU81aVRYczZ0dWJvdC8xenRNNFpLTmwydHpaN24vOG5mYkRCMkxOQ3Y4dDRibHo1cmhvQ1AzWEd1T2sydldCbw%3D%3D',
     cover: 'alienCover.jpg',
-    poster: 'alienWallpaper.jpg',
+    wallpaper: 'alienWallpaper.jpg',
     estado: 1
 }
 
@@ -65,8 +65,21 @@ p5 = {
     duracion: '91 min.',
     trailer: 'posesionTrailer.mp4',
     online: 'https://waaw.tv/watch_video.php?v=cGUzWEVCYlhQdzM3RTBuMzFmOXhUTm9ONERtc3B1bCtvcnJBSm9zMVFVYnk1TWIwU0RxV0c5MGQrdkE4WkVoag%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
-    cover: 'posesionCoveer.jpg',
-    poster: 'posesionWallpaper.jpg',
+    cover: 'posesionCover.jpg',
+    wallpaper: 'posesionWallpaper.jpg',
+    estado: 1
+}
+p6 = {
+     categoria: 'paranormal',
+    titulo: 'El conjuro',
+    sinopsis:'A principios de los años 70, Ed y Lorrain Warren, reputados investigadores de fenómenos paranormales, se enfrentan a una entidad demoníaca al intentar ayudar a una familia que está siendo aterrorizada por una presencia oscura en su aislada granja.',
+    director:'James Wan',
+    protagonistas: 'Ron Livingston, Shannon Kook',
+    duracion: '91 min.',
+    trailer: 'elconjuroTrailer.mp4',
+    online: 'https://waaw.tv/watch_video.php?v=cGUzWEVCYlhQdzM3RTBuMzFmOXhUTm9ONERtc3B1bCtvcnJBSm9zMVFVYnk1TWIwU0RxV0c5MGQrdkE4WkVoag%3D%3D#iss=MTg2LjExNC4xMTEuMTQ3',
+    cover: 'elconjuroCover.jpg',
+    wallpaper: 'elconjuroWallpaper.jpg',
     estado: 1
 }
 
@@ -80,7 +93,7 @@ p5 = {
     trailer: '',
     online: '',
     cover: '',
-    poster: '',
+    wallpaper: '',
     estado: 1
 }
  */
@@ -89,4 +102,91 @@ p5 = {
 
 
 
-db.peliculas.insert( [p1,p2,p3,p4,p5] )
+db.peliculas.insert( [p1,p2,p3,p4,p5, p6] )
+
+
+st1= {
+          titulo: 'Saw',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: ['12:45 PM', '4:20 PM', '6:30 PM', '8:00 PM', '10:00 PM']
+            }
+          ]
+        }
+
+        st2= {
+          titulo: 'El conjuro',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: ['12:45 PM', '4:20 PM', '6:30 PM', '8:00 PM', '10:00 PM']
+            }
+          ]
+        }
+         st3=
+        {
+          titulo: 'Alien, el octavo pasajero',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: [
+                '10:20 AM',
+                '12:00 PM',
+                '1:45 PM',
+                '3:00 PM',
+                '5:30 PM',
+                '6:45 PM'
+              ]
+            }
+          ]
+        }
+    st4=
+        {
+          titulo: 'La masacre de Texas',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: [
+                  '10:20 AM',
+              '11:00 AM',
+                '1:00 PM',
+                 '2:00 PM',
+                '4:00 PM',
+                '6:00 PM',
+                 '8:00 PM',
+                '10:00 PM'
+              ]
+            }
+          ]
+        }
+         st5=
+        {
+          movieId: 'Doctor sueño',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: [
+                '10:20 AM',
+                '12:00 PM',
+                '1:45 PM',
+                '3:00 PM',
+                '5:30 PM',
+                '6:45 PM'
+              ]
+            }
+          ]
+        }
+         st6=
+        {
+          movieId: 'Posesión Infernal',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: ['12:45 PM', '4:20 PM', '6:30 PM', '8:00 PM', '10:00 PM']
+            }
+          ]
+        }
+
+        db.showtimes.insert( [st1,st2,st3,st4,st5, st6] )
+      

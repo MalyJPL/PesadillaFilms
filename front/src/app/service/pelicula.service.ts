@@ -11,12 +11,16 @@ import { Observable } from 'rxjs';
 
 
 import { stringify } from 'querystring';
+import { Pelicula } from '../modelo/pelicula';
+
+
 
 @Injectable()
 export class PeliculaService {
 
 // Declarar la variable url de la api
 url = 'http://localhost:3000/api/';
+
 
   // Declarar la variable pelicula registrad
  
@@ -34,7 +38,7 @@ url = 'http://localhost:3000/api/';
       headers : new HttpHeaders({'Content-Type': 'application/json'})
     };
     return this._http.post(
-      this.url + 'registrar-pelicula/',
+      this.url + 'registrar-pelicula',
       params,
       options
     ).pipe(map(res => res))
@@ -67,12 +71,29 @@ cargarWallpaper(file: File, id){
       formData
     ).pipe(map(res => res));
   }
+
   
   obtenerCategoria(categoria){
     return this._http
     .get(this.url + 'buscar-categoria/' + categoria)
     .pipe(map((res) => res));
   }
+
+
+
+ todasLasPeliculas(){
+    return this._http.get(
+      this.url + 'buscar-todas'
+      ).pipe(map(res  => res));
+  }
+
+  obtenerPelicula(id){
+        return this._http.get(
+      this.url + 'buscar-pelicula/'+id
+      ).pipe(map(res => res));
+  }
+
+
 }
 
  

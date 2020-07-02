@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
   <title>Pesadilla Films ☠</title>
@@ -9,6 +9,9 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 
+
+
+  
 <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -30,6 +33,10 @@
 
 
 
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 <!-- DATA TABLE para la opcion del registro de administracion-->
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
@@ -42,11 +49,21 @@
         $('#userList').DataTable();
     } );
 </script>
+<script type="text/javascript">
+  $(document).ready(function() {
+      
+      $('#userList2').DataTable();
+  } );
+</script>
 <!-- DATA TABLE para la opcion del registro de administracion  FIN -->
+
 
 
 </head>
       <body>
         <app-root></app-root>
       </body>
+
+
+      
 </html>

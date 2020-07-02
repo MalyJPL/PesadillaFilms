@@ -6,13 +6,12 @@
     <img id="imgUsuario" src="{{ rutaImagen }}" />
  -->
  
- <img id="imgUsuario" src="{{ url + 'obtenerImagen/' + identidad.imagen }}" style="width: 80px;" />
- <span>Bienvenid@ {{ identidad.nombre }}</span>
+ 
 
 <!-- 
   Formulario Actualización Datos Usuario
--->
-<form #formularioActualizar="ngForm" (ngSubmit)="actualizarUsuario()">
+
+ <form #formularioActualizar="ngForm" (ngSubmit)="actualizarUsuario()">
  <input type="text" placeholder="Nombre" name="nombre"
     #nombre="ngModel" [(ngModel)]="usuarioActualizar.nombre" />
  <br>
@@ -27,9 +26,116 @@
  <br>
 
  <input type="file" placeholder="Subir Imagen" (change)="subirArchivo($event)" />
- <!-- 
+
      Previsualizar la imagen escogida por el usuario
-  -->
-  <br><br>
+
+ <br><br>
   <button type="submit" >Actualizar Datos</button>
-</form>
+</form>  -->
+
+
+
+<body>
+ 
+
+   <div class="container">
+           <div class="modal-container">
+               <div class="banner-container">
+                   <div class="img-container">
+
+                     <img id="imgUsuario" src="{{ url + 'obtenerImagen/' + identidad.imagen }}" style=" width: 250px; height: 250px; margin-right: 333px; border-radius: 33px;" />
+                   </div>
+               </div>
+               <div class="form-container">
+                  
+                   <div class="welcome">
+                     <div class="info-banner">
+                       
+                        
+                        <div class="info-form">
+                           <p>Bienvenid@ <b style="color: red;">{{ identidad.nombre }}</b> Actualiza tu información aquí. </p>
+                       </div>
+                        <br><br>
+
+
+                        
+
+                        <label class="sub1">  <input   class="sub"   type="file" placeholder="Subir Imagen" (change)="subirArchivo($event)" /> <i class="fa fa-cloud-upload"></i>&nbsp;Seleccionar imagen de perfil.
+                        </label>&nbsp;
+                       
+
+
+                        
+                        <!-- <input type="file" placeholder="Subir Imagen" (change)="subirArchivo($event)" class="fas fa-camera" style=" background-color: black;" /> -->
+                    
+                     
+                     </div>
+                   </div>
+                   
+                   <form #formularioActualizar="ngForm" (ngSubmit)="actualizarUsuario()">
+                       <div class="input-div one">
+                           <div class="icono">
+                               <i class="fas fa-user"></i>
+                           </div>
+                           <div>
+               
+                              <input type="text" placeholder="Nombre" name="nombre"
+                              #nombre="ngModel" [(ngModel)]="usuarioActualizar.nombre" />
+                           <br>
+
+                           </div>
+                       </div>
+                       <div class="input-div two">
+                           <div class="icono">
+                               <i class="fas fa-user"></i>
+                           </div>
+                           <div>
+
+                              <input type="text" placeholder="Apellido" name="apellido"
+    #apellido="ngModel" [(ngModel)]="usuarioActualizar.apellido" />
+ <br>
+                           
+                           </div>
+                       </div>
+
+                       <div class="input-div two">
+                           <div class="icono">
+                               <i class="fa fa-envelope" aria-hidden="true"></i>
+                           </div>
+                           <div>
+
+                              <input type="text" placeholder="Correo" name="correo"
+                              #correo="ngModel" [(ngModel)]="usuarioActualizar.correo" />
+                           <br>
+                           
+                           </div>
+                       </div>
+
+
+                       <div class="input-div two">
+                           <div class="icono">
+                               <i class="fas fa-lock"></i>
+                           </div>
+                           <div>
+
+                              <input type="password" placeholder="Contraseña" name="contrasena"
+    #contrasena="ngModel" [(ngModel)]="usuarioActualizar.contrasena" />
+ <br>
+                           
+                           </div>
+                       </div>
+                       <button type="submit" class="btn" > <i class="fa fa-upload" ></i>&nbsp; Actualizar Datos</button>
+                   </form>
+                  
+               </div>
+           </div>
+       </div>
+   
+      
+   
+   
+     </body>
+
+
+
+

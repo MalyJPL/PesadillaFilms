@@ -1,0 +1,305 @@
+
+.logo{
+    margin-top: -30%;
+    margin-bottom: -8%;
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+}
+
+.container{
+    margin-top: 30px;
+    font-size: large;
+    text-align: justify !important;
+    color: lightslategray;
+}
+
+h3{
+    color: black;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 3rem!important;
+    margin: 65px 0px 25px;
+}
+
+.generic-margin {
+    margin-top: 180px;
+}
+
+.section-intro.text-center.pb-90px {
+    padding-bottom: 90px;
+    color: blue;
+}
+
+.section-padding {
+    padding-bottom: 90px ;
+}
+
+.mb-4 {
+    padding-bottom: 90px;
+}
+
+/* servicios
+	============================================================================================ */
+    .service-card {
+        background: #f8f8ff;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+      }
+      
+      .service-card:hover {
+        background: #fff;
+      }
+      
+      .service-card-img {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        max-height: 260px;
+      }
+      
+      @media (max-width: 600px) {
+        .service-card-img {
+          padding-top: 20px;
+          padding: 10px;
+        }
+      }
+      
+      .service-card-body {
+        padding: 10px 30px 40px 30px;
+      }
+      
+      .service-card-body h3 {
+        margin-bottom: 8px;
+      }
+/* servicios	============================================================================================ */ 
+
+.page-footer{
+    background:#f0efff;
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenedor_index{
+   margin-top: 280px;
+   margin-left: -600px;
+}
+
+.contenedor_principal{
+    margin-left: 0%;
+    margin-top: 6%;
+    width: 800px;
+
+}
+
+#contenedorFoto{
+    background-color: gray;
+    width: 330px;
+    height: 340px;
+    border-radius: 300px;
+    opacity: 0,9;
+}
+
+.foto1{
+    margin-left: 120px;
+}
+
+.foto2{
+    margin-left: 320px;
+}
+
+.foto3{
+    margin-left: 520px;
+   
+}
+
+
+
+
+#img1{
+    width: 350px;
+    height:360px;
+   margin-left: 30px;
+   border-radius: 300px;
+   
+}
+
+#texto_aceraDeMi{
+    margin-left: 180px;
+    text-align: justify;
+    padding: 20px;
+}
+
+#acerca_de_mi{
+    background-color: gray;  
+    width: 680px;
+    height:345px;
+   margin-left: 213px;
+   margin-top: -360px;
+   opacity: 0;
+}
+
+div#contenedorFoto:hover div#acerca_de_mi{
+    opacity: 1;
+}
+
+h1, h2{
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+#btn{
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+font-weight: bold;
+padding: 5px;
+}
+
+.barnav{
+    color: white;
+    font-weight: bold;
+}
+
+.barnav:hover{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+
+#a{
+    text-decoration: none;
+}
+
+
+/* Linea de tiempo pagina experiencia */
+
+.linea-tiempo {
+  position: relative;
+  width: 500px;
+  margin-left: 20%;
+}
+ 
+.momento {
+  position: relative;
+  width: 45%;
+  box-sizing: border-box;
+  background-color: gray;
+  padding: 10px;
+}
+ 
+.momento:nth-child(even) {
+  left: 55%;
+}
+
+.linea-tiempo::before {
+    content: '';  
+    position: absolute;
+    width: 3px;
+    background-color: #000;
+    height: 100%;
+  }
+   
+  .momento::after {
+    content: '';
+    position: absolute;
+    top: calc(50% + 10px);
+    right: calc(-11.11% - 11.5px);
+    height: 20px;
+    width: 20px;
+    background-color: #000;
+   
+  }
+   
+  .momento:nth-child(even)::after {
+    left: calc(-11.11% - 8.5px);
+  }
+
+  /* aptitudes */
+
+  #contenedor_aptitudes{
+     
+      margin-top: -80px !important;
+      margin-left: 600px;
+      padding: 20px;
+      width: 80%;
+      margin-bottom: -100px;
+  }
+
+  progress{
+      background-color: green;
+  }
+
+/* boton flotante */
+
+  .btn-mail {
+    display:block;
+    position: fixed;
+    right:5px;
+    bottom:360px;
+    z-index:999;
+}
+
+.mail{
+    border-radius: 10px !important;
+}
+
+footer{
+    background-color: black;
+    padding: 0px;
+}
+
+#angie{
+color: wheat;
+margin-left: 250px;
+}
+
+#datos{
+    font-weight: bolder;
+    margin-left: 250px;
+}

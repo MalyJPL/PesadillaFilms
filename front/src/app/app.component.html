@@ -1,11 +1,13 @@
 
+<div *ngIf="!'/tyba-empresa'">   
+
 <!--            imagen de fondo y logo          -->
 
  <section id="header2">
 
   <div class="container text-center">
     <div class="logo">
- <img style="width: 460px; display:block; margin:auto; " src="../../../assets/img/logo.png" alt="">   
+ <img style="width: 60%; display:block; margin:auto; " src="../../../assets/img/logo.png" alt="">   
   
   </div>
   </div>
@@ -36,6 +38,7 @@
             <a class="nav-link dropdown-toggle" routerLink="/"   id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Categorías 
             </a>
+
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item nav-link" routerLink="/categorias/asesinos">Asesinos</a>
                 <div class="dropdown-divider"></div>
@@ -44,6 +47,7 @@
                 <a class="dropdown-item nav-link" routerLink="/categorias/paranormal">Paranormal</a>
                  <div class="dropdown-divider"></div>
                 <a class="dropdown-item nav-link" routerLink="/categorias/psicologico">Psicológico</a>     
+
               </div>
           </li> 
 
@@ -57,7 +61,9 @@
             <a routerLink="/confiteria" class="nav-link">Confitería</a>
           </li>
 
-
+          <li class="nav-item">
+            <a routerLink="/perfil" class="nav-link">Editar perfil</a>
+          </li>
         
          
 
@@ -84,13 +90,13 @@
     </div>
   </div>
 </header>
-
+</div>
 <main id="main" class="site-main main">
   <router-outlet></router-outlet>
 </main>
 
 <!-- --------------------- Footer --------------------- -->
-
+<div *ngIf="!'/tyba-empresa'"> 
 <footer class="page-footer font-small unique-color-dark">
 
   <div style="background-color: #8b0101;">
@@ -151,7 +157,7 @@
         <!-- Content -->
         <h6 class="text-uppercase font-weight-bold">Descarga Nuestra App</h6>
         <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p > <img style="width: 200px;" src="../../../assets/img/go.png" alt="">  </p> 
+        <p > <img style="width: 80%;" src="../../../assets/img/go.png" alt="">  </p> 
       
 
       </div>
@@ -224,4 +230,4 @@
 
 </footer>
 <!-- Footer -->
-
+</div>

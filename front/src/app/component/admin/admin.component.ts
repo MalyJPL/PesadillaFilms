@@ -52,35 +52,29 @@ export class AdminComponent implements OnInit {
 
   //método registrar película 
   registrarPelicula() {
-    console.log(`La pelicula enviada al servicio es: ${JSON.stringify(this.peliculaRegistrada)}`)
+   
     this.peliculaService.registrarPelicula(this.peliculaRegistrada).subscribe(
       (response: any) => {
         let pelicula = response.pelicula;
         this.peliculaRegistrada = pelicula;
-        this.idPeliculaActualizada = this.peliculaRegistrada._id;
-
+        this.idPeliculaActualizada = JSON.stringify(this.peliculaRegistrada._id);
+        this.idPeliculaActualizada = this.idPeliculaActualizada.substring(1, this.idPeliculaActualizada.length - 1 )
         if (!this.peliculaRegistrada._id) {
           alert("Error al registrar película");
         } else {
-          alert("Registro de película exitoso");
-          this.peliculaRegistrada = new Pelicula('', '', '', '', '', '', '', '', '', '', '', true);
-          this._router.navigate(['/admin']);
+                   alert("Registro de película exitoso");
+   /*        this.peliculaRegistrada = new Pelicula('', '', '', '', '', '', '', '', '', '', '', true);
+          this._router.navigate(['/admin']); */
         }
-      },
-      error => {
-        var errorMensaje = <any>error;
-        if (errorMensaje != null) {
-          console.log(`Error al registrar película: ${JSON.stringify(error)}`)
-        }
-      }
-    );
+         
 
     //registrar archivos de película
     if (!this.archivoSubirTrailer) {
-      alert('No hay ningún trailer')
+     console.log('No hay ningún trailer')
     } else {
-      alert('Has incluido el trailer')
+      console.log('Has incluido el trailer')
       //llamar servicio guardar traileer
+       console.log(JSON.stringify(`el id de la película es: ${this.idPeliculaActualizada}`));
       this.peliculaService.cargarTrailer(this.archivoSubirTrailer, this.idPeliculaActualizada).subscribe(
         (result: any) => {
           console.log(`trailer guardado: ${result}`)
@@ -89,9 +83,9 @@ export class AdminComponent implements OnInit {
     }
 
     if (!this.archivoSubirCover) {
-      alert('No hay ningún cover')
+      console.log('No hay ningún cover')
     } else {
-      alert('Has incluido el cover')
+      console.log('Has incluido el cover')
       //llamar servicio guardar cover
       this.peliculaService.cargarCover(this.archivoSubirCover, this.idPeliculaActualizada).subscribe(
         (result: any) => {
@@ -101,9 +95,9 @@ export class AdminComponent implements OnInit {
     }
 
     if (!this.archivoSubirWallpaper) {
-      alert('No hay ningún wallpaper')
+      console.log('No hay ningún wallpaper')
     } else {
-      alert('Has incluido el wallpaper')
+      console.log('Has incluido el wallpaper')
       //llamar servicio guardar traileer
       this.peliculaService.cargarWallpaper(this.archivoSubirWallpaper, this.idPeliculaActualizada).subscribe(
         (result: any) => {
@@ -111,5 +105,12 @@ export class AdminComponent implements OnInit {
         }
       )
     }
+  },
+  error => {
+    var errorMensaje = <any>error;
+    if (errorMensaje != null) {
+      console.log(`Error al registrar película: ${JSON.stringify(error)}`)
+    }
+  });
   }
 }
