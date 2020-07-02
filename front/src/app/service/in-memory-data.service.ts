@@ -1,9 +1,9 @@
-import { Showtime } from './../interface/showtime';
+import { Showtime } from '../modelo/showtime';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 // import mockData from './mock-data.json';
-import { Database } from '../interface/database';
-import { ShowtimeDate } from '../interface/showtime-date';
+import { Database } from '../modelo/database';
+import { ShowtimeDate } from '../modelo/showtime-date';
 
 @Injectable({
   providedIn: 'root'
@@ -222,155 +222,7 @@ export class InMemoryDataService implements InMemoryDbService {
           mpaa: 'PG-13'
         }
       ],
-      showtimes: [
-        {
-          movieId: 1,
-          showtimes: [
-            {
-              date: '02/07/2019',
-              times: [
-                {
-                  type: '3D',
-                  time: '10:20 AM'
-                },
-                '11:00 AM',
-                '1:00 PM',
-                {
-                  type: '3D',
-                  time: '2:00 PM'
-                },
-                '4:00 PM',
-                '6:00 PM',
-                {
-                  type: '3D',
-                  time: '8:00 PM'
-                },
-                '10:00 PM'
-              ]
-            }
-          ]
-        },
-        {
-          movieId: 2,
-          showtimes: [
-            {
-              date: '02/07/2019',
-              times: ['12:45 PM', '4:20 PM', '6:30 PM', '8:00 PM', '10:00 PM']
-            }
-          ]
-        },
-        {
-          movieId: 3,
-          showtimes: [
-            {
-              date: '02/07/2019',
-              times: [
-                '10:20 AM',
-                '12:00 PM',
-                '1:45 PM',
-                '3:00 PM',
-                '5:30 PM',
-                '6:45 PM'
-              ]
-            }
-          ]
-        },
-        {
-          movieId: 4,
-          showtimes: [
-            {
-              date: '02/07/2019',
-              times: [
-                {
-                  type: '3D',
-                  time: '10:20 AM'
-                },
-                '11:00 AM',
-                '1:00 PM',
-                {
-                  type: '3D',
-                  time: '2:00 PM'
-                },
-                '4:00 PM',
-                '6:00 PM',
-                {
-                  type: '3D',
-                  time: '8:00 PM'
-                },
-                '10:00 PM'
-              ]
-            }
-          ]
-        },
-        {
-          movieId: 5,
-          showtimes: [
-            {
-              date: '02/07/2019',
-              times: [
-                '10:20 AM',
-                '12:00 PM',
-                '1:45 PM',
-                '3:00 PM',
-                '5:30 PM',
-                '6:45 PM'
-              ]
-            }
-          ]
-        },
-        {
-          movieId: 6,
-          showtimes: [
-            {
-              date: '02/07/2019',
-              times: ['12:45 PM', '4:20 PM', '6:30 PM', '8:00 PM', '10:00 PM']
-            }
-          ]
-        },
-        {
-          movieId: 7,
-          showtimes: [
-            {
-              date: '02/07/2019',
-              times: [
-                '10:20 AM',
-                '12:00 PM',
-                '1:45 PM',
-                '3:00 PM',
-                '5:30 PM',
-                '6:45 PM'
-              ]
-            }
-          ]
-        },
-        {
-          movieId: 8,
-          showtimes: [
-            {
-              date: '02/07/2019',
-              times: [
-                {
-                  type: '3D',
-                  time: '10:20 AM'
-                },
-                '11:00 AM',
-                '1:00 PM',
-                {
-                  type: '3D',
-                  time: '2:00 PM'
-                },
-                '4:00 PM',
-                '6:00 PM',
-                {
-                  type: '3D',
-                  time: '8:00 PM'
-                },
-                '10:00 PM'
-              ]
-            }
-          ]
-        }
-      ]
-    };
+      showtimes: [],
   }
+}
 }

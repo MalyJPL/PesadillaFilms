@@ -356,6 +356,23 @@ function borrarPelicula(req, res) {
         });
 }
  
+//buscar una película
+
+function buscarUnaPelicula(req, res){
+  var peliculaId= req.params.id;
+  Pelicula.findById(peliculaId, (err, peliculaEncontrada) => {
+    if (err) {
+        res.status(500).send({ message: "Error en el servidor" });
+    } else {
+            res.status(200).send({
+                message: "¡Pelicula Encontrada!",
+                pelicula: peliculaEncontrada
+            });
+        }
+      });
+}
+
+
 
 // Exportar paquete de funciones
 module.exports = {
@@ -367,5 +384,6 @@ module.exports = {
   mostrarCategoria,
   busquedaPorPalabra,
   buscarTodas,
-  borrarPelicula
+  borrarPelicula, 
+  buscarUnaPelicula
 }

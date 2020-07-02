@@ -3,6 +3,8 @@ import { Movie } from './../../interface/movie';
 import { Observable, Subject } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { Pelicula} from '../../modelo/pelicula';
+import { PeliculaService } from '../../service/pelicula.service';
 
 @Component({
   selector: 'app-movie-search',
@@ -10,7 +12,7 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
   styleUrls: ['./movie-search.component.sass']
 })
 export class MovieSearchComponent implements OnInit {
-  movies$: Observable<Movie[]>;
+  movies$: Observable<Pelicula[]>;
   private searchTerms = new Subject<string>();
 
 

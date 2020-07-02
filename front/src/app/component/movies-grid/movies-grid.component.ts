@@ -17,6 +17,7 @@ export class MoviesGridComponent implements OnInit {
   @Input() columns: number;
   @Input() exclude?: number | number[];
   public peliculas: any[];
+  public peliculasFrontpage: any[];
   public archivoMostrar: String;
   modalRef: BsModalRef;
   previewUrl = '';
@@ -39,13 +40,14 @@ export class MoviesGridComponent implements OnInit {
     this.peliculaService.todasLasPeliculas().subscribe(
       (response: any)=>{
         this.peliculas = response.peliculas;
+         //obtener la rut completa y no solo el nombre
          for(let i = 0; i< this.peliculas.length; i++){
           this.peliculas[i].cover = this.url+'obtener-archivo/'+ this.peliculas[i]._id+'/'+'cover';
           this.peliculas[i].wallpaper = this.url+'obtener-archivo/'+ this.peliculas[i]._id+'/'+'wallpaper';
           this.peliculas[i].trailer = this.url+'obtener-archivo/'+ this.peliculas[i]._id+'/'+'trailer';
-  //obtener la rut completa y no solo el nombre
-  console.log(`La pelicula ${i} tiene datos: ${JSON.stringify(this.peliculas[i])}`)
   }
+  //dejar solo las últimas 4 películas en el frontPage
+  this.peliculas = this.peliculas.slice(this.peliculas.length-4, this.peliculas.length);
         if (!this.peliculas) {
          console.log("No se pudo recuperar películas");
         } else {

@@ -1,5 +1,8 @@
-import { FilterDate } from './../../interface/filter-date';
+import { FilterDate } from '../../modelo/filter-date';
 import { Component, OnInit, Input } from '@angular/core';
+import { Pelicula} from '../../modelo/pelicula';
+import { PeliculaService } from '../../service/pelicula.service';
+
 
 @Component({
   selector: 'app-movies',

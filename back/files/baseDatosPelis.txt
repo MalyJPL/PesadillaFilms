@@ -37,7 +37,7 @@ p3 = {
     trailer: '',
     online: '',
     cover: 'doctorCover.jpg',
-    wallpaper: 'doctorWallpapeer.jpg',
+    wallpaper: 'doctorWallpaper.jpg',
     estado: 1
 }
 
@@ -103,3 +103,90 @@ p6 = {
 
 
 db.peliculas.insert( [p1,p2,p3,p4,p5, p6] )
+
+
+st1= {
+          titulo: 'Saw',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: ['12:45 PM', '4:20 PM', '6:30 PM', '8:00 PM', '10:00 PM']
+            }
+          ]
+        }
+
+        st2= {
+          titulo: 'El conjuro',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: ['12:45 PM', '4:20 PM', '6:30 PM', '8:00 PM', '10:00 PM']
+            }
+          ]
+        }
+         st3=
+        {
+          titulo: 'Alien, el octavo pasajero',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: [
+                '10:20 AM',
+                '12:00 PM',
+                '1:45 PM',
+                '3:00 PM',
+                '5:30 PM',
+                '6:45 PM'
+              ]
+            }
+          ]
+        }
+    st4=
+        {
+          titulo: 'La masacre de Texas',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: [
+                  '10:20 AM',
+              '11:00 AM',
+                '1:00 PM',
+                 '2:00 PM',
+                '4:00 PM',
+                '6:00 PM',
+                 '8:00 PM',
+                '10:00 PM'
+              ]
+            }
+          ]
+        }
+         st5=
+        {
+          movieId: 'Doctor sueño',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: [
+                '10:20 AM',
+                '12:00 PM',
+                '1:45 PM',
+                '3:00 PM',
+                '5:30 PM',
+                '6:45 PM'
+              ]
+            }
+          ]
+        }
+         st6=
+        {
+          movieId: 'Posesión Infernal',
+          showtimes: [
+            {
+              date: '02/07/2019',
+              times: ['12:45 PM', '4:20 PM', '6:30 PM', '8:00 PM', '10:00 PM']
+            }
+          ]
+        }
+
+        db.showtimes.insert( [st1,st2,st3,st4,st5, st6] )
+      

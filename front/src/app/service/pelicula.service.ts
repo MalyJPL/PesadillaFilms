@@ -79,16 +79,11 @@ cargarWallpaper(file: File, id){
       ).pipe(map(res  => res));
   }
 
-  obtenerArchivoImagen(tipo, idPelicula){
-   let idPel = JSON.stringify(idPelicula).substring(1, JSON.stringify(idPelicula).length - 1 )
-    return this._http.get(
-      this.url + 'obtener-archivo/' + idPel + '/' + tipo
-        ).pipe(map(res  => res));
-
+  obtenerPelicula(id){
+        return this._http.get(
+      this.url + 'buscar-pelicula/'+id
+      ).pipe(map(res => res));
   }
-  
-
-
 
 }
 
