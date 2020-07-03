@@ -2,7 +2,8 @@ $rojo: #8b0101
 
 li,p,h5
     color: $rojo 
-
+img
+  height: 320px
 .btn 
   color: #ffff
   cursor: pointer
@@ -16,11 +17,21 @@ li,p,h5
   text-decoration: none
   text-transform: uppercase
   width: auto
+  
 
 .btn-1 
-  background: darken($rojo, 1.5%)
+  background: linear-gradient(90deg, rgba(160,6,6,0.9024743686537114) 0%, rgba(182,14,14,0.4262838924632353) 65%, rgba(0,0,0,1) 100%)
   font-weight: 100
-  
+
+.card
+  background: radial-gradient(circle, rgba(51,50,50,0.8464519596901261) 0%, rgba(59,60,62,0.8632586823792017) 91%)
+ 
+  h3
+    min-height: 2.5em
+    text-align: center
+  a
+    font-family: Arial, Helvetica, sans-serif
+    font-weight: 600
   svg 
     height: 100%
     left: 0
@@ -28,7 +39,7 @@ li,p,h5
     top: 0 
     width: 100% 
   
-  
+
   rect 
     fill: none
     stroke: #343a40
