@@ -93,6 +93,12 @@ cargarWallpaper(file: File, id){
       ).pipe(map(res => res));
   }
 
+  buscador(texto: string){
+return this._http.get(
+  this.url + 'buscar-palabra/' + texto
+).pipe(map(res => res));
+  }
+
 
 }
 

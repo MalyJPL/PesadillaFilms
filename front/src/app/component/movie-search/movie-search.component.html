@@ -4,11 +4,11 @@
 
   <ul class="movie-search-result">
     <li *ngFor="let movie of movies$ | async">
-      <a routerLink="/movie/{{movie.id}}" class="clearfix">
-        <img class="movie-search-result-image" src="{{ movie.poster }}" alt="{{ movie.title }}" />
+      <a routerLink="/movie/{{movie._id}}" class="clearfix">
+        <img class="movie-search-result-image" src="{{ movie.cover }}" alt="{{ movie.titulo }}" />
         <span class="movie-search-result-info">
-          <strong>{{ movie.title }}</strong>
-          <em>{{ movie.cast | join: ", " }}</em>
+          <strong>{{ movie.cover }}</strong>
+          <em>{{ movie.protagonistas }}</em>
         </span>
       </a>
     </li>
