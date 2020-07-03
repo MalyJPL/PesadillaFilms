@@ -1,234 +1,252 @@
-<!-- <div *ngIf="!'/tyba-empresa'"> -->
+<div id="encabezado">
+<!--            imagen de fondo y logo          -->
 
-  <!--            imagen de fondo y logo          -->
+<section id="header2">
 
-  <section id="header2">
+  <div class="container text-center">
+    <div class="logo">
+      <img style="width: 60%; display:block; margin:auto; " src="../../../assets/img/logo.png" alt="">
 
-    <div class="container text-center">
-      <div class="logo">
-        <img style="width: 60%; display:block; margin:auto; " src="../../../assets/img/logo.png" alt="">
-
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
 
 
 
-  <!-- ----------------     Menu  principal     ------------ -->
+<!-- ----------------     Menu  principal     ------------ -->
 
-  <header class="header">
-    <div>
-      <div class="navbar navbar-expand-lg navbar-dark">
+<header class="header">
+  <div>
+    <div class="navbar navbar-expand-lg navbar-dark">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"><span
-            class="navbar-toggler-icon"></span></button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"><span
+          class="navbar-toggler-icon"></span></button>
 
-        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
-          <ul class="navbar-nav ">
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav ">
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" routerLink="/"   id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Categorías 
+            <a class="nav-link dropdown-toggle" routerLink="/" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorías
             </a>
 
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item nav-link" routerLink="/categorias/asesinos">Asesinos</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item nav-link" routerLink="/categorias/monstruos">Monstruos</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item nav-link" routerLink="/categorias/paranormal">Paranormal</a>
-                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item nav-link" routerLink="/categorias/psicologico">Psicológico</a>     
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item nav-link" routerLink="/categorias/asesinos">Asesinos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item nav-link" routerLink="/categorias/monstruos">Monstruos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item nav-link" routerLink="/categorias/paranormal">Paranormal</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item nav-link" routerLink="/categorias/psicologico">Psicológico</a>
 
-              </div>
-            </li>
-
-
-            <li class="nav-item">
-              <a routerLink="/movies" class="nav-link">Películas</a>
-            </li>
+            </div>
+          </li>
 
 
-            <li class="nav-item">
-              <a routerLink="/confiteria" class="nav-link">Confitería</a>
-            </li>
-
-            <li class="nav-item">
-              <a routerLink="/perfil" class="nav-link">Editar perfil</a>
-            </li>
+          <li class="nav-item">
+            <a routerLink="/movies" class="nav-link">Películas</a>
+          </li>
 
 
+          <li class="nav-item">
+            <a routerLink="/confiteria" class="nav-link">Confitería</a>
+          </li>
 
-          </ul>
+          <li class="nav-item">
+            <a routerLink="/membresias" class="nav-link">Membresías</a>
+          </li>
 
-          <ul class="navbar-nav ml-auto">
+        </ul>
 
+        <ul class="navbar-nav ml-auto">
+
+          <span id="menuNoRegistrado" style = "display:flex">
             <li class="nav-item">
               <a routerLink="/login" class="nav-link"
                 style="background-color: #8b0101;  border-top-right-radius: 8px; border-bottom-left-radius: 8px; border-top-left-radius: 8px; border-bottom-right-radius: 8px "><i
                   class="fa fa-user"></i> &nbsp; Ingreso</a>
             </li>&nbsp; &nbsp;
 
-
             <li class="nav-item">
               <a routerLink="/registro" class="nav-link"
                 style="background-color: #8b0101; border-top-right-radius: 8px; border-bottom-left-radius: 8px; border-top-left-radius: 8px; border-bottom-right-radius: 8px "><i
                   class="fa fa-pencil"></i> &nbsp; Registro</a>
             </li>
-          </ul>&nbsp; &nbsp;
+          </span>
+
+          <span id="menuRegistrado" style = "display:flex">
+            <li class="nav-item">
+              <a routerLink="/admin" class="nav-link" id="menuAdmin"
+                style="background-color: #8b0101; border-top-right-radius: 8px; border-bottom-left-radius: 8px; border-top-left-radius: 8px; border-bottom-right-radius: 8px "><i
+                  class="fa fa-pencil"></i> &nbsp; Administrador</a>
+            </li>&nbsp; &nbsp;
+
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link" (click)="cerrarSesion()"
+                style="background-color: #8b0101; border-top-right-radius: 8px; border-bottom-left-radius: 8px; border-top-left-radius: 8px; border-bottom-right-radius: 8px "><i
+                  class="fa fa-pencil"></i> &nbsp; Cerrar sesion</a>
+            </li>&nbsp; &nbsp;
+
+            <li class="nav-item">
+              <a routerLink="/perfil" class="nav-link"
+                style="background-color: #8b0101; border-top-right-radius: 8px; border-bottom-left-radius: 8px; border-top-left-radius: 8px; border-bottom-right-radius: 8px "><i
+                  class="fa fa-pencil"></i> &nbsp;Editar perfil</a>
+            </li>
+          </span>
+        </ul>&nbsp; &nbsp;
 
 
 
-          <app-movie-search></app-movie-search> &nbsp; &nbsp; <i style="font-size: 26px; " class="fas fa-search"
-            aria-hidden="true"></i>&nbsp; &nbsp;
+        <app-movie-search></app-movie-search> &nbsp; &nbsp; <i style="font-size: 26px; " class="fas fa-search"
+          aria-hidden="true"></i>&nbsp; &nbsp;
 
 
-        </div>
       </div>
     </div>
-  </header>
-<!-- </div>
- -->
+  </div>
+</header>
+ </div>
+ 
 <main id="main" class="site-main main">
   <router-outlet></router-outlet>
 </main>
 
 <!-- --------------------- Footer --------------------- -->
 <!-- <div *ngIf="!'/tyba-empresa'"> -->
-  <footer class="page-footer font-small unique-color-dark">
+<footer class="page-footer font-small unique-color-dark" id="footer">
 
-    <div style="background-color: #8b0101;">
-      <div class="container">
+  <div style="background-color: #8b0101;">
+    <div class="container">
 
-        <!-- Grid row-->
-        <div class="row py-4 d-flex align-items-center">
-
-          <!-- Grid column -->
-          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-            <h6 class="mb-0">¡Conéctate con nosotros en nuestras redes sociales!</h6>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div style="font-size:30px ;" class="col-md-6 col-lg-7 text-center text-md-right">
-
-            <!-- Facebook -->
-            <a class="fb-ic">
-              <i class="fab fa-facebook-f white-text mr-4"> </i>
-            </a>
-
-            <!-- Twitter -->
-            <a class="tw-ic">
-              <i class="fab fa-twitter white-text mr-4"> </i>
-            </a>
-            <!-- Google +-->
-            <a class="gplus-ic">
-              <i class="fab fa-google-plus-g white-text mr-4"> </i>
-            </a>
-            <!--Linkedin -->
-            <a class="li-ic">
-              <i class="fab fa-linkedin-in white-text mr-4"> </i>
-            </a>
-            <!--Instagram-->
-            <a class="ins-ic">
-              <i class="fab fa-instagram white-text"> </i>
-            </a>
-
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row-->
-
-      </div>
-    </div>
-
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left mt-5">
-
-      <!-- Grid row -->
-      <div class="row mt-3">
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
 
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-          <!-- Content -->
-          <h6 class="text-uppercase font-weight-bold">Descarga Nuestra App</h6>
-          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p> <img style="width: 80%;" src="../../../assets/img/go.png" alt=""> </p>
-
-
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">¡Conéctate con nosotros en nuestras redes sociales!</h6>
         </div>
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <div style="font-size:30px ;" class="col-md-6 col-lg-7 text-center text-md-right">
 
-          <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold">Servicios</h6>
-          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>
-            <a routerLink="/tyba-empresa">Nuestra Confitería</a> </p>
-          <p>
-            <a routerLink="/tyba-empresa">Inf Corporativa</a> </p>
-          <p>
-            <a routerLink="/tyba-empresa">Tarjeta VIP</a> </p>
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
 
-
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-          <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold">Películas</h6>
-          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>
-            <a routerLink="/tyba-empresa">En Cartelera</a> </p>
-          <p>
-            <a routerLink="/tyba-empresa">Próximos Estrenos</a> </p>
-
-
-
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-          <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold">Contacto</h6>
-          <hr style="width: 60px;color: blueviolet;">
-
-
-          <p>
-            <i style="color: #8b0101;" class="fas fa-home mr-3"></i> Bogota, calle 97 #12-56</p>
-          <p>
-            <i style="color: #8b0101;" class="fas fa-envelope mr-3"></i> info@pesadilla.com.co</p>
-          <p>
-            <i style="color: #8b0101;" class="fas fa-phone mr-3"></i>01-8000-946-263 </p>
-
-
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
 
         </div>
         <!-- Grid column -->
 
       </div>
-      <!-- Grid row -->
+      <!-- Grid row-->
 
     </div>
-    <!-- Footer Links -->
+  </div>
 
-    <!-- Copyright -->
-    <div style="background-color: #180000;" class="footer-copyright text-center py-3"><b>Pesadilla Films</b> © 2020
-      Copyright. Bogotá, Colombia, Todos los derechos reservados. Diseño y desarrollo por :
-      <a routerLink="/tyba-empresa"> Tyba SAS.com</a>
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Descarga Nuestra App</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p> <img style="width: 80%;" src="../../../assets/img/go.png" alt=""> </p>
+
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Servicios</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a routerLink="/confiteria">Nuestra Confitería</a> </p>
+        <p>
+          <a routerLink="/membresias">Tarjetas de membresía</a> </p>
+       
+
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Películas</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a routerLink="/movies">Todas nuestras películas</a> </p>
+        <p>
+          <a routerLink="/frontpage">Estrenos</a> </p>
+
+
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contacto</h6>
+        <hr style="width: 60px;color: blueviolet;">
+
+
+        <p>
+          <i style="color: #8b0101;" class="fas fa-home mr-3"></i> Bogota, calle 97 #12-56</p>
+        <p>
+          <i style="color: #8b0101;" class="fas fa-envelope mr-3"></i> info@pesadilla.com.co</p>
+        <p>
+          <i style="color: #8b0101;" class="fas fa-phone mr-3"></i>01-8000-946-263 </p>
+
+
+
+      </div>
+      <!-- Grid column -->
+
     </div>
-    <!-- Copyright -->
+    <!-- Grid row -->
 
-  </footer>
-  <!-- Footer -->
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div style="background-color: #180000;" class="footer-copyright text-center py-3"><b>Pesadilla Films</b> © 2020
+    Copyright. Bogotá, Colombia, Todos los derechos reservados. Diseño y desarrollo por :
+    <a routerLink="/tyba-empresa" style="font-size: 20px;"> Tyba SAS.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 <!-- </div> -->
