@@ -43,15 +43,10 @@ import { AdminComponent } from './component/admin/admin.component';
 
 // Importar Servicio Usuario y película
 import { UsuarioService } from './service/usuario.service';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 import { PeliculaService } from './service/pelicula.service';
 import { IntroComponent } from './component/intro/intro.component';
-
 import { BoleteriaComponent } from './component/boleteria/boleteria.component';
-=======
 import { MembresiasComponent } from './component/membresias/membresias.component';
 
 /* import { SillasComponent } from './component/sillas/sillas.component'; */
@@ -82,7 +77,7 @@ import { MembresiasComponent } from './component/membresias/membresias.component
     IntroComponent,
     MembresiasComponent,
     CategoriasComponent,
-    MovieInfoComponent
+    MovieInfoComponent,
     BoleteriaComponent
 
 
