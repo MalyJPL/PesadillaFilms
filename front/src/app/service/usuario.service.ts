@@ -99,4 +99,11 @@ export class UsuarioService {
   }
   //-------------------------------------------------------------
 
+
+  listarUsuarios(){
+    return this._http.get(
+      this.url + 'lista-usuarios'
+      ).pipe(map(res  => res));
+  }
+  
 }
