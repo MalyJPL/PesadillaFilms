@@ -41,7 +41,13 @@ export class CategoriasComponent implements OnInit {
     this.peliculaService.obtenerCategoria(categoria).subscribe(
       (response : any)=>{
         this.categorias = response.peliculas;
-        
+                 for(let i = 0; i< this.categorias.length; i++){
+
+          this.categorias[i].cover = this.url+'obtener-archivo/'+ this.categorias[i]._id+'/'+'cover';
+          this.categorias[i].wallpaper = this.url+'obtener-archivo/'+ this.categorias[i]._id+'/'+'wallpaper';
+          this.categorias[i].trailer = this.url+'obtener-archivo/'+ this.categorias[i]._id+'/'+'trailer';
+          console.log("pelicula categoria " + JSON.stringify(this.categorias[i]) )
+  }
       }
     )
       this.membresia = JSON.parse(localStorage.getItem('sesion')).membresia
