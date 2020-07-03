@@ -10,6 +10,7 @@ export class IntroComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.getElementsByTagName('video')[0].load();
   }
 
 }
