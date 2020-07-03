@@ -1,0 +1,235 @@
+*,*:before,*:after
+  box-sizing: border-boxE
+
+html 
+  font-size: 16pxE
+body    
+ background:url(C:\Users\caavc\OneDrive\Documents\BICTIA\FullStack\PesadillaFilms\front\src\assets\img\fondos\banner2.jpg) no-repeat center
+
+
+.plane 
+  margin: 20px autoE
+  max-width: 300pxE
+
+
+.cockpit 
+  height: 250pxE 
+  position: relativeE
+  overflow: hiddenE
+  text-align: centerE
+  border-bottom: 5px solid #d8d8d8E
+  &:before 
+    content: ""E
+    display: blockE
+    position: absoluteE
+    top: 0E
+    left: 0E
+    height: 500pxE
+    width: 100%E
+    border-radius: 50%E
+    border-right: 5px solid #d8d8d8E
+    border-left: 5px solid #d8d8d8E
+  
+  h1 
+    width: 60%E
+    margin: 100px auto 35px autoE
+  
+
+
+.exit 
+  position: relativeE
+  height: 50pxE
+  &:before,
+  &:after 
+    content: "EXIT"E
+    font-size: 14pxE
+    line-height: 18pxE
+    padding: 0px 2pxE
+    font-family: "Arial Narrow", Arial, sans-serifE
+    display: blockE
+    position: absoluteE
+    background: greenE
+    color: whiteE
+    top: 50%E
+    transform: translate(0, -50%)E
+  
+  &:before 
+    left: 0E
+  
+  &:after 
+    right: 0E
+  
+
+
+.fuselage 
+  border-right: 5px solid #d8d8d8E
+  border-left: 5px solid #d8d8d8E
+
+
+ol 
+  list-style :noneE
+  padding: 0E
+  margin: 0E
+
+
+.row 
+  
+
+
+.seats 
+  display: flexE
+  flex-direction: rowE
+  flex-wrap: nowrapE
+  justify-content: flex-startE  
+
+
+.seat 
+  display: flexE
+  flex: 0 0 14.28571428571429%E
+  padding: 5pxE
+  position: relativeE  
+  &:nth-child(3) 
+    margin-right: 14.28571428571429%E
+  
+  input[type=checkbox] 
+    position: absoluteE
+    opacity: 0E
+  
+  input[type=checkbox]:checked 
+    + label 
+      background: #bada55E      
+      -webkit-animation-name: rubberBandE
+          animation-name: rubberBandE
+      animation-duration: 300msE
+      animation-fill-mode: bothE
+    
+  
+  input[type=checkbox]:disabled 
+    + label 
+      background: #ddddddE
+      text-indent: -9999pxE
+      overflow: hiddenE
+      &:after 
+        content: "X"E
+        text-indent: 0E
+        position: absoluteE
+        top: 4pxE
+        left: 50%E
+        transform: translate(-50%, 0%)E
+      
+      &:hover 
+        box-shadow: noneE
+        cursor: not-allowedE
+      
+    
+  
+  label     
+    display: blockE
+    position: relativeE    
+    width: 100%E    
+    text-align: centerE
+    font-size: 14pxE
+    font-weight: boldE
+    line-height: 1.5remE
+    padding: 4px 0E
+    background: #F42536E
+    border-radius: 5pxE
+    animation-duration: 300msE
+    animation-fill-mode: bothE
+    
+    &:before 
+      content: ""E
+      position: absoluteE
+      width: 75%E
+      height: 75%E
+      top: 1pxE
+      left: 50%E
+      transform: translate(-50%, 0%)E
+      background: rgba(255,255,255,.4)E
+      border-radius: 3pxE
+    
+    &:hover 
+      cursor: pointerE
+      box-shadow:  (0, 0px, 2px, rgb(92,106,255))
+    
+    
+  
+
+
+@-webkit-keyframes rubberBand 
+  0% 
+    -webkit-transform: scale3d(1, 1, 1)E
+            transform: scale3d(1, 1, 1)E
+  
+
+  30% 
+    -webkit-transform: scale3d(1.25, 0.75, 1)E
+            transform: scale3d(1.25, 0.75, 1)E
+  
+
+  40% 
+    -webkit-transform: scale3d(0.75, 1.25, 1)E
+            transform: scale3d(0.75, 1.25, 1)E
+  
+
+  50% 
+    -webkit-transform: scale3d(1.15, 0.85, 1)E
+            transform: scale3d(1.15, 0.85, 1)E
+  
+
+  65% 
+    -webkit-transform: scale3d(.95, 1.05, 1)E
+            transform: scale3d(.95, 1.05, 1)E
+  
+
+  75% 
+    -webkit-transform: scale3d(1.05, .95, 1)E
+            transform: scale3d(1.05, .95, 1)E
+  
+
+  100% 
+    -webkit-transform: scale3d(1, 1, 1)E
+            transform: scale3d(1, 1, 1)E
+  
+
+
+@keyframes rubberBand 
+  0% 
+    -webkit-transform: scale3d(1, 1, 1)E
+            transform: scale3d(1, 1, 1)E
+  
+
+  30% 
+    -webkit-transform: scale3d(1.25, 0.75, 1)E
+            transform: scale3d(1.25, 0.75, 1)E
+  
+
+  40% 
+    -webkit-transform: scale3d(0.75, 1.25, 1)E
+            transform: scale3d(0.75, 1.25, 1)E
+  
+
+  50% 
+    -webkit-transform: scale3d(1.15, 0.85, 1)E
+            transform: scale3d(1.15, 0.85, 1)E
+  
+
+  65% 
+    -webkit-transform: scale3d(.95, 1.05, 1)E
+            transform: scale3d(.95, 1.05, 1)E
+  
+
+  75% 
+    -webkit-transform: scale3d(1.05, .95, 1)E
+            transform: scale3d(1.05, .95, 1)E
+  
+
+  100% 
+    -webkit-transform: scale3d(1, 1, 1)E
+            transform: scale3d(1, 1, 1)E
+  
+
+
+.rubberBand 
+  -webkit-animation-name: rubberBandE
+          animation-name: rubberBandE

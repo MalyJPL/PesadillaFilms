@@ -49,6 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PeliculaService } from './service/pelicula.service';
 import { IntroComponent } from './component/intro/intro.component';
+import { BoleteriaComponent } from './component/boleteria/boleteria.component';
 /* import { SillasComponent } from './component/sillas/sillas.component'; */
 
 
@@ -78,6 +79,7 @@ import { IntroComponent } from './component/intro/intro.component';
     MovieInfoComponent,
     AdminComponent,
     IntroComponent,
+    BoleteriaComponent,
 /*     SillasComponent */
     
 
