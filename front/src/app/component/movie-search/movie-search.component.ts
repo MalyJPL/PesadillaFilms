@@ -1,5 +1,4 @@
 import { DatabaseService } from './../../service/database.service';
-import { Movie } from './../../interface/movie';
 import { Observable, Subject } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
@@ -12,17 +11,17 @@ import { PeliculaService } from '../../service/pelicula.service';
   styleUrls: ['./movie-search.component.sass']
 })
 export class MovieSearchComponent implements OnInit {
-  movies$: Observable<Pelicula[]>;
+  movies$: Observable<Object>;
   private searchTerms = new Subject<string>();
 
 
-  constructor(private db: DatabaseService) { }
+  constructor(private peliculaService: PeliculaService) { }
 
   ngOnInit() {
     this.movies$ = this.searchTerms.pipe(
       debounceTime(300),
       distinctUntilChanged(),
-      switchMap((term: string) => this.db.searchMovies(term))
+      switchMap((term: string) => this.peliculaService.buscador(term))
     );
   }
 

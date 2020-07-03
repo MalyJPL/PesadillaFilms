@@ -17,6 +17,7 @@ import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.comp
 import { CategoriasComponent } from './component/categorias/categorias.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { IntroComponent } from './component/intro/intro.component';
+import { MembresiasComponent } from './component/membresias/membresias.component';
 import { MovieInfoComponent } from './component/movie-info/movie-info.component';
 
 
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'categorias/:categoria', component: CategoriasComponent},
   { path: 'admin', component: AdminComponent },
   { path: 'intro', component: IntroComponent },
+  { path: 'membresias', component: MembresiasComponent },
    { path: 'movie-info', component: MovieInfoComponent }
 
 ];

@@ -49,6 +49,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PeliculaService } from './service/pelicula.service';
 import { IntroComponent } from './component/intro/intro.component';
+
+import { BoleteriaComponent } from './component/boleteria/boleteria.component';
+=======
+import { MembresiasComponent } from './component/membresias/membresias.component';
+
 /* import { SillasComponent } from './component/sillas/sillas.component'; */
 
 
@@ -74,10 +79,13 @@ import { IntroComponent } from './component/intro/intro.component';
     ConfiteriaComponent,
     TybaEmpresaComponent,
     AdminComponent,
-    CategoriasComponent,
-    MovieInfoComponent,
-    AdminComponent,
     IntroComponent,
+    MembresiasComponent,
+    CategoriasComponent,
+    MovieInfoComponent
+    BoleteriaComponent
+
+
 /*     SillasComponent */
     
 
@@ -94,7 +102,7 @@ import { IntroComponent } from './component/intro/intro.component';
 /*     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),  */
-    CarouselModule.forRoot()
+    
 
   ],
   providers: [DatabaseService, UsuarioService, PeliculaService],

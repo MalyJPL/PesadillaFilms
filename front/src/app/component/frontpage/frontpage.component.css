@@ -1,0 +1,22 @@
+.shoppingCart {
+    background-color: #c50000;
+    border-radius: 50%;
+    position: fixed;
+    right: 0;
+    bottom: 15%;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid black;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+    background-color: #d21717;
+}

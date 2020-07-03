@@ -267,7 +267,7 @@ function mostrarCategoria(req, res) {
   // Pedir el archivo que queremos mostrar
   // localhost:3000/api/obtenerImagen/:imageFile
   var categoriaSeleccionada = req.params.categoria;
-
+  console.log("Categoria seleccionada:" + categoriaSeleccionada);
 Pelicula.find({'categoria' : categoriaSeleccionada}, function (err, peliculasEncontradas){
   if (err) {
     res.status(500).send({ message: "Error en el servidor" });
