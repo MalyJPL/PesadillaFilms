@@ -1,7 +1,9 @@
 import { Movie } from './../../interface/movie';  //trae las peliculas
+import { Pelicula } from '../../modelo/pelicula';
 import { DomSanitizer } from '@angular/platform-browser';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { DatabaseService } from './../../service/database.service';
+import { PeliculaService } from '../../service/pelicula.service';
 import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
