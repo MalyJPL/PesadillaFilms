@@ -23,7 +23,7 @@ body{
     text-align: center;
     font: normal 18px sans-serif;
     padding: 45px;
-    margin-top: 50px;
+    margin-top: 200px;
     border-top: 5px solid red;
 }
 
@@ -54,10 +54,10 @@ body{
 }
 
 .panel-primary{
-  box-shadow: 0 0 30px red;
+  box-shadow: 0 0 30px white;
 }
 .panel-primary:hover{
-  box-shadow: 0 0 30px green;
+  box-shadow: 0 0 30px  red;
 }
 
 
@@ -70,10 +70,19 @@ body{
   margin: auto;
   margin-top: 3%;
   width: 50%;
-  border: 2px solid cyan;
+  border: 2px solid red;
   border-radius: 10px;
   background-color: #19B5FE;
+  background-image: url(https://i.pinimg.com/736x/43/1a/8a/431a8a88f6bca79609b7b7d83a8a3ab9--horror-comics-horror-art.jpg);
+    background-repeat: round;
 }
+
+.panel-primary>.panel-heading {
+  color: #fff;
+  background-color: #000000;
+  border-color: #670000;
+}
+
 
 
 .login-form,
@@ -116,7 +125,7 @@ body{
 .boxF{
   display: inline-block;
   margin: 5px;
-  border: 2px solid cyan;
+  border: 2px solid red;
   font-weight: bold;
 }
 .boxF:hover{
@@ -126,9 +135,9 @@ body{
   padding: 15px;
   display: inline-block;
   margin: 5px;
-  border: 2px solid cyan;
+  border: 2px solid red;
   font-weight: bold;
-  background-color: #31B0D5;
+  background-color: #000000;
   color: white;
 
 }
@@ -139,7 +148,7 @@ body{
 .boxFl{
   display: block;
   margin: 5px;
-  border: 2px solid cyan;
+  border: 2px solid red;
   font-weight: bold;
   text-align: left;
   padding: 5px;

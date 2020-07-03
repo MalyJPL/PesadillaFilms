@@ -96,7 +96,7 @@ import { MembresiasComponent } from './component/membresias/membresias.component
 /*     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),  */
-    CarouselModule.forRoot()
+    
 
   ],
   providers: [DatabaseService, UsuarioService, PeliculaService],
