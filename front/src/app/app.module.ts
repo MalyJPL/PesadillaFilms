@@ -113,7 +113,7 @@ import { IntroComponent } from './component/intro/intro.component';
 /*     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),  */
-    CarouselModule.forRoot()
+    
 
   ],
   providers: [DatabaseService, UsuarioService, PeliculaService],
