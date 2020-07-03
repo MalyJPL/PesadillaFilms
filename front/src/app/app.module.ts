@@ -49,6 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PeliculaService } from './service/pelicula.service';
 import { IntroComponent } from './component/intro/intro.component';
+import { MembresiasComponent } from './component/membresias/membresias.component';
 /* import { SillasComponent } from './component/sillas/sillas.component'; */
 
 
@@ -74,10 +75,11 @@ import { IntroComponent } from './component/intro/intro.component';
     ConfiteriaComponent,
     TybaEmpresaComponent,
     AdminComponent,
+    IntroComponent,
+    MembresiasComponent,
     CategoriasComponent,
     MovieInfoComponent,
-    AdminComponent,
-    IntroComponent,
+    AdminComponent
 /*     SillasComponent */
     
 
