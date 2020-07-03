@@ -79,8 +79,7 @@ import { MembresiasComponent } from './component/membresias/membresias.component
     MembresiasComponent,
     CategoriasComponent,
     MovieInfoComponent,
-    AdminComponent,
-    IntroComponent
+    AdminComponent
 /*     SillasComponent */
     
 
