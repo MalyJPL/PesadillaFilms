@@ -1,3 +1,6 @@
+.contedorCompromiso{
+    text-align: center;
+}
 
 .logo{
     margin-top: -30%;
@@ -83,41 +86,6 @@ h3{
     background:#f0efff;
 }
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #contenedor_index{
    margin-top: 280px;
@@ -153,7 +121,9 @@ h3{
 }
 
 
-
+.malyFoto{
+ width: 330px !important;
+}
 
 #img1{
     width: 350px;
@@ -176,6 +146,13 @@ h3{
    margin-left: 213px;
    margin-top: -360px;
    opacity: 0;
+}
+
+#nombre{
+    margin-left: 260px;
+    padding-top: 15px;
+    margin-bottom: -10px;
+    color: black;
 }
 
 div#contenedorFoto:hover div#acerca_de_mi{
@@ -262,14 +239,7 @@ padding: 5px;
 
   /* aptitudes */
 
-  #contenedor_aptitudes{
-     
-      margin-top: -80px !important;
-      margin-left: 600px;
-      padding: 20px;
-      width: 80%;
-      margin-bottom: -100px;
-  }
+
 
   progress{
       background-color: green;
@@ -280,7 +250,7 @@ padding: 5px;
   .btn-mail {
     display:block;
     position: fixed;
-    right:5px;
+    right:7px;
     bottom:360px;
     z-index:999;
 }
@@ -302,4 +272,27 @@ margin-left: 250px;
 #datos{
     font-weight: bolder;
     margin-left: 250px;
+}
+
+.contenedorTecnologias{
+    width: 70%;
+    margin-left: 230px;
+}
+
+label{ 
+    color:orange;
+}
+
+input[type = "radio"]{ 
+    display:none;
+}
+
+#imgOpinion{
+    border-radius: 80px;
+    padding: 10px;
+}
+
+#proyectos{
+    width: 90% !important;
+    margin-left: -60px;
 }

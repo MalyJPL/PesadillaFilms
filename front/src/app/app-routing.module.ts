@@ -16,6 +16,8 @@ import { ConfiteriaComponent } from './component/confiteria/confiteria.component
 import { TybaEmpresaComponent } from './component/tyba-empresa/tyba-empresa.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { IntroComponent } from './component/intro/intro.component';
+import { MembresiasComponent } from './component/membresias/membresias.component';
+
 
 
 // Relacionar rutas con componentes
@@ -32,8 +34,8 @@ const routes: Routes = [
   { path: 'confiteria', component: ConfiteriaComponent},
   { path: 'tyba-empresa', component: TybaEmpresaComponent},
   { path: 'admin', component: AdminComponent },
-  { path: 'intro', component: IntroComponent }
-
+  { path: 'intro', component: IntroComponent },
+  { path: 'membresias', component: MembresiasComponent }
 
   
 ];
