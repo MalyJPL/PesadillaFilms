@@ -58,12 +58,19 @@ export class MovieDetailComponent implements OnInit {
       }
     }
     );
-          
-//ocultar o mostrar link online
+
+    this.membresia = "Usuario";
+    //ocultar o mostrar link online
+    if(JSON.parse(localStorage.getItem('sesion')) !== null){
 this.membresia = JSON.parse(localStorage.getItem('sesion')).membresia
-if(this.membresia !== 'anabelle'){
-document.getElementById('veronline').innerHTML = '<b> Accede con una membresía ANABELLE para tener acceso en línea </b>'
-}
+console.log(`la membresía es ${this.membresia}`)
+    } else{
+      console.log(`la membresía es ${this.membresia}`)
+      if(this.membresia !== 'Anabelle'){
+        document.getElementById('veronline').textContent= '<b> Accede con una membresía ANABELLE para tener acceso en línea </b>'
+        }
+    }
+
 
   }
 
