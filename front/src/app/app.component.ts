@@ -53,10 +53,14 @@ cerrarSesion(){/*
 ocultar(){
   let ruta = window.location.href.split("/");
   const categoria= ruta[ruta.length-1];
+  console.log(`la ruta es: ${categoria}`);
   if(categoria ==="tyba-empresa" || categoria === "intro"){
     document.getElementById('encabezado').style.display='none';
     document.getElementById('footer').style.display='none';
+  }else{
+    document.getElementById('encabezado').style.display='block';
+    document.getElementById('footer').style.display='block';
+   
   }
-
 }
 }
