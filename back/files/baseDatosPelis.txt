@@ -95,7 +95,7 @@ p7 = {
     duracion: '101 min.',
     trailer: 'Original Nightmare on elm street trailer.mp4',
     online: 'https://mega.nz/file/Z74iGBqY#J6g0QhERumo9POOUIxNaR5ooOOqyFXR7YgBzlT8TnkE',
-    cover: 'ANightmareonElmStreet.jpg',
+    cover: 'ANightmareonElm Street.jpg',
     wallpaper: 'aNightmareWall.jpg',
     estado: 1
 }
@@ -290,6 +290,9 @@ p20 = {
 
 
 
+db.peliculas.insert( [p1,p2,p3,p4,p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19] )
+
+
 
 
 
@@ -317,9 +320,6 @@ p20 = {
 
 
 
-
-
-db.peliculas.insert( [p1,p2,p3,p4,p5, p6] )
 
 
 st1= {
