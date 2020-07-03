@@ -39,6 +39,8 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
 
     this.mostrarUsuarios();
+    this.mostrarPeliculas();
+
   }
   // Método subirArchivo
   subirArchivoTrailer(fileInput: any) {
@@ -129,4 +131,21 @@ mostrarUsuarios(){
       }
     }
   )}
+
+  //funcion para mostrar lista de Peliculas
+  mostrarPeliculas(){
+    this.peliculaService.listarPeliculas().subscribe(
+      (response: any)=>{
+        this.peliculaRegistrada = response.peliculas;
+      },error => {
+        var errorMensaje = <any>error;
+        if (errorMensaje != null) {
+          console.log(`Error al listar peliculas: ${JSON.stringify(error)}`)
+        }
+      }
+    )}
+
+
+
+
 }

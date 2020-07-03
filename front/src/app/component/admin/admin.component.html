@@ -44,15 +44,15 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr *ngFor="let usuario of listaUsuarios">
-                                                <th scope="row">1</th>
+                                            <tr *ngFor="let usuario of listaUsuarios; let indice=index">
+                                                <th style="text-align: center;" scope="row">{{indice+1}}</th>
                                                 <td>{{usuario.nombre}}</td>
                                                 <td>{{usuario.apellido}}</td>
                                                 <td>{{usuario.correo}}</td>
                                                 <td>{{usuario.membresia}}</td>
                                                 <td><input type="checkbox" name="estado" value="activo"></td>
                                                 <td>
-                                                    <a href="#"><i style="color: rgb(233, 134, 20);" class="fas fa-edit"></i></a> | <a href="#"><i style="color: red;" class="fas fa-user-times"></i></a>
+                                                     <a href="#"><i style="color: red;" class="fas fa-user-times"></i></a>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -84,22 +84,23 @@
                                                     <th scope="col">Categoria</th>
                                                     <th scope="col">Titulo</th>
                                                     <th scope="col">Director</th>
-                                                  <th scope="col">Protagonista</th> 
-                                                    <th scope="col">Duracion</th>
-
+                                                  <th scope="col">Duracion</th> 
+                                                    <!-- <th scope="col">Protagonista</th> -->
+                                                    <th></th>
                                                     <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>asesinos</td>
-                                            <td>Viernes 13</td>
-                                            <td>Sean S. Cunningham</td>
-                                          <td>Betsy Palmer</td> 
-                                            <td>2 h</td>
-                                            <td>
-                                                 <a href="#"><i style="color: red;" class="fas fa-user-times"></i></a>
+                                        <tr *ngFor="let pelicula of peliculaRegistrada; let indice=index">
+                                            <th style="text-align: center;" scope="row">{{indice+1}}</th>
+                                            <td>{{pelicula.categoria}}</td>
+                                            <td>{{pelicula.titulo}}</td>
+                                            <td>{{pelicula.director}}</td>
+                                            <td>{{pelicula.duracion}}</td> 
+                                            <!-- <td>{{pelicula.protagonistas}}</td> -->
+                                            <td><input type="checkbox" name="estado" value="activo"></td>
+                                            <td style="text-align: center;" >
+                                                 <a href="#"><i style="color: red; " class="fa fa-times"></i></a>
                                             </td>
                                         </tr>
                                         </tbody>

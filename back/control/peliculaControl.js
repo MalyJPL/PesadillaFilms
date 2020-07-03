@@ -374,6 +374,28 @@ function buscarUnaPelicula(req, res){
 
 
 
+// Función Mostrar Archivo pelicula
+function mostrarPeliculas(req, res) {
+  // Pedir el archivo que queremos mostrar
+  // localhost:3000/api/obtenerImagen/:imageFile
+ Pelicula.find((err, peliculaRegistrada)=>{
+  if (err) {
+      res.status(500).send({ message: "Error en el servidor" });
+  } else {
+      if (!peliculaRegistrada) {
+          res.status(200).send({ message: "No fue posible recuperar lista de Peliculas" });
+      } else {
+          res.status(200).send({
+              message: "Lista de Peliculas enviada",
+              peliculas: peliculaRegistrada
+          });
+      }
+  }
+});
+}
+
+
+
 // Exportar paquete de funciones
 module.exports = {
   registrarPelicula,
@@ -385,5 +407,6 @@ module.exports = {
   busquedaPorPalabra,
   buscarTodas,
   borrarPelicula, 
-  buscarUnaPelicula
+  buscarUnaPelicula,
+  mostrarPeliculas
 }
