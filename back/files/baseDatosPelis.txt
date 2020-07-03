@@ -69,6 +69,8 @@ p5 = {
     wallpaper: 'posesionWallpaper.jpg',
     estado: 1
 }
+
+
 p6 = {
      categoria: 'paranormal',
     titulo: 'El conjuro',
@@ -82,6 +84,221 @@ p6 = {
     wallpaper: 'elconjuroWallpaper.jpg',
     estado: 1
 }
+
+
+p7 = {
+    categoria: 'asesinos',
+    titulo: 'Nightmare on elm street ',
+    sinopsis:'Un grupo de adolescentes sufre unas pesadillas horrendas en las que un ser deforme que porta garras de acero los persigue. Lo más inquietante es que los hechos empiezan a sugerir que lo que ocurre mientras sueñan repercute en la vida real.',
+    director:'Wes Craven',
+    protagonistas:'Robert Englund, Heather Langenkamp',
+    duracion: '101 min.',
+    trailer: 'Original Nightmare on elm street trailer.mp4',
+    online: 'https://mega.nz/file/Z74iGBqY#J6g0QhERumo9POOUIxNaR5ooOOqyFXR7YgBzlT8TnkE',
+    cover: 'ANightmareonElmStreet.jpg',
+    wallpaper: 'aNightmareWall.jpg',
+    estado: 1
+}
+
+
+p8 = {
+    categoria: 'asesinos',
+    titulo: 'Hellraiser',
+    sinopsis:'Frank Cotton adquiere el llamado cubo de Lamont, un acertijo tridimensional que abre las puerta a una dimensión repleta de placeres sádicos. Sin embargo, cuando Frank lo resuelve, solo encuentra dolor y tortura.',
+    director:'Clive Barker',
+    protagonistas:'Doug Bradley, Oliver Smith, Amy Klein',
+    duracion: '94 min.',
+    trailer: 'HellraiserTrailer.mp4',
+    online: 'https://www.youtube.com/watch?v=3bZYNlz-sT4',
+    cover: 'hellraiser-583256724-large.jpg',
+    wallpaper: 'Hellraiserwallpaper.png',
+    estado: 1
+}
+
+
+p9 = {
+    categoria: 'asesinos',
+    titulo: 'Hostel',
+    sinopsis:'Dos jóvenes universitarios norteamericanos, Paxton y Josh, recorren Europa en busca de emociones y diversión. En Eslovaquia conocen a Natalya y Svetlana, dos exóticas bellezas que los llevarán a un siniestro y tenebroso hostal.',
+    director:'Eli Roth',
+    protagonistas:' ‎Jay Hernández,  ‎Derek Richar' Rick Hoffman, Jan Vlasák, Petr Janis,
+    duracion: '95 min.',
+    trailer: 'Hostel(2005)-Trailer.mp4',
+    online: 'https://www.youtube.com/watch?v=aj_4Hw8c6Yk',
+    cover: 'hostel-752558415-large.jpg',
+    wallpaper: 'wallpaperHostel.jpg',
+    estado: 1
+}
+
+
+p10 = {
+    categoria: 'monstruos',
+    titulo: '28 weeks later',
+    sinopsis:'Seis meses después de la epidemia original, el virus de la rabia ha aniquilado a la población de las Islas Británicas. No obstante, el ejército estadounidense declara que el peligro ha pasado, y los soldados americanos llegan para restaurar el orden y empezar la reconstrucción. Refugiados regresan a tierras británicas, pero uno de ellos vuelve con un secreto mortal: el virus no ha desaparecido y es más peligroso que nunca.',
+    director:'Juan Carlos Fresnadillo',
+    protagonistas:'Rose Byrne, Robert Carl, Imogen Poots, Idris Elba',
+    duracion: '100 min.',
+    trailer: '28SEMANASDESPUÉS(Trailer español).mp4',
+    online: 'https://www.youtube.com/watch?v=9dXu1RIFe0w',
+    cover: '28weekslater.png',
+    wallpaper: 'WallnjmsGu3rCpmLfVEd3pA7O4e9fa3.jpg',
+    estado: 1
+}
+
+
+p11 = {
+    categoria: 'monstruos',
+    titulo: 'Bram stoker dracula',
+    sinopsis:'El conde Drácula viaja a Londres en busca de la mujer a la que siempre amó. El profesor Van Helsing y un grupo de valientes tratará de detener al maligno vampiro, antes de que su sed de sangre devaste la metrópoli inglesa.',
+    director:'Francis Ford Coppola',
+    protagonistas:'Gary Oldman, Sadie Frost, Tom Waits, Cary Elwes',
+    duracion: '155 min.',
+    trailer: ''https://www.youtube.com/watch?v=8tdj8ditR4I'',
+    online: 'https://www.youtube.com/watch?v=8tdj8ditR4I',
+    cover: 'bram_stoker_s_dracula-420186556-large.jpg',
+    wallpaper: 'wallpaperDracula.jpg',
+    estado: 1
+}
+
+
+p12 = {
+    categoria: 'monstruos',
+    titulo: 'El amanecer de los muertos',
+    sinopsis:'Una enfermera, un policía y otros residentes de Milwaukee pelean con unos zombis carnívoros mientras están atrapados en un centro comercial.',
+    director:'Zack Snyder',
+    protagonistas:'Michael Kelly, Sarah Polley, Ving Rhames, Lindy Booth, Inna Korob, Ken Foree, Ty Burrel, Dan Duran, Colm Magner, Philip Mack',
+    duracion: '110 min.',
+    trailer: 'ElAmanecerDeLosMuertosOficialTrailer-LanderLQ.mp4',
+    online: 'https://www.youtube.com/watch?v=hIlf3jyip90',
+    cover: 'Dawn_of_the_Dead_2004_movie (1).jpg',
+    wallpaper: 'Wallthumb-1920-446833.jpg',
+    estado: 1
+}
+
+p13 = {
+    categoria: 'monstruos',
+    titulo: 'The Thing',
+    sinopsis:'Un alienígena que se transforma en otras formas vivientes, invade una base científica de la Antártida.',
+    director:'John Carpenter',
+    protagonistas:'Kurt Russell, Keith David, T.K. Carter, Peter Malo, Joel Edgerton, David Clen, Kim Bubbs, Donald Moffat',
+    duracion: '109 min.',
+    trailer: 'TheThing(1982)Trailer.mp4',
+    online: 'https://www.youtube.com/watch?v=Txjm94GnrPA',
+    cover: 'the_thing-823700381-large.jpg',
+    wallpaper: 'wallpaperLaCosa(1).jpg',
+    estado: 1
+}
+
+p14 = {
+    categoria: 'paranormal',
+    titulo: 'The grudge',
+    sinopsis:'Una estudiante norteamericana de intercambio y su novio se topan con vengativos espíritus que habitan una casa en Tokio.',
+    director:'Takashi Shimizu',
+    protagonistas:'Takako Fuji, Yuya Ozeki, Sarah Michelle, Ryo Ishibashi, Bill Pullman, Jason Behr, Rosa Blasi, Ted Raimi, Clea Duvall, Yoko Maki',
+    duracion: '94 min.',
+    trailer: 'Grudge.mp4',
+    online: 'https://waaw.tv/watch_video.php?v=YVRLckxOS1FKVnUwZkg3ZEtmOTJKaytHWGsxNjUzN255VmhPaDZ6d01icEFzajBlYzY2Ynhnc1BZY0krTEY2eQ%3D%3D#iss=MjAxLjIzMy40MS4xMDM=',
+    cover: 'the_grudge-230917193-large.jpg',
+    wallpaper: 'wallpaperGrudge.jpg',
+    estado: 1
+}
+
+p15 = {
+    categoria: 'paranormal',
+    titulo: 'The Amityville Horror',
+    sinopsis:'Una familia se muda a una casa nueva en la que, unos años antes, se produjeron unos asesinatos especialmente grotescos. Poco después de asentarse en la vivienda, los integrantes de la familia empiezan a experimentar fenómenos extraños.',
+    director:'Andrew Douglas',
+    protagonistas:'Kathy Lutz, Ryan Reyns, Jesse James, Philip Baker, Rachel Nichols, Marie Lynn, Jose Taitano, Nancy Lollar',
+    duracion: '94 min.',
+    trailer: 'TheAmityvilleHorror- OfficialTrailer.mp4',
+    online: 'https://www.youtube.com/watch?v=L_Z3TDqjokg',
+    cover: 'the_amityville_horror-641359054-large.jpg',
+    wallpaper: 'wallpaperTheAmy.jpg',
+    estado: 1
+}
+
+p16 = {
+    categoria: 'paranormal',
+    titulo: 'El exorcista',
+    sinopsis:'Una actriz llama a unos sacerdotes jesuitas para que intenten terminar con la posesión demoníaca de su hija de 12 años.',
+    director:'William Friedkin',
+    protagonistas:'Linda Blair, Jason Miller, Max Von, Ellen Burstyn, Lee j. Cobb, Kitty Winn, John Mahon, Roy Cooper, John Nicola, Paul Bateson',
+    duracion: '132 min.',
+    trailer: 'ELEXORCISTA(Trailerespañol).mp4',
+    online: 'https://www.youtube.com/watch?v=bcxa9prwn8Q&list=PLYYawHVBuh7iCnMyyG7SYpHwtoND8hOrs',
+    cover: 'the_exorcist-742137399-large.jpg',
+    wallpaper: 'WallPEl_Exorcista-948330284-large.jpg',
+    estado: 1
+}
+
+p17 = {
+    categoria: 'psicologico',
+    titulo: 'The number 23',
+    sinopsis:'Un hombre se obsesiona con un libro que parece estar basado en su vida y termina con la muerte del personaje principal.',
+    director:'Joel Schumacher',
+    protagonistas:'Jim Carrey, Rhona Mitra, Lynn Collins, Corey Stoll, David Stifel, Ed Lauter, Bud Cort, Tara Karsian, Lesli Marght, Tom Lenk, Helen Jordan ',
+    duracion: '98 min.',
+    trailer: 'Elnúmero23-TrailerenEspañol.mp4',
+    online: 'https://www.youtube.com/watch?v=KpyUvfT-iVQ',
+    cover: 'the_number_23-343867159-large.jpg',
+    wallpaper: 'wallpaperNo23.jpg',
+    estado: 1
+}
+
+p18 = {
+    categoria: 'psicologico',
+    titulo: 'Jacob's Ladder',
+    sinopsis:'Luego de regresar de la Guerra de Vietnam, un soldado (Tim Robbins) sufre graves alucinaciones que cambian su vida.',
+    director:'Adrian Lyne',
+    protagonistas:'Tim Robbins, Lewis Black, Eriq La Salle, Ving Rhames, Matt Craven, Chris Murphy, Danny Aiello',
+    duracion: '116 min.',
+    trailer: 'LaEscaleraDeJacobTrailerespañol.mp4',
+    online: 'https://www.youtube.com/watch?v=JQb8GLAAPX4',
+    cover: 'jacob_s_ladder-790924940-large.jpg',
+    wallpaper: 'WallJacob'sLadder.jpg',
+    estado: 1
+}
+
+p19 = {
+    categoria: 'psicologico',
+    titulo: 'Psicosis',
+    sinopsis:'Después de haberle robado 40 000 dólares a su jefe, Marion Crane huye de la policía y se detiene a pasar la noche en un motel que se erige junto a una carretera perdida. El establecimiento lo regentan un joven tímido y extraño y su madre.',
+    director:'Alfred Hitchcock',
+    protagonistas:'Vera Miles, John Gavin, John Mclntire, Ted Knight, Mort Mills, Pat McCaffrie, Lurene Tuttle',
+    duracion: '109 min.',
+    trailer: 'Psicosistráilerencastellano.mp4',
+    online: 'https://www.youtube.com/watch?v=x9VV3Lslbv8&has_verified=1',
+    cover: 'psycho-805182707-large.jpg',
+    wallpaper: 'wallpaperPsicosis.png',
+    estado: 1
+}
+
+p20 = {
+    categoria: 'psicologico',
+    titulo: 'The Others',
+    sinopsis:'Una viuda afligida descubre sucesos extraños, que apuntan hacia la presencia de fantasmas en su apartada mansión.',
+    director:'Alejandro Amenábar',
+    protagonistas:'Nicole Kidman, Eric Sykes, Alakina Mann, Keith Allen, Gordon Reid, Yasmin Paige, Aldo Grilo',
+    duracion: '104 min.',
+    trailer: 'LosOtros(Trailer).mp4',
+    online: 'https://www.youtube.com/watch?v=_yK5BlW_z6c',
+    cover: 'los_otros_the_others-255113377-large.jpg',
+    wallpaper: 'wallpaperLosOtros.jpg',
+    estado: 1
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* {
     categoria: '',
