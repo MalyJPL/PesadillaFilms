@@ -45,5 +45,12 @@ api.put('/borrar-pelicula/:id', PeliculaControl.borrarPelicula);
 //mostrar una película
 api.get('/buscar-pelicula/:id', PeliculaControl.buscarUnaPelicula)
 
+
+//Mostrar todos los usuarios
+api.get('/lista-peliculas', PeliculaControl.mostrarPeliculas);
+
+
+
+
 // Exportar el módulo
 module.exports = api;

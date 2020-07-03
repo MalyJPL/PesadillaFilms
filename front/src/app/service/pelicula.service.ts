@@ -100,6 +100,16 @@ return this._http.get(
   }
 
 
+  listarPeliculas(){
+    return this._http.get(
+      this.url + 'lista-peliculas'
+      ).pipe(map(res  => res));
+  }
+
+
+
+
+
 }
 
  
